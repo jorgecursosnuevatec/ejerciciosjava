@@ -15,7 +15,7 @@ PushLog="/dev/null"
 # Mensaje
 message=$@
 if [ -z "$message" ]; then
-message="$(date)2022-10-29 PRIMERA SUBIDA DEL DIA"
+message="$(date)2022-11-24 EMPEZAR OVERRIDE"
 fi
 
 start=`date +%s`
