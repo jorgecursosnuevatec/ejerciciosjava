@@ -1,5 +1,5 @@
-package org.aguzman.poosobrecarga;
-import static org.aguzman.poosobrecarga.Calculadora.*;
+package org.aguzman.poosobrecarga.estatico;
+import static org.aguzman.poosobrecarga.estatico.Calculadora.*;
 public class EjemploSobrecarga {
     public static void main(String[] args) {
 

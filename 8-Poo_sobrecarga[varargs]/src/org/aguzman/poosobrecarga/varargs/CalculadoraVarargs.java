@@ -1,15 +1,12 @@
-package org.aguzman.poosobrecarga;
+package org.aguzman.poosobrecarga.varargs;
 
-public class Calculadora {
+public class CalculadoraVarargs {
 
-    private Calculadora() {
-    }
-
-    public static int sumar(int a, int b){
+    public int sumar(int a, int b){
         return a + b;
     }
 
-    public static int sumar(int... argumentos){
+    public int sumar(int... argumentos){
         int total = 0;
         for(int i: argumentos){
             total+=i;
@@ -17,7 +14,7 @@ public class Calculadora {
         return total;
     }
 
-    public static float sumar(float a, int... argumentos){
+    public float sumar(float a, int... argumentos){
         float total = a;
         for(int i: argumentos){
             total+=i;
@@ -25,7 +22,7 @@ public class Calculadora {
         return total;
     }
 
-    public static double sumar(double... varargs){
+    public double sumar(double... varargs){
         double total = 0.0;
         for(double d: varargs){
             total += d;
@@ -33,23 +30,23 @@ public class Calculadora {
         return total;
     }
 
-    public static float sumar(float x, float y){
+    public float sumar(float x, float y){
         return x + y;
     }
 
-    public static float sumar(int i, float j){
+    public float sumar(int i, float j){
         return i + j;
     }
 
-    public static float sumar(float i, int j){
+    public float sumar(float i, int j){
         return i + j;
     }
 
-    public static double sumar(double a, double b){
+    public double sumar(double a, double b){
         return a + b;
     }
 
-    public static int sumar(String a, String b){
+    public int sumar(String a, String b){
         int resultado;
         try {
             resultado = Integer.parseInt(a) + Integer.parseInt(b);
@@ -59,7 +56,7 @@ public class Calculadora {
         return resultado;
     }
 
-    public static int sumar(int a, int b, int c){
+    /*public int sumar(int a, int b, int c){
         return a + b + c;
-    }
+    }*/
 }

@@ -1,9 +1,9 @@
-package org.aguzman.poosobrecarga;
+package org.aguzman.poosobrecarga.varargs;
 
-public class EjemploSobrecarga {
+public class EjemploSobrecargaVarargs {
     public static void main(String[] args) {
 
-        Calculadora cal = new Calculadora();
+        CalculadoraVarargs cal = new CalculadoraVarargs();
 
         System.out.println("sumar int : " + cal.sumar(10, 5));
         System.out.println("sumar float: " + cal.sumar(10.0F, 5F));
