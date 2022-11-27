@@ -15,7 +15,7 @@ PushLog="/dev/null"
 # Mensaje
 message=$@
 if [ -z "$message" ]; then
-message="$(date)2022-11-25 EMPEZANDO HERENCIA"
+message="$(date)2022-11-27 SEGUIR CON HERENCIA"
 fi
 
 start=`date +%s`
