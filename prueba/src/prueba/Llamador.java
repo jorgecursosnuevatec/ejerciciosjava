@@ -4,9 +4,13 @@ public class Llamador {
 
 	public static void main(String[] args) {
 		
-		InterfazPrueba ip = new LlamaInterfaz();
+		Short a=100;
+		Integer b =300;
 		
-		ip.metodo1(0);
+		Long c= (long) a+b;
+		String d = String.valueOf(c*b);
+		
+		
 		
 
 	}
