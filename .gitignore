@@ -1,6 +1,4 @@
 
-
-
 ### NO SUBO LOS TEMPORALES ###
 ~$*.*
 *.tmp
@@ -13,8 +11,6 @@
 drivers/
 *.avi
 *.mp4
-
-
 
 ### Eclipse ###
 .metadata
