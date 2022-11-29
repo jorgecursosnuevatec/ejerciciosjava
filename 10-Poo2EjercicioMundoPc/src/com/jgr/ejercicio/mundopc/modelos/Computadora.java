@@ -13,11 +13,12 @@ public class Computadora {
 	private static int contadorComputadoras;
 
 	public Computadora() {
+		this.idComputadora=contadorComputadoras++;
 
 	}
 
 	public Computadora(String nombre, Monitor monitor, Teclado teclado, Raton raton) {
-		super();
+		this();
 		this.nombre = nombre;
 		this.monitor = monitor;
 		this.teclado = teclado;
@@ -25,7 +26,7 @@ public class Computadora {
 	}
 
 	public Computadora(String nombre, Monitor monitor, DispositivoEntrada dispo1, DispositivoEntrada dispo2) {
-		super();
+		this();
 		this.nombre = nombre;
 		this.monitor = monitor;
 

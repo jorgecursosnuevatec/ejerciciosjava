@@ -8,20 +8,18 @@ public class Monitor {
 	private static int contadorMonitores;
 
 	public Monitor() {
-		this.idMonitor = sumaContador();
+		this.idMonitor = contadorMonitores++;
 
 	}
 
 	public Monitor(String marca, double tamanio) {
-		super();
+		this();
 		this.marca = marca;
 		this.tamanio = tamanio;
-		this.idMonitor = sumaContador();
+		
 	}
 
-	private int sumaContador() {
-		return contadorMonitores++;
-	}
+	
 
 	/**
 	 * @return the idMonitor

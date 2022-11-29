@@ -14,7 +14,7 @@ public class Orden {
 	private int contadorOrdenes;
 
 	private int contadorComputadoras;
-	private int maxComputadoras = 25;
+	private static final int maxComputadoras = 25;
 	private static int totOrdenes;
 	private static int totPc;
 
@@ -52,6 +52,8 @@ public class Orden {
 	}
 
 	public Optional<Computadora> mostrarOrdenPedido(Computadora computadora) {
+		
+		lista.stream().filter(c -> computadora.getIdComputadora()==(c.getIdComputadora())).findAny();
 
 		return lista.stream().filter(c -> computadora.equals(c)).findAny();
 

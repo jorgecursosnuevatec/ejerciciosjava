@@ -15,7 +15,7 @@ PushLog="/dev/null"
 # Mensaje
 message=$@
 if [ -z "$message" ]; then
-message="$(date)2022-11-28 PTE TERMINAR EJERCICION ORDENES"
+message="$(date)2022-11-29 ++ARGUMENTOS VARIABLES"
 fi
 
 start=`date +%s`
