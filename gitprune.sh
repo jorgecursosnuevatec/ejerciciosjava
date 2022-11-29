@@ -15,7 +15,7 @@ PushLog="/dev/null"
 # Mensaje
 message=$@
 if [ -z "$message" ]; then
-message="$(date)2022-11-29 ++ARGUMENTOS VARIABLES"
+message="$(date)2022-11-29 ++INTERFACES"
 fi
 
 start=`date +%s`
