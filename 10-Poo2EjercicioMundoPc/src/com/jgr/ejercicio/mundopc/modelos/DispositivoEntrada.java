@@ -3,11 +3,10 @@ package com.jgr.ejercicio.mundopc.modelos;
 import java.util.Objects;
 
 public class DispositivoEntrada {
-	
+
 	private String tipoEntrada;
 	private String marca;
-	
-	
+
 	public DispositivoEntrada() {
 		super();
 	}
@@ -79,8 +78,5 @@ public class DispositivoEntrada {
 		builder.append("]");
 		return builder.toString();
 	}
-
-	
-	
 
 }

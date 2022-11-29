@@ -31,26 +31,20 @@ public class Computadora {
 
 		if (dispo1 instanceof Teclado) {
 			this.teclado = (Teclado) dispo1;
-		}else {
-			if(dispo1 instanceof Raton) {
-				this.raton = (Raton) dispo1;				
-			}			
+		} else {
+			if (dispo1 instanceof Raton) {
+				this.raton = (Raton) dispo1;
+			}
 		}
 		if (dispo2 instanceof Teclado) {
 			this.teclado = (Teclado) dispo2;
-		}else {
-			if(dispo2 instanceof Raton) {
-				this.raton = (Raton) dispo2;				
-			}			
+		} else {
+			if (dispo2 instanceof Raton) {
+				this.raton = (Raton) dispo2;
+			}
 		}
 
-
-
-
-
 	}
-
-
 
 	/**
 	 * @return the idComputadora
@@ -121,6 +115,7 @@ public class Computadora {
 	public void setRaton(Raton raton) {
 		this.raton = raton;
 	}
+
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
@@ -153,8 +148,6 @@ public class Computadora {
 		return builder.toString();
 	}
 
-	
-
 	@Override
 	public int hashCode() {
 		return Objects.hash(idComputadora);
@@ -171,6 +164,5 @@ public class Computadora {
 		Computadora other = (Computadora) obj;
 		return this.idComputadora == other.idComputadora;
 	}
-
 
 }

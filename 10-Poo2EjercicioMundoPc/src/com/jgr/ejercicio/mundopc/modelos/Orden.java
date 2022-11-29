@@ -12,7 +12,7 @@ public class Orden {
 	private Computadora computadora;
 
 	private int contadorOrdenes;
-	
+
 	private int contadorComputadoras;
 	private int maxComputadoras = 25;
 	private static int totOrdenes;
@@ -21,7 +21,7 @@ public class Orden {
 	public Orden() {
 		lista = new ArrayList<>();
 	}
-	
+
 	public Orden(List<Computadora> lista) {
 		super();
 		if (lista == null) {
@@ -30,7 +30,6 @@ public class Orden {
 
 		this.lista = lista;
 	}
-
 
 	public Orden(Computadora computadora) {
 
@@ -41,23 +40,21 @@ public class Orden {
 		lista.add(computadora);
 
 	}
+
 	public void agregarComputadora(Computadora computadora) {
-		
+
 		this.computadora = computadora;
 		if (lista == null) {
 			lista = new ArrayList<>();
 		}
 		lista.add(computadora);
-		
-	}
-	
-	public Optional<Computadora> mostrarOrdenPedido(Computadora computadora) {
-		
-		return lista.stream().filter(c->computadora.equals(c)).findAny();
-		
-		
-		
+
 	}
 
-	
+	public Optional<Computadora> mostrarOrdenPedido(Computadora computadora) {
+
+		return lista.stream().filter(c -> computadora.equals(c)).findAny();
+
+	}
+
 }
