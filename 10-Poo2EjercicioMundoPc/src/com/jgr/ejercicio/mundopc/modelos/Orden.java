@@ -3,7 +3,6 @@ package com.jgr.ejercicio.mundopc.modelos;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import java.util.function.Predicate;
 
 public class Orden {
 
