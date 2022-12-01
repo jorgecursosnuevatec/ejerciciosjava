@@ -5,8 +5,6 @@ import java.util.List;
 
 public class OrdenaTextoComparatorFuncional {
 
-	
-
 	public static void main(String[] args) {
 		List<String> textos = new ArrayList<>();
 
@@ -18,8 +16,10 @@ public class OrdenaTextoComparatorFuncional {
 		//si objeto<parametro<0
 
 		// ordenamos por longitud con funcion lambda
+		//el mismo va recorriendo el array
 		textos.sort((a, b) -> a.length() - b.length());
 		textos.forEach(System.out::println);
+		
 
 	}
 

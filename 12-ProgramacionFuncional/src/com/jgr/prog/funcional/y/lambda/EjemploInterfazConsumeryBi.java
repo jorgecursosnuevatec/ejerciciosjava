@@ -5,12 +5,9 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Properties;
 
-public class EjemploInterfazConsumer {
+public class EjemploInterfazConsumeryBi {
 
-	public EjemploInterfazConsumer() {
-		// TODO Auto-generated constructor stub
-	}
-
+	
 	public static void main(String[] args) {
 		Persona array[] = { new Persona("Nombre3", 66), new Persona("Nombre2", 67), new Persona("Nombre1", 66),
 				new Persona("Nombre3", 67) };

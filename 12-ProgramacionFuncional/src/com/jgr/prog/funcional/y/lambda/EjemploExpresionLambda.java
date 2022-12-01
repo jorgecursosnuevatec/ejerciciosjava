@@ -10,6 +10,8 @@ public class EjemploExpresionLambda {
 		// llama a la interfaz funcional
 		// esta seria una expresion lambda,guardamos este metodo en una variable
 		EjemploExpresionLambdaInterfazUsada ex = (a) -> System.out.println(a);
+		
+		//el metodo met en EjemploExpresionLambdaInterfazUsada ->void met(int data);
 		ex.met(100);
 
 		

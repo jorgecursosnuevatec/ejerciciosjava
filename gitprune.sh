@@ -15,7 +15,7 @@ PushLog="/dev/null"
 # Mensaje
 message=$@
 if [ -z "$message" ]; then
-message="$(date)2022-11-29 empiezo interfaces java.util.function,minuto 12:15 unaryoperator"
+message="$(date)2022-12-01  empiezo interfaces java.util.function,minuto 12:15 unaryoperator"
 fi
 
 start=`date +%s`
