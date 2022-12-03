@@ -1,4 +1,4 @@
-package com.jgr.excepciones;
+package com.jgr.excepciones.lanza;
 
 public class ManejoExcepciones {
 

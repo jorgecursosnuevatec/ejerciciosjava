@@ -1,4 +1,4 @@
-package com.jgr.excepciones.personalizadas;
+package com.jgr.excepciones.lanza.personalizadas;
 
 public class ExcepcionPersonalizadaException extends Exception{
 	

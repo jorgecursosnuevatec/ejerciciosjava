@@ -1,15 +1,15 @@
-package com.jgr.excepciones;
+package com.jgr.excepciones.lanza;
 
 import java.util.Scanner;
 
+import com.jgr.excepciones.lanza.personalizadas.ExcepcionPersonalizadaException;
 
-import com.jgr.excepciones.personalizadas.ExcepcionPersonalizadaRuntime;
-
+// TODO: Auto-generated Javadoc
 /**
  * The Class LanzaExcepcionPersonalizadaException.
- * Como la excepcion hereda exception ES OBLIGATORIO poner el throws
+ * Como la excepcion hereda de runtimeexception NO ES OBLIGATORIO poner el throws
  */
-public class LanzaExcepcionPersonalizadaRuntime {
+public class LanzaExcepcionPersonalizadaExceptionVentana {
 
 	/**
 	 * The main method.
@@ -17,7 +17,7 @@ public class LanzaExcepcionPersonalizadaRuntime {
 	 * @param args the arguments
 	 * @throws ExcepcionPersonalizadaException the excepcion personalizada exception
 	 */
-	public static void main(String[] args)  {
+	public static void main(String[] args) throws ExcepcionPersonalizadaException {
 
 		int dividendo = 0;
 		int divisor = 0;
@@ -26,22 +26,17 @@ public class LanzaExcepcionPersonalizadaRuntime {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Introduce dividendo=");
 
-		
-		//aqui el try/catch es OPCIONAL
 		try {
 			datos = sc.nextLine();
 			dividendo = Integer.parseInt(datos);
 
-		} catch (ExcepcionPersonalizadaRuntime e) {
+		} catch (Exception e) {
 			//le paso un mensaje y la excepcion
-			throw new  ExcepcionPersonalizadaRuntime ("Dividendo "+ datos +" no es un numero", e);
-		}
-		finally {
-			System.out.println("tratado el dividendo");
+			throw new ExcepcionPersonalizadaException("Dividendo "+ datos +" no es un numero", e);
 		}
 
 		if (dividendo == 0) {
-			throw new ExcepcionPersonalizadaRuntime("Dividendo es cero");
+			throw new ExcepcionPersonalizadaException("Dividendo es cero");
 		}
 		
 		System.out.println("Introduce divisor=");
@@ -49,13 +44,14 @@ public class LanzaExcepcionPersonalizadaRuntime {
 		try {
 			datos = sc.nextLine();
 			divisor = Integer.parseInt(datos);
-			
-		} catch (Exception n) {
-			throw new ExcepcionPersonalizadaRuntime("Divisor "+ datos +" no es un numero",n);
+		
+		
+		} catch (NumberFormatException n) {
+			throw new ExcepcionPersonalizadaException("Divisor "+ datos +" no es un numero",n);
 		}
 		
 		if (divisor == 0) {
-			throw new ExcepcionPersonalizadaRuntime("Numerador es cero");
+			throw new ExcepcionPersonalizadaException("Numerador es cero");
 		}
 		
 		
