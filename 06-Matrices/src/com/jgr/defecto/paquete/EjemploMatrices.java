@@ -52,7 +52,8 @@ public class EjemploMatrices {
         	
         }
         
-        int[][] numeros2 = new int[4][4];
+        System.out.println("************************");
+        int[][][] numeros2 = new int[4][4][4];
         
         /*
          * 			columna		columna		columna 	columna	
@@ -62,20 +63,27 @@ public class EjemploMatrices {
          * fila		0			1			2			3        
          * */
         
-        for (int i=0;i<numeros2.length;i++) {
-        	
-        	for (int j= 0;j<numeros2[i].length;j++) {
-        		
+        for (int i = 0; i < numeros2.length; i++) {
 
-        		System.out.println("valor i->"+i + " valor j->"+j);
-        		numeros2[i][j]=j+i;
-        		
-        		
-        	}        	
+        	for (int j = 0; j < numeros2[i].length; j++) {
+
+        		for (int k = 0; k < numeros2[i][j].length; k++) {     			
+
+        			numeros2[i][j][k] = i + j + k;
+        			System.out.println("valor de i->"+i + " j->"+j +" k->" + k+ " guardado->" + numeros2[i][j][k]);
+
+        		}
+
+        	}
         }
    
+     
    
-   
+        int [][] edades = {{1,2,3},{4,5,6},{7,8,9},{10,11,12},{13,14,15}};
+        
+        System.out.println("filas->" + edades.length);
+        System.out.println("columnas->" + edades[0].length);
+        
         
         
     }

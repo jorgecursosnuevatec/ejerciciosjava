@@ -33,7 +33,10 @@ public class EjemploInterfazPredicate {
 		
 		List<Persona> lista = new ArrayList<>(Arrays.asList(array));
 		
-		lista.removeIf(p->p.getEdad()>66);
+		lista.removeIf(
+				
+				p->p.getEdad()>66
+				);
 		lista.forEach(System.out::println);
 		
 
