@@ -3,8 +3,17 @@ package com.jgr.prog.funcional.y.lambda;
 import java.util.ArrayList;
 import java.util.List;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class OrdenaTextoComparatorFuncional.
+ */
 public class OrdenaTextoComparatorFuncional {
 
+	/**
+	 * The main method.
+	 *
+	 * @param args the arguments
+	 */
 	public static void main(String[] args) {
 		List<String> textos = new ArrayList<>();
 

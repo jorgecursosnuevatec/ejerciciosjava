@@ -3,8 +3,17 @@ package com.jgr.prog.funcional.y.lambda;
 import java.util.ArrayList;
 import java.util.List;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class EjemploExpresionLambda.
+ */
 public class EjemploExpresionLambda {
 
+	/**
+	 * The main method.
+	 *
+	 * @param args the arguments
+	 */
 	public static void main(String[] args) {
 
 		// llama a la interfaz funcional

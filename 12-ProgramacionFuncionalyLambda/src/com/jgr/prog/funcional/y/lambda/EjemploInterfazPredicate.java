@@ -5,11 +5,24 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+
+/**
+ * The Class EjemploInterfazPredicate.
+ * recibe un dato y devuelve un boolean
+ * metodo abstracto test que realiza una comprobacion y devuelve un boolean
+ * boolean test(T t)
+ * https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Predicate.html
+ * por ejemplo removeIf
+ */
 public class EjemploInterfazPredicate {
 	
-	//interfaz Predicate<T>,devuelve un boolean
-	//metodo abstracto test que realiza una comprobacion y devuelve un boolean
+	
 
+	/**
+	 * The main method.
+	 *
+	 * @param args the arguments
+	 */
 	public static void main(String[] args) {
 		
 		Persona array []= {

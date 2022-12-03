@@ -2,9 +2,18 @@ package com.jgr.prog.funcional.y.lambda;
 
 import java.util.Arrays;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class OrdenaTextoInterfazComparable.
+ */
 public class OrdenaTextoInterfazComparable {
 
 
+	/**
+	 * The main method.
+	 *
+	 * @param args the arguments
+	 */
 	public static void main(String[] args) {
 		//persona implementa comparable
 		Persona lista []= {

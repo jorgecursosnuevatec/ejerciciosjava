@@ -4,14 +4,19 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
+
+/**
+ * The Class EjemploInterfazFunction.
+ * interfaz function <T,R>,devuelve un objeto Resultado R R apply(T t)
+ * metodo apply que a partir de un objeto realiza una operacion y devuelve un resultado R apply(T t)
+ * para transformar datos,como map de Stream
+ * https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html
+ * con dos parametros es BiFunction
+ * https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/BiFunction.html
+ */
 public class EjemploInterfazFunction {
 
-	//interfaz function <T,R>,devuelve un objeto Resultado R
-	//metodo apply que a partir de un objeto realiza una operacion y devuelve un resultado R apply(T t)
-	//para transformar datos,como map de Stream
-	
 	public static void main(String[] args) {
 		
 		Persona array []= {
@@ -27,6 +32,9 @@ public class EjemploInterfazFunction {
 
 		
 		modificado.forEach(System.out::println);
+		
+		
+		
 	}
 
 }

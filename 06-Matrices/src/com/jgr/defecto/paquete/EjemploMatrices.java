@@ -3,7 +3,12 @@ public class EjemploMatrices {
     public static void main(String[] args) {
 
         int[][] numeros = new int[2][4];
-
+        
+        /*
+         * 			columna		columna		columna 	columna	
+         * fila		1			2			3			4
+         * fila		11			12			13			14        
+         * */
         numeros[0][0] = 1;
         numeros[0][1] = 2;
         numeros[0][2] = 3;
@@ -37,5 +42,41 @@ public class EjemploMatrices {
         System.out.println("num6 = " + num6);
         System.out.println("num7 = " + num7);
         System.out.println("num8 = " + num8);
+       
+        
+        for (int i=0;i<numeros.length;i++) {
+        	
+        	for (int j=0;j<numeros[i].length;j++) {
+        		System.out.println("valor de i->"+i + " j->"+j +" guardado->" + numeros[i][j]);
+        	}
+        	
+        }
+        
+        int[][] numeros2 = new int[4][4];
+        
+        /*
+         * 			columna		columna		columna 	columna	
+         * fila		0			1			2			3
+         * fila		0			1			2			3        
+         * fila		0			1			2			3        
+         * fila		0			1			2			3        
+         * */
+        
+        for (int i=0;i<numeros2.length;i++) {
+        	
+        	for (int j= 0;j<numeros2[i].length;j++) {
+        		
+
+        		System.out.println("valor i->"+i + " valor j->"+j);
+        		numeros2[i][j]=j+i;
+        		
+        		
+        	}        	
+        }
+   
+   
+   
+        
+        
     }
 }
