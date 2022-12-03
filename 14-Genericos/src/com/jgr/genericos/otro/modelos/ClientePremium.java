@@ -7,6 +7,6 @@ public class ClientePremium  extends Cliente implements Comparable<ClientePremiu
 
     @Override
     public int compareTo(ClientePremium o) {
-        return 0;
+        return this.id.compareTo(o.getId());
     }
 }

@@ -15,7 +15,7 @@ PushLog="/dev/null"
 # Mensaje
 message=$@
 if [ -z "$message" ]; then
-message="$(date)2022-12-03 genericos guzman"
+message="$(date)2022-12-03 genericos con limites 223"
 fi
 
 start=`date +%s`
