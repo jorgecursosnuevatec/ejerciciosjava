@@ -3,17 +3,17 @@ package com.jgr.genericos;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Lanzadora {
+public class LanzadoraFacil {
 
 	public static void main(String[] args) {
-		ClaseGenerica<Integer> clase = new ClaseGenerica(15); 
+		ClaseGenericaFacil<Integer> clase = new ClaseGenericaFacil(15); 
 
 		clase.obtenerTipo();
 
-		clase= new ClaseGenerica("Hola");
+		clase= new ClaseGenericaFacil("Hola");
 		clase.obtenerTipo();
 
-		clase = new ClaseGenerica(123f);
+		clase = new ClaseGenericaFacil(123f);
 		clase.obtenerTipo();
 
 		Map<String, String> miMapa = new HashMap<>();
@@ -22,7 +22,7 @@ public class Lanzadora {
 		miMapa.put("valor3", "Rosario");
 		miMapa.put("valor3", "Carlos");
 
-		clase = new ClaseGenerica(miMapa);
+		clase = new ClaseGenericaFacil(miMapa);
 		clase.obtenerTipo();
 
 

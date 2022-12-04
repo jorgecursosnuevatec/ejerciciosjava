@@ -1,10 +1,10 @@
 package com.jgr.genericos;
 
-public class ClaseGenerica<T> {
+public class ClaseGenericaFacil<T> {
 
 	private T objeto;
 
-	public ClaseGenerica(T objeto) {
+	public ClaseGenericaFacil(T objeto) {
 		this.objeto = objeto;
 	}
 	

@@ -2,6 +2,7 @@ package com.jgr.genericos.otro.modelos;
 
 public class Cliente extends BaseEntity{
 
+	
     private String nombre;
     private String apellido;
 
