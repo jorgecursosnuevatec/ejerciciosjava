@@ -5,7 +5,6 @@ import java.util.TreeSet;
 
 import com.jgr.colecciones.modelo.Alumno;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class EjemploTreeSetComparable.
  * TreeSet-> es ordenado,pero no permite duplicados. Ordena cuando se modifica 
@@ -27,7 +26,7 @@ public class EjemploTreeSetComparable {
         sa.add(new Alumno("Jano", 7));
         sa.add(new Alumno("Andres", 3));
         sa.add(new Alumno("Zeus", 2));
-        sa.add(new Alumno("Zeus", 8));
+        sa.add(new Alumno("Zeus", 8));//este esta duplicado
         System.out.println(sa);
     }
 

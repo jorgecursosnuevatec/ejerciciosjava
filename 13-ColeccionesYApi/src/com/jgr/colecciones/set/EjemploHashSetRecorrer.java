@@ -30,7 +30,8 @@ public class EjemploHashSetRecorrer {
 	        sa.add(new Alumno("Zeus2", 2));
 	        sa.add(new Alumno("Zeus", 2));
 	        sa.add(new Alumno("Lucas", 2));
-	        sa.add(new Alumno("Lucas", 3));
+	        sa.add(new Alumno("Lucas", 2));//esta repetido solo sale uno
+	        sa.add(new Alumno("Lucas", 4));
 	        System.out.println(sa);
 
 	        /*System.out.println("Utilizando un for clásico");

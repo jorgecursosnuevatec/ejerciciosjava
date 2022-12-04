@@ -2,7 +2,8 @@ package com.jgr.colecciones.modelo;
 
 import java.util.Objects;
 
-public class Alumno implements Comparable<Alumno> {
+//public class Alumno implements ComparableYComparator<Alumno> {
+	public class Alumno implements Comparable<Alumno>{
 		private String nombre;
 		private Integer nota;
 
@@ -40,6 +41,7 @@ public class Alumno implements Comparable<Alumno> {
 			if (this.nombre == null) {
 				return 0;
 			}
+			
 			return this.nombre.compareTo(a.nombre);
 			/*
 			 * if(this.nota == a.nota){ return 0; } if(this.nota > a.nota){ return 1; } else
