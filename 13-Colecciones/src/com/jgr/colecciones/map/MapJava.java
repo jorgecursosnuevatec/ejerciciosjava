@@ -1,4 +1,4 @@
-package com.jgr.colecciones;
+package com.jgr.colecciones.map;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -8,10 +8,24 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+/**
+ * The Class MapJava.
+ * interface MAP, no de Collection como las otras
+ * HashMap-> usa el algoritmo Hash lo necesita,no admite duplicados
+ * LinkedHashMap-> extiende de HashMap,usa clave-valor
+ * TreeMap-> es un mapa ordenado
+ * la informacion se guarda en formato clave-valor
+ * 
+ */
 public class MapJava {
 
+	/**
+	 * The main method.
+	 *
+	 * @param args the arguments
+	 */
 	public static void main(String[] args) {
-		List miLista = new ArrayList();
+		List<String> miLista = new ArrayList<String>();
 		miLista.add("Lunes");
 		miLista.add("Martes");
 		miLista.add("Miercoles");
@@ -20,7 +34,7 @@ public class MapJava {
 		miLista.add("Viernes");
 		imprimir(miLista);
 
-		Set miSet = new HashSet();
+		Set<String> miSet = new HashSet<String>();
 		miSet.add("Lunes");
 		miSet.add("Martes");
 		miSet.add("Miercoles");
@@ -29,7 +43,7 @@ public class MapJava {
 		miSet.add("Viernes");
 		imprimir(miSet);
 
-		Map miMapa = new HashMap();
+		Map<String, String> miMapa = new HashMap<String, String>();
 		miMapa.put("valor1", "Lunes");
 		miMapa.put("valor2", "Martes");
 		miMapa.put("valor3", "Miercoles");
@@ -44,6 +58,11 @@ public class MapJava {
 
 	}
 
+	/**
+	 * Imprimir.
+	 *
+	 * @param coleccion the coleccion
+	 */
 	public static void imprimir(Collection coleccion) {
 		System.out.println("****************************");
 		coleccion.forEach(elemento -> {

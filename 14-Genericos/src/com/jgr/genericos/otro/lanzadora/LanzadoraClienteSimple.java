@@ -6,7 +6,6 @@ import java.util.List;
 import com.jgr.genericos.otro.modelos.Cliente;
 import com.jgr.genericos.otro.modelos.ClientePremium;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class LanzadoraClienteSimple.
  */
@@ -53,10 +52,6 @@ public class LanzadoraClienteSimple {
 		System.out.println(obtieneMayor(150033f,2f,3f));
 		System.out.println(obtieneMayor("caramelo","betun","zanahoria"));
 		
-		
-		
-		
-
 	}
 
 	/**

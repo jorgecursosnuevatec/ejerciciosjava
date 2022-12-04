@@ -1,4 +1,4 @@
-package com.jgr.colecciones;
+package com.jgr.colecciones.set;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -6,9 +6,16 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-// TODO: Auto-generated Javadoc
+
 /**
  * The Class SetJava.
+ * Extiende la interfaz Collection y de ahi la interface Set
+ * NO admiten duplicados y NO mantiene el orden
+ * Por debajo trabajan con Map
+ * HashSet-> no mantiene el orden,ni el de insercion,se puede usar comparable,sus elementos tienen que implementar hashcode
+ * LinkedHashSet-> hereda de HashSet,trabaja tb con lista enlazada. Mantiene el orden en el que se añaden elementos
+ * TreeSet-> es ordenado,pero no permite duplicados. Ordena cuando se modifica
+ * 
  */
 public class SetJava {
 

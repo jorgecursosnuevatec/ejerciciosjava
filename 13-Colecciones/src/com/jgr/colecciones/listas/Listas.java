@@ -1,23 +1,26 @@
-package com.jgr.colecciones;
+package com.jgr.colecciones.listas;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class Listas.
+ *     /**
+     * The main method.
+     * mantiene el orden
+     * admiten duplicados
+     * usa equals para comparar
+     * ARRAYLIST->acceso lectura muy rapido,pero eliminar/modificar tarda mas porque no deja espacios vacios
+     * LINKED LIST->listas enlazadas,es mas rapido que la lista para modificaciones,tarda mas en buscar aleatoria
+     * 				trabaja con pilas/colas
+     * VECTOR->parecido al arraylist,es sincronizado/protegido para concurrencia cuando acceden varios hilos a la vez solo lo usa uno 
+     *		   costoso en rendimiento
  */
 public class Listas {
 
-    /**
-     * The main method.
-     * las listas salen tal y como se declaran
-     *
-     * @param args the arguments
-     */
     public static void main(String[] args) {
-        List miLista = new ArrayList();
+        List<String> miLista = new ArrayList<String>();
         miLista.add("Lunes");
         miLista.add("Martes");
         miLista.add("Miercoles");
