@@ -11,7 +11,6 @@
 AddLog="/dev/null"
 CommitLog="/dev/null"
 PushLog="/dev/null"
-
 # Mensaje
 message=$@
 if [ -z "$message" ]; then
