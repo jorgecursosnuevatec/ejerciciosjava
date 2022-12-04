@@ -1,6 +1,6 @@
 package com.jgr.genericos.otro.modelos;
 
-public class Cliente extends BaseEntity{
+public class Cliente extends ClaseModelo{
 
 	
     private String nombre;

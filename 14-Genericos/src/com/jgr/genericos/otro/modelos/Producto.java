@@ -1,6 +1,6 @@
 package com.jgr.genericos.otro.modelos;
 
-public class Producto extends BaseEntity{
+public class Producto extends ClaseModelo{
     private String descripcion;
     private Double precio;
 

@@ -3,12 +3,12 @@ package com.jgr.genericos.otro.modelos.repositorio;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.jgr.genericos.otro.modelos.BaseEntity;
+import com.jgr.genericos.otro.modelos.ClaseModelo;
 import com.jgr.genericos.otro.modelos.repositorio.excepciones.EscrituraAccesoDatoException;
 import com.jgr.genericos.otro.modelos.repositorio.excepciones.LecturaAccesoDatoException;
 import com.jgr.genericos.otro.modelos.repositorio.excepciones.RegistroDuplicadoAccesoDatoException;
 
-public abstract class AbstractaListRepositorio<T extends BaseEntity> implements OrdenablePaginableCrudRepositorio<T> {
+public abstract class AbstractaListRepositorio<T extends ClaseModelo> implements OrdenablePaginableCrudRepositorio<T> {
 
     protected List<T> dataSource;
 

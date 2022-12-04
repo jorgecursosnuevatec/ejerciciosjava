@@ -1,4 +1,4 @@
-package com.jgr.genericos.otro.lanzadora;
+package com.jgr.genericos.otro.modelos.repositorio.lanzadora;
 
 import java.util.List;
 
