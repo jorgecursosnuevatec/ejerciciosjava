@@ -14,7 +14,7 @@ PushLog="/dev/null"
 # Mensaje
 message=$@
 if [ -z "$message" ]; then
-message="$(date)2022-12-05 TERMINADO API JAVA Y COLECCIONES"
+message="$(date)2022-12-05 257 HILOS"
 fi
 
 start=`date +%s`

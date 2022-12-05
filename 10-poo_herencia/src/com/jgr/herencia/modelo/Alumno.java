@@ -1,4 +1,4 @@
-package org.aguzman.pooherencia;
+package com.jgr.herencia.modelo;
 
 public class Alumno extends Persona {
     private String institucion;

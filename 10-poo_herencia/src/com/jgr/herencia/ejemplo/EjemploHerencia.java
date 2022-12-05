@@ -1,6 +1,6 @@
 package com.jgr.herencia.ejemplo;
 
-import org.aguzman.pooherencia.*;
+import com.jgr.herencia.modelo.*;
 
 public class EjemploHerencia {
     public static void main(String[] args) {

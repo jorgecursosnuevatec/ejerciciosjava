@@ -1,9 +1,9 @@
 package com.jgr.herencia.ejemplo;
 
-import org.aguzman.pooherencia.Alumno;
-import org.aguzman.pooherencia.AlumnoInternacional;
-import org.aguzman.pooherencia.Persona;
-import org.aguzman.pooherencia.Profesor;
+import com.jgr.herencia.modelo.Alumno;
+import com.jgr.herencia.modelo.AlumnoInternacional;
+import com.jgr.herencia.modelo.Persona;
+import com.jgr.herencia.modelo.Profesor;
 
 public class EjemploHerenciaToString {
 	public static void main(String[] args) {

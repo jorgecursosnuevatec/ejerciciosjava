@@ -17,8 +17,7 @@ public class PruebaHashMap {
 //        Map<String, Object> persona = new TreeMap<>(Comparator.reverseOrder());
 //ordenamos por la longitud de la clave		
         Map<String, Object> persona = new TreeMap<>(Comparator.comparing(String::length).reversed());
-		
-        
+		        
         System.out.println("contiene elementos=" + !persona.isEmpty());
         persona.put("numero1", "1234");
         persona.put("numero2", "12345");
