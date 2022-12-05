@@ -6,11 +6,23 @@ package com.jgr.paquete.hilos.modelos;
  */
 public class TareaThread extends Thread{
 	
+	String name;
+	public TareaThread(String name) {
+		super(name);
+		this.name=name;
+				
+	}
+	
 	/**
 	 * Run.
 	 */
 	public void run() {
-		System.out.println("Clase TareaThread");
+		System.out.println("Entro en Clase TareaThread llamada->"+getName());
+		
+		for (int i=0;i<10;i++) {
+			System.out.println("Dentro del run de :"+ getName()+" ->"+this.getState() +" "+ i);
+		}
+		System.out.println("Salgo del run de :"+ getName()+" ->" +this.getState());
 	}
 
 }

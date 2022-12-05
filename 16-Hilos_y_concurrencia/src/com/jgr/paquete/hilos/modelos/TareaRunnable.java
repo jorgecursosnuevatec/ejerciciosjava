@@ -6,12 +6,22 @@ package com.jgr.paquete.hilos.modelos;
  */
 public class TareaRunnable implements Runnable{
 
-	/**
-	 * Run.
-	 */
+	private String name;
+	public TareaRunnable(String name) {
+		
+		this.name=name;
+				
+	}
 	@Override
 	public void run() {
-		System.out.println("Clase TareaRunnable");
+		
+		System.out.println("Entro en Clase TareaRunnable llamada->"+ this.name);
+		for (int i=0;i<10;i++) {
+			System.out.println("Dentro del run de :"+ this.name +" "+ i);
+		}
+		System.out.println("Salgo del run de :"+ this.name);
+		
+		
 		
 		
 	}
