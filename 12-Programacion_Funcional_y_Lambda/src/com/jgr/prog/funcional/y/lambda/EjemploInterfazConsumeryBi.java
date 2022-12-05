@@ -1,23 +1,27 @@
 package com.jgr.prog.funcional.y.lambda;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 import java.util.Properties;
 import java.util.function.BiConsumer;
 import java.util.function.Consumer;
+import java.util.function.Supplier;
+
+
+import com.jgr.prog.funcional.y.lambda.models.*;
 
 /**
  * The Class EjemploInterfazConsumeryBi.
- * solo tiene un metodo abstracto que se llama accpet que realiza algun proceso con lo que recibe
+ * solo tiene un metodo abstracto que se llama accept que realiza algun proceso con lo que recibe
  *void accept(T t)
- *Represents an operation that accepts a single input argument and returns no result. Unlike most other functional interfaces,
- * Consumer is expected to operate via side-effects.
+ *Represents an operation that accepts a single input argument and returns no result.
+ * Unlike most other functional interfaces,Consumer is expected to operate via side-effects.
  * https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Consumer.html
  */
 public class EjemploInterfazConsumeryBi {
-
-	
 	/**
 	 * The main method.
 	 *
@@ -25,6 +29,45 @@ public class EjemploInterfazConsumeryBi {
 	 */
 	public static void main(String[] args) {
 		
+		
+		//acepta una fecha y la imprime,no devuelve nada
+		Consumer<Date> consumidor = fecha -> {
+            SimpleDateFormat f = new SimpleDateFormat("yyyy-MM-dd");
+            System.out.println(f.format(fecha));
+        };
+        
+        consumidor.accept(new Date());
+
+//le pasamos un string y un integer,no devuelve nada
+        BiConsumer<String, Integer> consumidorBi =
+        		(nombre, edad) -> System.out.println(nombre + ", tiene " + edad + " años!");
+
+        consumidorBi.accept("pepe", 20);
+
+        Consumer<String> consumidor2 = System.out::println;
+        consumidor2.accept("Hola mundo lambda");
+
+        List<String> nombres = Arrays.asList("andres", "pepe", "luz", "paco");
+        nombres.forEach(consumidor2);
+
+        Supplier<Usuario> creaUsuario = Usuario::new;
+        Usuario usuario = creaUsuario.get();
+
+        BiConsumer<Usuario, String> asignarNombre = Usuario::setNombre;
+        //esta es otra manera de hacerlo
+        BiConsumer<Usuario,String> asignarNombre2= (usu,nombre)->{usu.setNombre(nombre);};
+        
+        asignarNombre.accept(usuario, "Andrés");
+        System.out.println("Nombre usuario: " + usuario.getNombre());
+        asignarNombre2.accept(usuario, "FranciscoLorin");
+        System.out.println("Nombre usuario: " + usuario.getNombre());
+        
+
+        Supplier<String> proveedor = () -> "Hola mundo lambda supplier";
+
+        System.out.println(proveedor.get());
+        
+        
 		Consumer<String> cr=(String a)-> System.out.println(a);
 		cr.accept("Hola");
 		
@@ -86,5 +129,8 @@ public class EjemploInterfazConsumeryBi {
         equals.accept(listaa, listb);
 
 	}
+	
+	
+	
 
 }

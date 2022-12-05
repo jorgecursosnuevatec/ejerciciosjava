@@ -1,10 +1,10 @@
-package com.jgr.prog.funcional.y.lambda;
+package com.jgr.prog.funcional.y.lambda.models;
 // TODO: Auto-generated Javadoc
 
 /**
  * The Class Persona.
  */
-class Persona implements Comparable<Persona> {
+public class Persona implements Comparable<Persona> {
 	
 	/** The nombre. */
 	private String nombre;

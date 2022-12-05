@@ -3,7 +3,7 @@ package com.jgr.prog.funcional.y.lambda;
 import java.util.ArrayList;
 import java.util.List;
 
-// TODO: Auto-generated Javadoc
+
 /**
  * The Class EjemploExpresionLambda.
  */

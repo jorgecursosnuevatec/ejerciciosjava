@@ -2,7 +2,8 @@ package com.jgr.prog.funcional.y.lambda;
 
 import java.util.Arrays;
 
-// TODO: Auto-generated Javadoc
+import com.jgr.prog.funcional.y.lambda.models.Persona;
+
 /**
  * The Class OrdenaTextoInterfazComparable.
  */

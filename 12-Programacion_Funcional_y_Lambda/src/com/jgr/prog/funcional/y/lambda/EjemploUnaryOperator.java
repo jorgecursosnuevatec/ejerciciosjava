@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import com.jgr.prog.funcional.y.lambda.models.Persona;
+
 /**
  * The Class EjemploUnaryOperator.
  */
@@ -30,7 +32,20 @@ public class EjemploUnaryOperator {
 		
 		lista.forEach(System.out::println);
 		
-		List<Integer> lista2 = new ArrayList<Integer>();
+		Persona array []= {
+				new Persona("Nombre3",66),new Persona("Nombre2",67),
+				new Persona("Nombre1",66),new Persona("Nombre3",67)
+		};
+		
+		
+		List<Persona> lista2 = new ArrayList<>(Arrays.asList(array));
+		
+		//aqui cambio las personas por otra, el metodo replac
+		lista2.replaceAll(n->
+		new Persona("nombrenuevo", (int)(Math.random()*10+1)));
+		lista2.forEach(System.out::println);
+		
+		
 		
 		
 

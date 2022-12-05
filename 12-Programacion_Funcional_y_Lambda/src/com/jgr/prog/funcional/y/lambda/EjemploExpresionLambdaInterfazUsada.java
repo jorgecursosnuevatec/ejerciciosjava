@@ -1,7 +1,6 @@
 package com.jgr.prog.funcional.y.lambda;
 
 
-// TODO: Auto-generated Javadoc
 /**
  * The Interface EjemploExpresionLambdaInterfazUsada.
  */
