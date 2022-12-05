@@ -27,7 +27,8 @@ public class EjemploHashMap {
         persona.put("apellidoPaterno", "Doe");
         persona.put("email", "john.doe@email.com");
         persona.put("edad", 30);
-
+        
+        //OTRO MAP ,HASHMAP ANIDADO
         Map<String, String> direccion = new HashMap<>();
         direccion.put("pais", "USA");
         direccion.put("estado", "California");
@@ -35,8 +36,8 @@ public class EjemploHashMap {
         direccion.put("calle", "One Street");
         direccion.put("numero", "120");
 
+        //INSERTAMOS EN EL MAP OTRO DEL TIPO DIRECCION
         persona.put("direccion", direccion);
-
         System.out.println("persona = " + persona);
         
         String nombre = (String) persona.get("nombre");
@@ -47,6 +48,7 @@ public class EjemploHashMap {
         Map<String, String> direccionPersona = (Map<String, String>)persona.get("direccion");
         String pais = direccionPersona.get("pais");
         String ciudad = direccionPersona.get("ciudad");
+        //EN CASO DE QUE NO EXISTA LA CLAVE LE METE UN VALOR POR DEFECTO
         String barrio = direccionPersona.getOrDefault("barrio", "La playa");
         System.out.println("El pais de " + nombre + " es: " + pais);
         System.out.println("La ciudad de " + nombre + " es: " + ciudad);
@@ -61,24 +63,29 @@ public class EjemploHashMap {
 
         b2 = persona.containsValue("john.doe@email.co");
         System.out.println("b2 = " + b2);
-
-        System.out.println("========================== values");
+        
+        //solo valores pero tratandolo como un object, dentro del campo valor puede haber numeros y string
+        System.out.println("========================== values VALORES");
         Collection<Object> valores = persona.values();
         for(Object v: valores){
             System.out.println("v = " + v);
         }
-
-        System.out.println("========================= keySet");
+        //solo claves
+        System.out.println("========================= keySet CLAVES");
         Set<String> llaves = persona.keySet();
         for(String k: llaves){
             System.out.println("k = " + k);
         }
-
-        System.out.println("========================== entrySet");
+        
+        //todo
+        System.out.println("========================== entrySet lista TODO");
         for(Map.Entry<String, Object> par: persona.entrySet()){
+ 
             Object valor = par.getValue();
-            if(valor instanceof Map){
+        	//SI EL VALOR QUE RECUPERA ES UN MAPA            
+            if(valor instanceof Map){ 	
                 String nom = (String) persona.get("nombre");
+                //CONVERTIMOS EL MAP A 
                 Map<String, String> direccionMap = (Map<String, String>) valor;
                 for(Map.Entry<String, String> parDir: direccionMap.entrySet()){
                     System.out.println(parDir.getKey() + " => " + parDir.getValue());

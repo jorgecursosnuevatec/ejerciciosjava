@@ -30,6 +30,13 @@ public class EjemploTreeMap {
 
         persona.put("direccion", direccion);
         System.out.println("persona = " + persona);
+        
+        for(Map.Entry<String, Object> par: persona.entrySet()){
+        	
+        	System.out.println("clave->"+par.getKey());
+        	System.out.println("valor->"+ par.getValue());
+        	
+        }
 
     }
 }
