@@ -14,7 +14,7 @@ PushLog="/dev/null"
 # Mensaje
 message=$@
 if [ -z "$message" ]; then
-message="$(date)2022-12-06 TERMINADA 267 tareas programadas"
+message="$(date)2022-12-06 TERMINADOS HILOS"
 fi
 
 start=`date +%s`
