@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * The Class OrdenaTextoComparatorFuncional.
+ * The Class ComparatorFuncionalOrdenaTexto.
  */
-public class OrdenaTextoComparatorFuncional {
+public class ComparatorFuncionalOrdenaTexto {
 
 	/**
 	 * The main method.

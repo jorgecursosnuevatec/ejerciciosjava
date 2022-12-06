@@ -15,7 +15,7 @@ PushLog="/dev/null"
 # Mensaje
 message=$@
 if [ -z "$message" ]; then
-message="$(date) 2022-12-03 sigo con excepciones"
+message="$(date) 2022-12-06 renombrados"
 fi
 
 start=`date +%s`

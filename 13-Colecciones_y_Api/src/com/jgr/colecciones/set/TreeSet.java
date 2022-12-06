@@ -6,10 +6,10 @@ import java.util.TreeSet;
 
 // TODO: Auto-generated Javadoc
 /**
- * The Class EjemploTreeSet.
+ * The Class TreeSet.
  * TreeSet-> es ordenado,pero no permite duplicados. Ordena cuando se modifica 
  */
-public class EjemploTreeSet {
+public class TreeSet {
 	 
  	/**
  	 * The main method.

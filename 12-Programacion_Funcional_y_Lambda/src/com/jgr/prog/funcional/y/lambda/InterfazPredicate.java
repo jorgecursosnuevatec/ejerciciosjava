@@ -11,14 +11,14 @@ import com.jgr.prog.funcional.y.lambda.models.Usuario;
 
 
 /**
- * The Class EjemploInterfazPredicate.
+ * The Class InterfazPredicate.
  * recibe un dato y devuelve un boolean
  * metodo abstracto test que realiza una comprobacion y devuelve un boolean
  * boolean test(T t)
  * https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Predicate.html
  * por ejemplo removeIf
  */
-public class EjemploInterfazPredicate {
+public class InterfazPredicate {
 	
 	
 	public static void main(String[] args) {

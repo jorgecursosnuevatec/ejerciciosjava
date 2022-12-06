@@ -2,10 +2,10 @@ package com.jgr.prog.funcional.y.lambda;
 
 
 /**
- * The Interface EjemploExpresionLambdaInterfazUsada.
+ * The Interface ExpresionLambdaInterfazUsadaMia.
  */
 //esta seria una interfaz funcional,solo tiene un metodo . El default no cuenta
-public interface EjemploExpresionLambdaInterfazUsada {
+public interface ExpresionLambdaInterfazUsadaMia {
 	
 	/**
 	 * Met.

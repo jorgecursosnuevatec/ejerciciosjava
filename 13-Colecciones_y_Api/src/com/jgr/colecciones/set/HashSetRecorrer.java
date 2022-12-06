@@ -8,10 +8,10 @@ import com.jgr.colecciones.modelo.Alumno;
 
 // TODO: Auto-generated Javadoc
 /**
- * The Class EjemploHashSetRecorrer.
+ * The Class HashSetRecorrer.
  *  HashSet-> no mantiene el orden,ni el de insercion,se puede usar comparable,sus elementos tienen que implementar hashcode
  */
-public class EjemploHashSetRecorrer {
+public class HashSetRecorrer {
 	 
  	/**
  	 * The main method.

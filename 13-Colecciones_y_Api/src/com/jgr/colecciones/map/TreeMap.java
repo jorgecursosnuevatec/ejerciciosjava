@@ -5,10 +5,10 @@ import java.util.Map;
 import java.util.TreeMap;
 
 /**
- * The Class EjemploTreeMap.
+ * The Class TreeMap.
  * TreeMap-> es un mapa ordenado 
  */
-public class EjemploTreeMap {
+public class TreeMap {
     public static void main(String[] args) {
 
         Map<String, Object> persona = new TreeMap<>(Comparator.comparing(String::length));

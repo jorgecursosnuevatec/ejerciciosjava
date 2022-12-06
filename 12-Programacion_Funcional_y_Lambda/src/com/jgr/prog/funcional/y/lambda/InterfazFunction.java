@@ -10,7 +10,7 @@ import java.util.stream.Collectors;
 import com.jgr.prog.funcional.y.lambda.models.Persona;
 
 /**
- * The Class EjemploInterfazFunction.
+ * The Class InterfazFunction.
  * recibe un argumento y devuelve un resultado
  * interfaz function <T,R>,devuelve un objeto Resultado R R apply(T t)
  * metodo apply que a partir de un objeto realiza una operacion y devuelve un resultado R apply(T t)
@@ -19,7 +19,7 @@ import com.jgr.prog.funcional.y.lambda.models.Persona;
  * con dos parametros es BiFunction
  * https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/BiFunction.html
  */
-public class EjemploInterfazFunction {
+public class InterfazFunction {
 
 	public static void main(String[] args) {
 

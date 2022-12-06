@@ -7,9 +7,9 @@ import java.util.List;
 import com.jgr.prog.funcional.y.lambda.models.Persona;
 
 /**
- * The Class EjemploUnaryOperator.
+ * The Class UnaryOperator.
  */
-public class EjemploUnaryOperator {
+public class UnaryOperator {
 
 	
 	/**

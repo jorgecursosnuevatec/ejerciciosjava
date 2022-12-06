@@ -7,11 +7,11 @@ import com.jgr.colecciones.modelo.Alumno;
 
 
 /**
- * The Class EjemploLinkedList.
+ * The Class LinkedList.
  * * LINKED LIST->listas enlazadas,es mas rapido que la lista para modificaciones,tarda mas en buscar aleatoria
      * 				trabaja con pilas/colas
  */
-public class EjemploLinkedList {
+public class LinkedList {
     
     /**
      * The main method.

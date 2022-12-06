@@ -5,9 +5,9 @@ import java.util.List;
 
 
 /**
- * The Class EjemploExpresionLambda.
+ * The Class ExpresionLambdaMia.
  */
-public class EjemploExpresionLambda {
+public class ExpresionLambdaMia {
 
 	/**
 	 * The main method.
@@ -18,9 +18,9 @@ public class EjemploExpresionLambda {
 
 		// llama a la interfaz funcional
 		// esta seria una expresion lambda,guardamos este metodo en una variable
-		EjemploExpresionLambdaInterfazUsada ex = (a) -> System.out.println(a);
+		ExpresionLambdaInterfazUsadaMia ex = (a) -> System.out.println(a);
 		
-		//el metodo met en EjemploExpresionLambdaInterfazUsada ->void met(int data);
+		//el metodo met en ExpresionLambdaInterfazUsadaMia ->void met(int data);
 		ex.met(100);
 
 		

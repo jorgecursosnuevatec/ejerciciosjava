@@ -4,10 +4,10 @@ import java.util.List;
 
 import com.jgr.colecciones.modelo.*;
 /**
- * The Class EjemploArrayList.
+ * The Class ArrayList.
  * ARRAYLIST->acceso lectura muy rapido,pero eliminar/modificar tarda mas porque no deja espacios vacios 
  */
-public class EjemploArrayList {
+public class ArrayList {
     
     /**
      * The main method.

@@ -6,10 +6,10 @@ import java.util.TreeSet;
 import com.jgr.colecciones.modelo.Alumno;
 
 /**
- * The Class EjemploTreeSetComparable.
+ * The Class TreeSetComparable.
  * TreeSet-> es ordenado,pero no permite duplicados. Ordena cuando se modifica 
  */
-public class EjemploTreeSetComparable {
+public class TreeSetComparable {
 	
 	/**
 	 * The main method.

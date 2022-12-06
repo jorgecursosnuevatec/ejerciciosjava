@@ -14,14 +14,14 @@ import java.util.function.Supplier;
 import com.jgr.prog.funcional.y.lambda.models.*;
 
 /**
- * The Class EjemploInterfazConsumeryBi.
+ * The Class InterfazConsumeryBi.
  * solo tiene un metodo abstracto que se llama accept que realiza algun proceso con lo que recibe
  *void accept(T t)
  *Represents an operation that accepts a single input argument and returns no result.
  * Unlike most other functional interfaces,Consumer is expected to operate via side-effects.
  * https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Consumer.html
  */
-public class EjemploInterfazConsumeryBi {
+public class InterfazConsumeryBi {
 	/**
 	 * The main method.
 	 *

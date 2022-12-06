@@ -6,10 +6,10 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * The Class EjemploHashMap.
+ * The Class HashMap.
  * HashMap-> usa el algoritmo Hash lo necesita,no admite duplicados 
  */
-public class EjemploHashMap {
+public class HashMap {
     
     /**
      * The main method.

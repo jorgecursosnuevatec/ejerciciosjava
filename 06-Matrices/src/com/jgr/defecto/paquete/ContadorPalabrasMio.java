@@ -1,4 +1,4 @@
-package com.jgr.prog.funcional.y.lambda;
+package com.jgr.defecto.paquete;
 
 import java.util.ArrayList;
 import java.util.Collections;

@@ -4,12 +4,12 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * The Class EjemploHashSetAgregar. 
+ * The Class HashSetAgregar. 
  * HashSet-> no mantiene el orden,ni el de
  * insercion,se puede usar comparable,sus elementos tienen que implementar
  * hashcode
  */
-public class EjemploHashSetAgregar {
+public class HashSetAgregar {
 
 	/**
 	 * The main method.

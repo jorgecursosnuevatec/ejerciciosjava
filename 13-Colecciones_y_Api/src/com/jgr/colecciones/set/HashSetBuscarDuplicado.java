@@ -4,10 +4,10 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * The Class EjemploHashSetBuscarDuplicado.
+ * The Class HashSetBuscarDuplicado.
  *  HashSet-> no mantiene el orden,ni el de insercion,se puede usar comparable,sus elementos tienen que implementar hashcode
  */
-public class EjemploHashSetBuscarDuplicado {
+public class HashSetBuscarDuplicado {
     
     /**
      * The main method.

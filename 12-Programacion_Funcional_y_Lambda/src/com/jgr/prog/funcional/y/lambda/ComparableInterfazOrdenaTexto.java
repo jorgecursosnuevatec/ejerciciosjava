@@ -5,9 +5,9 @@ import java.util.Arrays;
 import com.jgr.prog.funcional.y.lambda.models.Persona;
 
 /**
- * The Class OrdenaTextoInterfazComparable.
+ * The Class ComparableInterfazOrdenaTexto.
  */
-public class OrdenaTextoInterfazComparable {
+public class ComparableInterfazOrdenaTexto {
 
 
 	/**

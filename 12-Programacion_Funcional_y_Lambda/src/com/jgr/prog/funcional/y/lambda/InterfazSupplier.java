@@ -13,12 +13,12 @@ import java.util.stream.Stream;
 import com.jgr.prog.funcional.y.lambda.models.Usuario;
 
 /**
- * The Class EjemploInterfazSupplier. Supplier<T> tiene el metodo get,no recibe
+ * The Class InterfazSupplier. Supplier<T> tiene el metodo get,no recibe
  * nada y devuelve un objeto
  * https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Supplier.html
  * 
  */
-public class EjemploInterfazSupplier {
+public class InterfazSupplier {
 
 	// para extraccion de datos,como el generate de stream
 	public static void main(String[] args) {
