@@ -11,11 +11,7 @@ import java.util.Set;
  */
 public class HashSetAgregar {
 
-	/**
-	 * The main method.
-	 *
-	 * @param args the arguments
-	 */
+	
 	public static void main(String[] args) {
 
 		Set<String> hs = new HashSet<>();
