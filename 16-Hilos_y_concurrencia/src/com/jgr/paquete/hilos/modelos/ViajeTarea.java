@@ -1,17 +1,37 @@
 package com.jgr.paquete.hilos.modelos;
 
-public class ViajeTarea implements Runnable{
-	 private String nombre;
 
-	    public ViajeTarea(String nombre) {
+/**
+ * The Class ViajeTarea.
+ * Hereda de Runnable para que pueda meterse en un hilo
+ */
+public class ViajeTarea implements Runnable{
+	 
+ 	/** The nombre. */
+ 	private String nombre;
+
+	    /**
+    	 * Instantiates a new viaje tarea.
+    	 *
+    	 * @param nombre the nombre
+    	 */
+    	public ViajeTarea(String nombre) {
 	        this.nombre = nombre;
 	    }
 
-	    public String getNombre() {
+	    /**
+    	 * Gets the nombre.
+    	 *
+    	 * @return the nombre
+    	 */
+    	public String getNombre() {
 	        return nombre;
 	    }
 
-	    @Override
+	    /**
+    	 * Run.
+    	 */
+    	@Override
 	    public void run() {
 	        for(int i=0; i < 10; i++){
 	            System.out.println(i + " - " + nombre);

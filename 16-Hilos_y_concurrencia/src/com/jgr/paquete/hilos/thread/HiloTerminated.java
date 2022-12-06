@@ -2,10 +2,10 @@ package com.jgr.paquete.hilos.thread;
 
 
 /**
- * The Class LanzadorHiloTerminated.
+ * The Class HiloTerminated.
  * TERMINATED es cuando acaba la ejecucion bien o por error.
  */
-public class LanzadorHiloTerminated {
+public class HiloTerminated {
 
 	public static void main(String[] args) throws InterruptedException {
 		Thread t2 = new Thread(() -> {

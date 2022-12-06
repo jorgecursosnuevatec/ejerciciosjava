@@ -2,10 +2,10 @@ package com.jgr.paquete.hilos.thread;
 
 
 /**
- * The Class LanzadorHiloBloqueado.
+ * The Class HiloBloqueado.
  * Ejemplo de bloqueo de hilos
  */
-public class LanzadorHiloBloqueado {
+public class HiloBloqueado {
 
 	
 	public static void main(String[] args) throws InterruptedException {

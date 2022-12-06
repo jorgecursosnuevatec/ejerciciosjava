@@ -14,7 +14,7 @@ PushLog="/dev/null"
 # Mensaje
 message=$@
 if [ -z "$message" ]; then
-message="$(date)2022-12-05 TERMINADO LAMBDA,MAÑANA SEGUIR 257 HILOS"
+message="$(date)2022-12-06 TERMINADA SINCRONIZACION"
 fi
 
 start=`date +%s`

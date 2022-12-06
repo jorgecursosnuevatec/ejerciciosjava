@@ -1,10 +1,10 @@
 package com.jgr.paquete.hilos.thread;
 
 /**
- * The Class LanzadorHiloWaiting. esta en estado Waiting cuando esta esperando a
+ * The Class HiloWaiting. esta en estado Waiting cuando esta esperando a
  * otro que esta en wait() o en join();
  */
-public class LanzadorHiloWaiting {
+public class HiloWaiting {
 
 	public static void main(String[] args) throws InterruptedException {
 

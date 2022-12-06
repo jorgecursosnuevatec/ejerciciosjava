@@ -25,8 +25,8 @@ public class ContadorPalabrasMio {
 		         palabrasRepetidas.put(palabra,palabrasRepetidas.get(palabra.toLowerCase())+1);
 		     }
 		     else{palabrasRepetidas.put(palabra,1);}
-
 		 }
+		 
 		 //lo ordeno por numero de ocurrencias que es lo que tengo en el valor,en la clave tengo la palabra
 		 List<Entry<String, Integer>> lista = new ArrayList<>(palabrasRepetidas.entrySet());
 		Collections.sort(lista, new Comparator<Entry<String, Integer>>() {
