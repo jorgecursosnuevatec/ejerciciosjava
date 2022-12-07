@@ -2,6 +2,8 @@ package com.jgr.colecciones.map;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -11,9 +13,9 @@ import java.util.Set;
 /**
  * The Class MapJava.
  * interface MAP, no de Collection como las otras
- * HashMap-> usa el algoritmo Hash lo necesita,no admite duplicados
- * LinkedHashMap-> extiende de HashMap,usa clave-valor
- * TreeMap-> es un mapa ordenado
+ * HashMapEjemplo-> usa el algoritmo Hash lo necesita,no admite duplicados
+ * LinkedHashMap-> extiende de HashMapEjemplo,usa clave-valor
+ * TreeMapEjemplo-> es un mapa ordenado
  * la informacion se guarda en formato clave-valor
  * 
  */

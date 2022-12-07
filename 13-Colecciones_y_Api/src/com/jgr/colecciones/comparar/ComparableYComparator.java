@@ -7,7 +7,7 @@ import java.util.List;
 
 import com.jgr.colecciones.modelo.Alumno;
 
-// TODO: Auto-generated Javadoc
+
 /**
  * The Class ComparableYComparator.
  * Comparable es la interfaz que debe implementar el metodo en la clase que lo usa
@@ -22,7 +22,7 @@ public class ComparableYComparator {
 	public static void main(String[] args) {
 
 		List<Alumno> sa = new ArrayList<Alumno>();
-		// List<Alumno> sa = new LinkedList<>();
+		// List<Alumno> sa = new LinkedListEjemplo<>();
 		sa.add(new Alumno("Pato", 5));
 		sa.add(new Alumno("Cata", 6));
 		sa.add(new Alumno("Luci", 4));

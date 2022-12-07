@@ -1,15 +1,17 @@
 package com.jgr.colecciones.set;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
+import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 
-// TODO: Auto-generated Javadoc
 /**
- * The Class TreeSet.
- * TreeSet-> es ordenado,pero no permite duplicados. Ordena cuando se modifica 
+ * The Class TreeSetEjemplo.
+ * TreeSetEjemplo-> es ordenado,pero no permite duplicados. Ordena cuando se modifica 
  */
-public class TreeSet {
+public class TreeSetEjemplo {
 	 
  	/**
  	 * The main method.

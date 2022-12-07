@@ -1,17 +1,22 @@
 package com.jgr.colecciones.listas;
 
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.ListIterator;
 
 import com.jgr.colecciones.modelo.Alumno;
 
 
 /**
- * The Class LinkedList.
+ * The Class LinkedListEjemplo.
  * * LINKED LIST->listas enlazadas,es mas rapido que la lista para modificaciones,tarda mas en buscar aleatoria
      * 				trabaja con pilas/colas
  */
-public class LinkedList {
+public class LinkedListEjemplo {
     
     /**
      * The main method.

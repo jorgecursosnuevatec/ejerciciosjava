@@ -14,7 +14,7 @@ PushLog="/dev/null"
 # Mensaje
 message=$@
 if [ -z "$message" ]; then
-message="$(date)2022-12-07  288 filtros"
+message="$(date)2022-12-07  289 mapToInt"
 fi
 
 start=`date +%s`

@@ -1,13 +1,15 @@
 package com.jgr.colecciones.listas;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import com.jgr.colecciones.modelo.*;
 /**
- * The Class ArrayList.
+ * The Class ArrayListEjemplo.
  * ARRAYLIST->acceso lectura muy rapido,pero eliminar/modificar tarda mas porque no deja espacios vacios 
  */
-public class ArrayList {
+public class ArrayListEjemplo {
     
     /**
      * The main method.
