@@ -14,7 +14,7 @@ PushLog="/dev/null"
 # Mensaje
 message=$@
 if [ -z "$message" ]; then
-message="$(date)2022-12-07  289 mapToInt"
+message="$(date)2022-12-07  terminado stream"
 fi
 
 start=`date +%s`
