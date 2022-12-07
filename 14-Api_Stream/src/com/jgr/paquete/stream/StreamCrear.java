@@ -3,8 +3,18 @@ package com.jgr.paquete.stream;
 import java.util.Arrays;
 import java.util.stream.Stream;
 
+
+/**
+ * The Class StreamCrear.
+ * Creamos un stream a partir de un array o con streambuilder
+ */
 public class StreamCrear {
 
+	/**
+	 * The main method.
+	 *
+	 * @param args the arguments
+	 */
 	public static void main(String[] args) {
 		Stream<String> nombres = Stream.of("Pato", "Paco", "Pepa", "Pepe");
 		nombres.forEach(System.out::println);
