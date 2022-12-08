@@ -14,7 +14,7 @@ PushLog="/dev/null"
 # Mensaje
 message=$@
 if [ -z "$message" ]; then
-message="$(date)2022-12-08 EJERCICIO PRACTICO UBALDO"
+message="$(date)2022-12-08 EJERCICIO PRACTICO UBALDO BUSCA NOMBRE PELICULA"
 fi
 
 start=`date +%s`

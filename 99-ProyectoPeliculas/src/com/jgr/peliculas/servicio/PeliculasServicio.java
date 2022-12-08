@@ -57,6 +57,10 @@ public class PeliculasServicio implements IPeliculasServicio{
             if(this.datos.existe(NOMBRE_RECURSO)){
                 datos.borrar(NOMBRE_RECURSO);
                 datos.crear(NOMBRE_RECURSO);
+                for (int i =0;i<5;i++) {
+                	Pelicula peli = new Pelicula("Pelicula"+i);
+                	datos.escribir(peli, NOMBRE_RECURSO, true);
+                }
             }
             else{
                 datos.crear(NOMBRE_RECURSO);

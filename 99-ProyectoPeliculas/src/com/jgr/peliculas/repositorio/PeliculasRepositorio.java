@@ -17,17 +17,32 @@ import com.jgr.peliculas.excepciones.ErrorEscrituraDatos;
 import com.jgr.peliculas.excepciones.ErrorLecturaDatos;
 import com.jgr.peliculas.modelo.Pelicula;
 
+// TODO: Auto-generated Javadoc
 /**
  * The Class PeliculasRepositorio.
+ * AÑADIDA LIBRERIA GSON-2.2.2.jar de GOOGLE para escribir/leer ficheros en formato json
  */
 public class PeliculasRepositorio implements IPeliculasRepositorio {
 
+	/**
+	 * Existe.
+	 *
+	 * @param nombreRecurso the nombre recurso
+	 * @return true, if successful
+	 */
 	@Override
 	public boolean existe(String nombreRecurso) {
 		var archivo = new File(nombreRecurso);
 		return archivo.exists();
 	}
 
+	/**
+	 * Listar.
+	 *
+	 * @param nombreRecurso the nombre recurso
+	 * @return the list
+	 * @throws ErrorLecturaDatos the error lectura datos
+	 */
 	@Override
 	public List<Pelicula> listar(String nombreRecurso) throws ErrorLecturaDatos {
 		var archivo = new File(nombreRecurso);
@@ -52,6 +67,14 @@ public class PeliculasRepositorio implements IPeliculasRepositorio {
 		return peliculas;
 	}
 
+	/**
+	 * Escribir.
+	 *
+	 * @param pelicula the pelicula
+	 * @param nombreRecurso the nombre recurso
+	 * @param anexar the anexar
+	 * @throws ErrorEscrituraDatos the error escritura datos
+	 */
 	@Override
 	public void escribir(Pelicula pelicula, String nombreRecurso, boolean anexar) throws ErrorEscrituraDatos {
 		var archivo = new File(nombreRecurso);
@@ -66,6 +89,14 @@ public class PeliculasRepositorio implements IPeliculasRepositorio {
 		}
 	}
 
+	/**
+	 * Buscar.
+	 *
+	 * @param nombreRecurso the nombre recurso
+	 * @param buscar the buscar
+	 * @return the string
+	 * @throws ErrorLecturaDatos the error lectura datos
+	 */
 	@Override
 	public String buscar(String nombreRecurso, String buscar) throws ErrorLecturaDatos {
 		var archivo = new File(nombreRecurso);
@@ -75,12 +106,16 @@ public class PeliculasRepositorio implements IPeliculasRepositorio {
 			String linea = null;
 			linea = entrada.readLine();
 			var indice = 1;
+			System.out.println("buscando"+buscar);
+			System.out.println("leido"+linea);
+			String nomPeli=formatear(linea);
 			while (linea != null) {
-				if (buscar != null && buscar.equalsIgnoreCase(linea)) {
+				if (buscar != null && buscar.equalsIgnoreCase(nomPeli)) {
 					resultado = "Pelicula " + linea + " encontrada en el indice " + indice;
 					break;
 				}
 				linea = entrada.readLine();
+				nomPeli=formatear(linea);
 				indice++;
 			}
 			entrada.close();
@@ -95,6 +130,12 @@ public class PeliculasRepositorio implements IPeliculasRepositorio {
 		return resultado;
 	}
 
+	/**
+	 * Crear.
+	 *
+	 * @param nombreRecurso the nombre recurso
+	 * @throws ErrorAccesoDatos the error acceso datos
+	 */
 	@Override
 	public void crear(String nombreRecurso) throws ErrorAccesoDatos {
 		var archivo = new File(nombreRecurso);
@@ -109,6 +150,11 @@ public class PeliculasRepositorio implements IPeliculasRepositorio {
 		}
 	}
 
+	/**
+	 * Borrar.
+	 *
+	 * @param nombreRecurso the nombre recurso
+	 */
 	@Override
 	public void borrar(String nombreRecurso) {
 		var archivo = new File(nombreRecurso);
@@ -117,4 +163,30 @@ public class PeliculasRepositorio implements IPeliculasRepositorio {
 		System.out.println("Se ha borrado el archivo");
 	}
 
+	/**
+	 * Formatear.
+	 *el formato en que se escribe es [idPelicula=1, nombre=Pelicula0]
+	 *
+	 * @param entrada the entrada
+	 * @return the string
+	 */
+	public String formatear(String entrada) {
+		String retorno="";
+		
+		//dividimos el string en trozos separados por =
+		String[] partes = entrada.split("=");
+		System.out.println("0->"+partes[0]);
+		System.out.println("1->"+partes[1]);
+		System.out.println("2->"+partes[2]);
+		//aqui tenemos esto Pelicula0]
+		String[] salida= partes[2].split("]");
+		System.out.println("parte0->"+partes[0]);
+		
+		System.out.println(salida[0].getClass());
+		
+		
+		return salida[0];
+		
+	}
+	
 }
