@@ -12,10 +12,16 @@ AddLog="/dev/null"
 CommitLog="/dev/null"
 PushLog="/dev/null"
 
+
+start=`date +%s`
+
+inicio_ns=`date +%s%N`
+inicio=`date +%s`
+
 # Mensaje
 message=$@
 if [ -z "$message" ]; then
-message="$(date)2022-11-09 primera subida del dia"
+message="$(date)2022-11-08 EMPEZANDO CLOUD/KAFKA"
 fi
 
 git add .
@@ -26,3 +32,15 @@ echo "Haciendo commit                \r\c"
 echo  "$message"
 git commit -am "$message" 1>>$CommitLog 2>>$CommitLog; git push 1>>$PushLog 2>>$PushLog
 
+end=`date +%s`
+
+runtime=$((end-start))%M
+
+fin_ns=`date +%s%N`
+fin=`date +%s`
+let total_ns=$fin_ns-$inicio_ns
+let total=$fin-$inicio
+let total_min=($total/60)
+echo "ha tardado: -$total_ns- nanosegudos, -$total- segundos, -$total_min- minutos  "
+
+echo "Finalizado,hasta luego EJERCICIOS"
