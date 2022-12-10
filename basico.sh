@@ -21,7 +21,7 @@ inicio=`date +%s`
 # Mensaje
 message=$@
 if [ -z "$message" ]; then
-message="$(date)2022-11-08 EMPEZANDO CLOUD/KAFKA"
+message="$(date)2022-12-10 HASTA EL 66,SEGUIR CON STREAM IV"
 fi
 
 git add .

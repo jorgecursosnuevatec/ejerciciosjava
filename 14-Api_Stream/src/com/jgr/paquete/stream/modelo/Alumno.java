@@ -6,7 +6,6 @@ import java.util.Objects;
 		private String nombre;
 		private String apellidos;
 		private Integer nota;
-
 		public Alumno() {
 		}
 

@@ -12,8 +12,6 @@ import java.util.stream.Stream;
  * se pueden realizar calculos
  */
 public class StreamIntermedioTransformacionMap {
-
-
 	public static void main(String[] args) {
 
 		//devuelve un stream convertido a mayusculas
