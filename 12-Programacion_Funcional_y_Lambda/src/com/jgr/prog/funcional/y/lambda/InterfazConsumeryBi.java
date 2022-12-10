@@ -15,8 +15,9 @@ import com.jgr.prog.funcional.y.lambda.models.*;
 
 /**
  * The Class InterfazConsumeryBi.
- * solo tiene un metodo abstracto que se llama accept que realiza algun proceso con lo que recibe
- *void accept(T t)
+ * tiene un metodo abstracto que se llama accept que realiza algun proceso con lo que recibe
+ *void accept(T t).NO DEVUELVE NADA
+ *default Consumer<T> andThen(Consumer<? super T> after) a un consumer le aplica otro
  *Represents an operation that accepts a single input argument and returns no result.
  * Unlike most other functional interfaces,Consumer is expected to operate via side-effects.
  * https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Consumer.html
@@ -43,9 +44,17 @@ public class InterfazConsumeryBi {
         		(nombre, edad) -> System.out.println(nombre + ", tiene " + edad + " años!");
 
         consumidorBi.accept("pepe", 20);
-
         Consumer<String> consumidor2 = System.out::println;
         consumidor2.accept("Hola mundo lambda");
+        
+//Le pasamos un string y lo saca por pantalla
+        
+        List<String> numbers = Arrays.asList("uno","dos","tres");
+        Consumer<String> cs = s-> System.out.println("Consumer->"+s);
+        //a ese consumer le aplicamoos otro y lo saca en mayusculas
+        Consumer<String> salida = cs.andThen(a->System.out.println(":"+a.toUpperCase()));        
+        numbers.forEach(salida);
+        
 
         List<String> nombres = Arrays.asList("andres", "pepe", "luz", "paco");
         nombres.forEach(consumidor2);

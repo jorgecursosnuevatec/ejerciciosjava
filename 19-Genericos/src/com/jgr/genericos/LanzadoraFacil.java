@@ -6,14 +6,14 @@ import java.util.Map;
 public class LanzadoraFacil {
 
 	public static void main(String[] args) {
-		ClaseGenericaFacil<Integer> clase = new ClaseGenericaFacil(15); 
+		ClaseGenericaFacil<Object> clase = new ClaseGenericaFacil<Object>(15); 
 
 		clase.obtenerTipo();
 
-		clase= new ClaseGenericaFacil("Hola");
+		clase= new ClaseGenericaFacil<Object>("Hola");
 		clase.obtenerTipo();
 
-		clase = new ClaseGenericaFacil(123f);
+		clase = new ClaseGenericaFacil<Object>(123f);
 		clase.obtenerTipo();
 
 		Map<String, String> miMapa = new HashMap<>();

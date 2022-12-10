@@ -27,7 +27,7 @@ public class SetJava {
 	 * no se pueden duplicar valores
 	 */
 	public static void main(String[] args) {
-		List miLista = new ArrayList();
+		List<String> miLista = new ArrayList<String>();
 		miLista.add("Lunes");
 		miLista.add("Martes");
 		miLista.add("Miercoles");
@@ -36,7 +36,7 @@ public class SetJava {
 		miLista.add("Viernes");
 		imprimir(miLista);
 
-		Set miSet = new HashSet();
+		Set<String> miSet = new HashSet<String>();
 		miSet.add("Lunes");
 		miSet.add("Martes");
 		miSet.add("Miercoles");

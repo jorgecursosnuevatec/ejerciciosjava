@@ -11,8 +11,7 @@ import com.jgr.prog.funcional.y.lambda.models.Persona;
 
 /**
  * The Class InterfazFunction.
- * recibe un argumento y devuelve un resultado
- * interfaz function <T,R>,devuelve un objeto Resultado R R apply(T t)
+ * interfaz function <T,R>,recibe un argumento y devuelve un objeto Resultado R R apply(T t)
  * metodo apply que a partir de un objeto realiza una operacion y devuelve un resultado R apply(T t)
  * para transformar datos,como map de Stream
  * https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html
