@@ -14,8 +14,6 @@ import com.jgr.paquete.stream.modelo.Usuario;
  * 
  */
 public class StreamFilterFindFirst {
-
-	
 	public static void main(String[] args) {
 
         Stream<Usuario> nombres = Stream

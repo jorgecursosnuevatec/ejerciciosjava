@@ -13,11 +13,7 @@ import com.jgr.paquete.stream.modelo.Usuario;
  */
 public class StreamFilter {
 
-	/**
-	 * The main method.
-	 *
-	 * @param args the arguments
-	 */
+	
 	public static void main(String[] args) {
 
         Stream<Usuario> nombres = Stream

@@ -1,6 +1,9 @@
 package com.jgr.ejercicios.opcional;
 
 import java.util.Optional;
+import java.util.OptionalDouble;
+import java.util.stream.DoubleStream;
+import java.util.stream.Stream;
 
 /**
  * The Class EjemploOptional.
@@ -8,15 +11,17 @@ import java.util.Optional;
  * ofNullable->si es nulo no da error
  * ifPresent->si esta presente...,
  * ifPresentOrElse->si esta presente..., si es nulo ....
- * 
+ * get()->devuelve el valor,si no hay lanza NoSuchElementException
+ * orElse()->si no hay devuelve un predeterminado
+ * Hay variantes OptionalInt y OptionalDouble 
+ * Optional<T> max(Comparator<?super T> comparator)
+ * max->devuelve el mayor,utiliza comparator
+ * min->devuelve en menor,utiliza comparator  
+ * OptionalDouble average()->devuelve la media en un double
+ * OptionalInt max() y min(),
  */
 public class EjemploOptional {
     
-    /**
-     * The main method.
-     *
-     * @param args the arguments
-     */
     public static void main(String[] args) {
         
         String nombre = "Andrés";
@@ -50,5 +55,23 @@ public class EjemploOptional {
         Optional<String> optEmpty = Optional.empty();
         System.out.println("optEmpty = " + optEmpty);
         System.out.println(optEmpty.isPresent());
+        
+
+        //busca el mayor
+		Stream<Integer> str = Stream.of(2, 5, 7, 9, 9, 23);
+		Optional<Integer> op = str.max((a,b)->a-b);		
+		System.out.println(op.get());
+		
+		// creating a stream
+        DoubleStream stream = DoubleStream.of(2.5, 3.6, 4.7, 5.0, 6.2);  
+        // OptionalDouble is a container object
+        // which may or may not contain a
+        // double value.
+        OptionalDouble obj = stream.average();
+        System.out.println("opcional double->"+obj);
+		
+		
+		
+		
     }
 }

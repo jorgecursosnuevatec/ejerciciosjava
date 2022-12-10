@@ -11,11 +11,6 @@ import com.jgr.paquete.stream.modelo.Usuario;
  */
 public class StreamFilterAnyMatch {
 
-	/**
-	 * The main method.
-	 *
-	 * @param args the arguments
-	 */
 	public static void main(String[] args) {
 
 		boolean existe = Stream.of("Pato Guzman", "Paco Gonzalez", "Pepa Gutierrez", "Pepe Mena", "Pepe Garcia")

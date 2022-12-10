@@ -15,11 +15,7 @@ import java.util.stream.Stream;
  */
 public class StreamCrear {
 
-	/**
-	 * The main method.
-	 *
-	 * @param args the arguments
-	 */
+	
 	public static void main(String[] args) {
 		
 		//a partir de otro stream
