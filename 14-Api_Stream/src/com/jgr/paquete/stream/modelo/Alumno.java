@@ -6,10 +6,11 @@ import java.util.Objects;
 		private String nombre;
 		private String apellidos;
 		private Integer nota;
-		public Alumno() {
-		}
+		private static int contador;
+		public Alumno() {}
 
 		public Alumno(String nombre,String apellidos, Integer nota) {
+			++contador;
 			this.nombre = nombre;
 			this.apellidos = apellidos;
 			this.nota = nota;
@@ -55,6 +56,22 @@ import java.util.Objects;
 		 */
 		public void setNota(Integer nota) {
 			this.nota = nota;
+		}
+		
+		
+
+		/**
+		 * @return the contador
+		 */
+		public static int getContador() {
+			return contador;
+		}
+
+		/**
+		 * @param contador the contador to set
+		 */
+		public static void setContador(int contador) {
+			Alumno.contador = contador;
 		}
 
 		@Override

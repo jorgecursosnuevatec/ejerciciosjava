@@ -13,8 +13,6 @@ import java.util.stream.Stream;
  * -flatMap
  */
 public class StreamIntermedioTransformacionYAplanamiento {
-
-
 	public static void main(String[] args) {
 
 
