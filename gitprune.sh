@@ -14,7 +14,7 @@ PushLog="/dev/null"
 # Mensaje
 message=$@
 if [ -z "$message" ]; then
-message="$(date)2022-12-11 METODOS STREAM IV"
+message="$(date)2022-12-11 METODOS STREAM V TERMINADO"
 fi
 
 start=`date +%s`
