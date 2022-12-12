@@ -8,7 +8,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import com.jgr.paquete.stream.modelo.Alumno;
+import com.jgr.paquete.stream.modelo.AlumnoComparable;
 import com.jgr.paquete.stream.modelo.Ciudad;
 import com.jgr.paquete.stream.modelo.Empleado;
 import com.jgr.paquete.stream.modelo.Persona;
@@ -43,12 +43,12 @@ public class StreamFinalCollection {
 		System.out.println(Collections.singletonList(lista));
 
 		//agrupamos por nota
-		Map<Integer,List<Alumno>> agrupado = Stream.of(
-				new Alumno("Nombre1", "Apellido1", 15),
-				new Alumno("Nombre0", "Apellido0", 10),
-				new Alumno("Nombre2", "Apellido2", 15),
-				new Alumno("Nombre3", "Apellido3", 16),
-				new Alumno("Nombre4", "Apellido4", 16))
+		Map<Integer,List<AlumnoComparable>> agrupado = Stream.of(
+				new AlumnoComparable("Nombre1", "Apellido1", 15),
+				new AlumnoComparable("Nombre0", "Apellido0", 10),
+				new AlumnoComparable("Nombre2", "Apellido2", 15),
+				new AlumnoComparable("Nombre3", "Apellido3", 16),
+				new AlumnoComparable("Nombre4", "Apellido4", 16))
 				.collect(Collectors.groupingBy(p->p.getNota())); //agrupamos por nota
 		agrupado.forEach((k,v)->System.out.println(v));
 
@@ -122,8 +122,11 @@ public class StreamFinalCollection {
 		);
 		
 		
-
-				
+		
+		Integer[] arrayEnteros = {1,3,5,8,9,10};		
+		Stream.of(arrayEnteros).mapToInt(p->p).average();
+		System.out.println(Stream.of(arrayEnteros).mapToInt(p->p).average());
+			
 		
 	}
 

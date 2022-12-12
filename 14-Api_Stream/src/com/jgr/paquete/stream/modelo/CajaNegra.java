@@ -2,19 +2,19 @@ package com.jgr.paquete.stream.modelo;
 
 import java.util.Objects;
 
-public class CajaNegraComparator {
+public class CajaNegra {
 	
 	private static int contador;
 	private int numCaja;
 	
 	
-	public CajaNegraComparator() {
+	public CajaNegra() {
 		++contador;
 		numCaja=contador;
 	}
 
 
-	public CajaNegraComparator(int numCaja) {
+	public CajaNegra(int numCaja) {
 		super();
 		this.numCaja = numCaja;
 	}
@@ -47,10 +47,10 @@ public class CajaNegraComparator {
 		if (this == obj) {
 			return true;
 		}
-		if (!(obj instanceof CajaNegraComparator)) {
+		if (!(obj instanceof CajaNegra)) {
 			return false;
 		}
-		CajaNegraComparator other = (CajaNegraComparator) obj;
+		CajaNegra other = (CajaNegra) obj;
 		return this.numCaja == other.numCaja;
 	}
 
@@ -58,14 +58,13 @@ public class CajaNegraComparator {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("CajaNegraComparator [numCaja=");
+		builder.append("CajaNegra [numCaja=");
 		builder.append(this.numCaja);
 		builder.append("]");
 		return builder.toString();
 	}
 
-	
-	
-	
+
+
 
 }

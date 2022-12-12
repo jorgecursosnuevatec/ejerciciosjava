@@ -4,11 +4,11 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import com.jgr.paquete.stream.modelo.Alumno;
+import com.jgr.paquete.stream.modelo.AlumnoComparable;
 
 /**
  * The Class StreamMapCambiaFormatoDatos.
- * Con el map a partir de un valor string lo podemos convertir en un Alumno
+ * Con el map a partir de un valor string lo podemos convertir en un AlumnoComparable
  */
 public class StreamMapCambiaFormatoDatos {
 
@@ -20,9 +20,9 @@ public class StreamMapCambiaFormatoDatos {
 
 
 		//lo convierto a un stream 
-		Stream<Alumno> modificado = Stream.of("Pato", "Paco", "Pepa", "Pepe")
+		Stream<AlumnoComparable> modificado = Stream.of("Pato", "Paco", "Pepa", "Pepe")
 				//como parametro le paso el nombre que recupero del array
-				.map(nombre->new Alumno(nombre,null, null))
+				.map(nombre->new AlumnoComparable(nombre,null, null))
 				.peek(System.out::println)
 				.map(al->{
 					String nombre =al.getNombre().toLowerCase();
@@ -36,8 +36,8 @@ public class StreamMapCambiaFormatoDatos {
 		
 		//a partir de una lista ,lo divido en un array
 		//como alumno tiene nombre y apellido ahora puedo usar cada parte del string recuperado en el constructor
-		Stream<Alumno> nombres = Stream.of("Pato Guzman", "Paco Gonzalez", "Pepa Gutierrez", "Pepe Mena")
-				.map(nombre -> new Alumno(nombre.split(" ")[0], nombre.split(" ")[1], null))
+		Stream<AlumnoComparable> nombres = Stream.of("Pato Guzman", "Paco Gonzalez", "Pepa Gutierrez", "Pepe Mena")
+				.map(nombre -> new AlumnoComparable(nombre.split(" ")[0], nombre.split(" ")[1], null))
 				.peek(System.out::println)
 				.map(usuario -> {
 					String nombre = usuario.getNombre().toUpperCase();
@@ -47,7 +47,7 @@ public class StreamMapCambiaFormatoDatos {
 					return usuario;
 				});
 
-		List<Alumno> lista = nombres.collect(Collectors.toList());
+		List<AlumnoComparable> lista = nombres.collect(Collectors.toList());
 		lista.forEach(System.out::println);
 
 

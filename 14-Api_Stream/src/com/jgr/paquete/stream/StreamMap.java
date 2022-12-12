@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import com.jgr.paquete.stream.modelo.Alumno;
+import com.jgr.paquete.stream.modelo.AlumnoComparable;
 
 /**
  * The Class StreamMap.
@@ -17,10 +17,10 @@ public class StreamMap {
 
 	public static void main(String[] args) {
 		
-		Alumno al1 = new Alumno("nombre1","apellidos1", 1);
-		Alumno al2 = new Alumno("nombre2","apellidos2", 2);
-		Alumno al3 = new Alumno("nombre3","apellidos3", 3);
-		Alumno al4 = new Alumno("nombre4","apellidos4", 4);
+		AlumnoComparable al1 = new AlumnoComparable("nombre1","apellidos1", 1);
+		AlumnoComparable al2 = new AlumnoComparable("nombre2","apellidos2", 2);
+		AlumnoComparable al3 = new AlumnoComparable("nombre3","apellidos3", 3);
+		AlumnoComparable al4 = new AlumnoComparable("nombre4","apellidos4", 4);
 		
 		//en la salida alterna sysout,luego antes de convertir y luego despues de convertir
 		Stream<?> alumnos = Stream.of(al1,al2,al3,al4)

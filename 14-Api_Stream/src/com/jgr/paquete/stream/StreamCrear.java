@@ -14,8 +14,6 @@ import java.util.stream.Stream;
  * una vez que se usa NO se puede volver a utilizar
  */
 public class StreamCrear {
-
-	
 	public static void main(String[] args) {
 		
 		//a partir de otro stream
