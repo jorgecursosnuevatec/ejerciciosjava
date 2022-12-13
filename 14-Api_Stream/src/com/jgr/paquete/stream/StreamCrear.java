@@ -39,7 +39,6 @@ public class StreamCrear {
 		stintrange.forEach(System.out::println);
 		stintrangeC.forEach(System.out::println);
 		
-		
 
 		//Usando un stream builder
 		Stream<String> nombres3 = Stream.<String>builder().

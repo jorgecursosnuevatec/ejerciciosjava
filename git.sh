@@ -15,7 +15,7 @@ PushLog="/dev/null"
 # Mensaje
 message=$@
 if [ -z "$message" ]; then
-message="$(date) 2022-12-06 284 MAP"
+message="$(date) 2022-12-13 leer y escribir archivos"
 fi
 
 start=`date +%s`
