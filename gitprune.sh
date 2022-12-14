@@ -14,7 +14,7 @@ PushLog="/dev/null"
 # Mensaje
 message=$@
 if [ -z "$message" ]; then
-message="$(date)2022-12-12 REPASAR REFERENCIAS A METODOS"
+message="$(date)2022-12-14 REPASAR REFERENCIAS A METODOS"
 fi
 
 start=`date +%s`
