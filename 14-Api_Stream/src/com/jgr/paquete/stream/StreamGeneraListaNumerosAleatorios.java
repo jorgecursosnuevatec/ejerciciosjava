@@ -13,7 +13,6 @@ import java.util.stream.Stream;
  */
 public class StreamGeneraListaNumerosAleatorios {
 
-	
 	public static void main(String[] args) {
 
 		List <Integer> lista =Stream.generate(()-> new Random()

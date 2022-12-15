@@ -47,7 +47,7 @@ public class InterfazSupplier {
 		Usuario usuario = creaUsuario.get();
 
 		/*
-		 * OJO QUE SE EMBUCLA genera un stream de numeros aleatorios
+		 
 		 * 
 		 * List<Integer> lista = new ArrayList<>();
 		 * 
@@ -59,7 +59,7 @@ public class InterfazSupplier {
 		 * 
 		 * // no recibe nada y genera una serie de numeros aleatorios lista =
 		 * Stream.generate( () -> (int) (Math.random() * 500 -
-		 * 1)).collect(Collectors.toList());
+		 * 1)).limit(10).collect(Collectors.toList());
 		 * 
 		 * }while (System.currentTimeMillis()<termino) ;
 		 * 
