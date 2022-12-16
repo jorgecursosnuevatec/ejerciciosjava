@@ -57,10 +57,10 @@ public class EjemploMatrices {
         
         /*
          * 			columna		columna		columna 	columna	
-         * fila		0			1			2			3
-         * fila		0			1			2			3        
-         * fila		0			1			2			3        
-         * fila		0			1			2			3        
+         * fila	0	0			1			2			3
+         * fila	1	0			1			2			3        
+         * fila	2	0			1			2			3        
+         * fila	3	0			1			2			3        
          * */
         
         for (int i = 0; i < numeros2.length; i++) {
@@ -83,6 +83,12 @@ public class EjemploMatrices {
         
         System.out.println("filas->" + edades.length);
         System.out.println("columnas->" + edades[0].length);
+        
+        for(int i=0 ;i<edades.length;i++) {
+        	for (int k=0;k<edades[i].length;k++) {
+        		System.out.println("Edades "+i + " valor "+ edades[i][k]);
+        	}
+        }
         
         
         

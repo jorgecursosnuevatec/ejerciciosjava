@@ -9,12 +9,6 @@ import com.jgr.prog.funcional.y.lambda.models.Persona;
  */
 public class ComparableInterfazOrdenaTexto {
 
-
-	/**
-	 * The main method.
-	 *
-	 * @param args the arguments
-	 */
 	public static void main(String[] args) {
 		//persona implementa comparable
 		Persona lista []= {

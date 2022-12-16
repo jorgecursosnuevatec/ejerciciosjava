@@ -8,11 +8,7 @@ import java.util.List;
  */
 public class ComparatorFuncionalOrdenaTexto {
 
-	/**
-	 * The main method.
-	 *
-	 * @param args the arguments
-	 */
+	
 	public static void main(String[] args) {
 		List<String> textos = new ArrayList<>();
 

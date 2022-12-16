@@ -1,17 +1,11 @@
 package com.jgr.paquete.stream.lambda.expresiones;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Comparator;
-import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import com.jgr.paquete.stream.modelo.Alumno;
-import com.jgr.paquete.stream.modelo.AlumnoComparable;
-import com.jgr.paquete.stream.modelo.CajaNegra;
-import com.jgr.paquete.stream.modelo.Usuario;
 
 /**
  * The Class ReferenciasMetodoExpresionLambda.
