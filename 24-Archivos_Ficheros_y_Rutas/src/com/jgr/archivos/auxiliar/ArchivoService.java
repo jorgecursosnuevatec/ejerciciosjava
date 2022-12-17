@@ -10,8 +10,6 @@ import java.io.PrintWriter;
 import java.util.Scanner;
 
 
-
-// TODO: Auto-generated Javadoc
 /**
  * The Class ArchivoService.
  * Utilidades para gestionar archivos
