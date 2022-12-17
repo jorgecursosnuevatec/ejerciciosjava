@@ -2,8 +2,14 @@ package com.jgr.archivos;
 
 import com.jgr.archivos.auxiliar.ManejoArchivos;
 
+
+/**
+ * The Class TestManejoArchivos.
+ */
 public class TestManejoArchivos {
-	   public static void main(String[] args) {
+	   
+   
+   	public static void main(String[] args) {
 		   var nombreArchivo = "prueba.txt";
 //	        crearArchivo(nombreArchivo);
 
