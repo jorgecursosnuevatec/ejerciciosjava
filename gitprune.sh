@@ -14,7 +14,7 @@ PushLog="/dev/null"
 # Mensaje
 message=$@
 if [ -z "$message" ]; then
-message="$(date)2022-12-17 ++ TERMINADA LECTURA,FALTA ESCRITURA VIDEO 77"
+message="$(date)2022-12-17 ++ TERMINADA ESCRITURA,SEGUIR CON EL 78"
 fi
 
 start=`date +%s`
