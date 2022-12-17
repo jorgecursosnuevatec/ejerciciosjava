@@ -14,7 +14,7 @@ PushLog="/dev/null"
 # Mensaje
 message=$@
 if [ -z "$message" ]; then
-message="$(date)2022-12-14 REPASAR REFERENCIAS A METODOS,repasado JDBC"
+message="$(date)2022-12-17 APUESTA PRIMITIVA CON INTSTREAM"
 fi
 
 start=`date +%s`
