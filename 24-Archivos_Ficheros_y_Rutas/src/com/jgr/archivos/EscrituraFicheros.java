@@ -1,6 +1,9 @@
 package com.jgr.archivos;
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.PrintStream;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -77,6 +80,29 @@ public class EscrituraFicheros {
 				e.printStackTrace();
 			}
 	        
+	        //USANDO PRINTSTREAM
+	        try(PrintStream out = new PrintStream(cadenaStringB)){
+	        	out.println(cadenaStringB);
+	        } catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	        
+	        
+	        //USANDO PRINTSTREAM Y FILEOUTPUTSTREAM
+	        //PERMITE REALIZAR LA ESCRITURA CON/SIN AÑADIR A LO YA EXISTENTE
+	        try {
+				FileOutputStream fos = new FileOutputStream(cadenaStringB,true);
+				PrintStream out = new PrintStream(cadenaStringB);
+				out.println(cadenaStringB);
+				
+			} catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	        
+	        		
+				
 	        
 	}
 

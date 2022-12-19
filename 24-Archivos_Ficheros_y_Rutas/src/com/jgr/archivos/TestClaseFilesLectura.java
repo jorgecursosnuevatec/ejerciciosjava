@@ -1,6 +1,7 @@
 package com.jgr.archivos;
 
 import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -14,14 +15,13 @@ import java.util.stream.Stream;
  * devuelve un stream con las lineas
  * static Stream<String> lines​(Path path) Read all lines from a file as a Stream.
  * 
- * devuvelve una lista con las cadenas,cada elemento es una linea
+ * devuelve una lista con las cadenas,cada elemento es una linea
  * static List<String>	readAllLines​(Path path)	Read all lines from a file.
  * Mas optimizado que el Stream
  * 
  * devuelve un buffered reader para leer normal
  * static BufferedReader	newBufferedReader​(Path path) Opens a file for reading, 
  * returning a BufferedReader to read text from the file in an efficient manner.
- * 
  * 
  * https://mkyong.com/java8/java-8-stream-read-a-file-line-by-line/
  */
@@ -52,7 +52,18 @@ public class TestClaseFilesLectura {
              lectura = entrada.readLine();
          }
          
-		
+		//USANDO BUFFERED READER Y FILEREADER
+         //CON RECURSOS PORQUE LO CIERRA SOLO
+         String dir="c:\\user\\myFile.txt";
+         try(FileReader fr = new FileReader(dir)){
+         BufferedReader br= new BufferedReader(fr);
+         String linea;
+         while((linea=br.readLine())!=null) {
+        	 System.out.println("linea->"+linea);
+        	 
+         }
+         }catch(IOException ex) {ex.getMessage();}
+         
 		
 	}
 }
