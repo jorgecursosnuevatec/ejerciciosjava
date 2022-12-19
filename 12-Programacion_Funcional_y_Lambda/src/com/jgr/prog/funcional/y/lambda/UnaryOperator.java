@@ -8,19 +8,15 @@ import com.jgr.prog.funcional.y.lambda.models.Persona;
 
 /**
  * The Class UnaryOperator.
+ *subinterfaz de function, el tipo de entrada coincide con el de salida,como function,para transformar datos
+ *static <T> UnaryOperator<T> identity()
+ *T - the type of the input and output of the operator
+ *Returns:a unary operator that always returns its input argument
+ *https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/UnaryOperator.html
  */
 public class UnaryOperator {
 
 	
-	/**
-	 * The main method.
-	 *subinterfaz de function, el tipo de entrada coincide con el de salida,como function,para transformar datos
-	 *static <T> UnaryOperator<T> identity()
-	 *T - the type of the input and output of the operator
-	 *Returns:a unary operator that always returns its input argument
-	 *https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/UnaryOperator.html
-	 * @param args the arguments
-	 */
 	public static void main(String[] args) {
 		
 		Integer [] a1 = { 3, 5, 7, 9, 15, 20 };
@@ -38,16 +34,12 @@ public class UnaryOperator {
 		};
 		
 		
-		List<Persona> lista2 = new ArrayList<>(Arrays.asList(array));
-		
+		List<Persona> lista2 = new ArrayList<>(Arrays.asList(array));		
 		//aqui cambio las personas por otra, el metodo replac
 		lista2.replaceAll(n->
 		new Persona("nombrenuevo", (int)(Math.random()*10+1)));
 		lista2.forEach(System.out::println);
-		
-		
-		
-		
+			
 
 	}
 

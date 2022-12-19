@@ -54,7 +54,12 @@ public class InterfazFunction {
 
 		Function<String, String> f2 = String::toUpperCase;
 		System.out.println("resultado f2->"+ f2.apply("andres"));
-
+		
+		//convertimos un String en integer
+		Function<String,Integer> convierteInt=(String a)-> Integer.getInteger(a);		
+		System.out.println("valor numero->"+ convierteInt.apply("4"));
+		
+		
 		//recibe dos String y devuelve otro string
 		BiFunction<String, String, String> f3 = (a, b) -> a.toUpperCase().concat(b.toUpperCase());
 		String r2 = f3.apply("andres", "jose");

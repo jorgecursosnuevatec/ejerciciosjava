@@ -12,7 +12,7 @@ import com.jgr.prog.funcional.y.lambda.models.Usuario;
 
 /**
  * The Class InterfazPredicate.
- * recibe un dato y devuelve un boolean
+ * recibe un objeto/dato y devuelve un boolean
  * metodo abstracto test que realiza una comprobacion y devuelve un boolean
  * boolean test(T t)
  * https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Predicate.html
@@ -23,19 +23,7 @@ public class InterfazPredicate {
 	
 	public static void main(String[] args) {
 		
-		Persona array []= {
-				new Persona("Nombre3",66),new Persona("Nombre2",67),
-				new Persona("Nombre1",66),new Persona("Nombre3",67)
-		};
-		
-		
-		List<Persona> lista = new ArrayList<>(Arrays.asList(array));
-			//este es el predicate
-		lista.removeIf(				
-				p->p.getEdad()>66
-				);
-		lista.forEach(System.out::println);
-		
+		//este metodo pregunta si es mayor que 10
 
         Predicate<Integer> test = num -> num > 10;
         boolean r = test.test(11);
@@ -46,6 +34,11 @@ public class InterfazPredicate {
         
         Predicate<String> t2b = role -> role.equals("ROLE_ADMIN");
         System.out.println("t2b->"+t2b.test("ROLE_USER"));
+        
+        Predicate<Integer> validaMayor = a->a>5;
+        System.out.println("es mayor->" + validaMayor.test(4));
+        
+        
 
         BiPredicate<String, String> t3 = String::equals;// (a, b) -> a.equals(b);        
         System.out.println("t3->"+t3.test("andres", "andres"));

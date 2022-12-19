@@ -41,6 +41,9 @@ public class InterfazSupplier {
 			return con;
 		};
 		
+		  Supplier<String> proveedor = () -> "Hola mundo lambda supplier";
+	        System.out.println(proveedor.get());
+		
 		Connection cn = sp.get();
 
 		Supplier<Usuario> creaUsuario = Usuario::new;

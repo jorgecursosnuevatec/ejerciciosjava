@@ -23,12 +23,12 @@ import com.jgr.prog.funcional.y.lambda.models.*;
  * https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Consumer.html
  */
 public class InterfazConsumeryBi {
-	/**
-	 * The main method.
-	 *
-	 * @param args the arguments
-	 */
+	
 	public static void main(String[] args) {
+		
+		//sacamos el dato recibido
+		Consumer<String> sacarMsg = (String a)->System.out.println(a);
+		sacarMsg.accept("\nHola desde Main");
 		
 		
 		//acepta una fecha y la imprime,no devuelve nada
@@ -72,9 +72,7 @@ public class InterfazConsumeryBi {
         System.out.println("Nombre usuario: " + usuario.getNombre());
         
 
-        Supplier<String> proveedor = () -> "Hola mundo lambda supplier";
-
-        System.out.println(proveedor.get());
+      
         
         
 		Consumer<String> cr=(String a)-> System.out.println(a);
