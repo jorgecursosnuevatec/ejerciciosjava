@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
+import java.util.stream.Stream;
 
 public class IntStreamGeneraApuestaPrimitiva {
 
@@ -19,7 +20,7 @@ public class IntStreamGeneraApuestaPrimitiva {
 		
 		long tMinInicio = System.currentTimeMillis();
 		
-		List<Integer> intStream = IntStream
+		List<Integer> intLista = IntStream
  				.generate(()-> (int)(Math.random() * (numero_maximo-numero_minimo)+numero_minimo))
 //				.generate(()-> (int)(Math.random() * (Integer.MAX_VALUE-Integer.MIN_VALUE)+Integer.MIN_VALUE))
 				.parallel()
@@ -38,7 +39,7 @@ public class IntStreamGeneraApuestaPrimitiva {
 			
 		long tMinFinal = System.currentTimeMillis();
 		System.out.println("terminado");
-		intStream.forEach(System.out::println);
+		intLista.forEach(System.out::println);
 		
 		long millis = tMinFinal-tMinInicio;
 		
@@ -47,6 +48,14 @@ public class IntStreamGeneraApuestaPrimitiva {
 	             TimeUnit.MILLISECONDS.toSeconds(millis) -
 	                     TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(millis))
 	     ));
+		
+		
+		List<Integer> intParallel =  ;(List<Integer>) Stream
+				.generate(()-> (int)(Math.random() * (numero_maximo-numero_minimo)+numero_minimo))
+				.distinct()
+				.sorted()
+				.toList().parallelStream()
+				
 	}
 
 }

@@ -94,24 +94,24 @@ public class StreamParallel {
         
        Stream<Integer> listaParesNOOrdenados =  listaEnteros
     		   .parallelStream()
-    		   /*
+    		 
     		   .peek(n -> {
                    System.out.println("Nombre Thread: " + Thread.currentThread().getName()
                    + " - " + n);
                })
-               */
+              
     		   .filter(n->n%2==0);       
        System.out.println("\n NO ORDENADOS");
        listaParesNOOrdenados.sorted().forEach(p->System.out.println("numero->"+p));
   			 
        Stream<Integer> listaParesOrdenados =  listaEnteros
     		   .parallelStream()
-    		   /*
+    		  
     		   .peek(n -> {
                    System.out.println("Nombre Thread: " + Thread.currentThread().getName()
                    + " - " + n);
                })
-               */
+             
     		   .sequential()
     		   .sorted()    		  
     		   .filter(n->n%2==0);   
