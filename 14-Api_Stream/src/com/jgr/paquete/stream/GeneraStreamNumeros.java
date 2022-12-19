@@ -36,7 +36,8 @@ public class GeneraStreamNumeros {
 			.boxed()//lo convierte a stream para que luego podamos pasarlo a lista
 			.limit(7)
 			.filter(p->(p>5))
-			.collect(Collectors.toList())//lo convertimos a lista
+			//.collect(Collectors.toList())//lo convertimos a lista
+			.toList() //este tambien lo convierte en lista
 			;//
 	
 	

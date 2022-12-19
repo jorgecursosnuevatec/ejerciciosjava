@@ -24,7 +24,7 @@ import java.nio.file.Paths;
  * 
  * Path.relativize devuelve la ruta RELATIVA de uno respecto al otro,internamente lo normaliza
  * p1 Path.of("c:\\temp\\mydata.txt")
- * p2 Path.Gget("c:\\temp\\..\\data.txt")->como sube un directorio la ruta seria c:\data
+ * p2 Paths.get("c:\\temp\\..\\data.txt")->como sube un directorio la ruta seria c:\data
  * p1.relativize(p2)
  * devolveria ..\.\data.txt->porque p2 al subir un directorio estaria en c:\data 
  * 
@@ -41,6 +41,7 @@ public class RutasArchivos {
 		
 		Path p1= Path.of("user/mydata.txt");		
 		System.out.println("p1->"+p1);
+		
 		
 		Path p2= Path.of("/a/b");
 		System.out.println("p2->"+p2);
