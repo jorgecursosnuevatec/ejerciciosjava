@@ -93,11 +93,10 @@ public class StreamParallel {
                .collect(Collectors.toList());
         
        Stream<Integer> listaParesNOOrdenados =  listaEnteros
-    		   .parallelStream()
-    		 
+    		   .parallelStream()    		 
     		   .peek(n -> {
                    System.out.println("Nombre Thread: " + Thread.currentThread().getName()
-                   + " - " + n);
+                   + " -numero " + n);
                })
               
     		   .filter(n->n%2==0);       
@@ -105,11 +104,10 @@ public class StreamParallel {
        listaParesNOOrdenados.sorted().forEach(p->System.out.println("numero->"+p));
   			 
        Stream<Integer> listaParesOrdenados =  listaEnteros
-    		   .parallelStream()
-    		  
+    		   .parallelStream()    		  
     		   .peek(n -> {
                    System.out.println("Nombre Thread: " + Thread.currentThread().getName()
-                   + " - " + n);
+                   + " - numero" + n);
                })
              
     		   .sequential()

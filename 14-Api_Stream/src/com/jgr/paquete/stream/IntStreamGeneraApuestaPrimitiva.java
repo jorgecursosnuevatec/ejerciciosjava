@@ -50,12 +50,7 @@ public class IntStreamGeneraApuestaPrimitiva {
 	     ));
 		
 		
-		List<Integer> intParallel =  ;(List<Integer>) Stream
-				.generate(()-> (int)(Math.random() * (numero_maximo-numero_minimo)+numero_minimo))
-				.distinct()
-				.sorted()
-				.toList().parallelStream()
-				
+		
 	}
 
 }
