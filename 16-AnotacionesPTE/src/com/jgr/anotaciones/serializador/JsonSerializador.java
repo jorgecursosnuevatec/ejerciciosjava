@@ -9,8 +9,17 @@ import java.util.stream.Collectors;
 
 import com.jgr.anotaciones.excepciones.JsonSerializadorException;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class JsonSerializador.
+ */
 public class JsonSerializador {
 
+    /**
+     * Inicializar objeto.
+     *
+     * @param object the object
+     */
     public static void inicializarObjeto(Object object){
         if(Objects.isNull(object)){
             throw new JsonSerializadorException("El objeto a serializar no puede ser null!");
@@ -29,17 +38,24 @@ public class JsonSerializador {
                 });
     }
 
+    /**
+     * Convertir json.
+     *
+     * @param object the object
+     * @return the string
+     */
     public static String convertirJson(Object object){
 
         if(Objects.isNull(object)){
             throw new JsonSerializadorException("El objeto a serializar no puede ser null!");
         }
         inicializarObjeto(object);
-        Field[] atributos = object.getClass().getDeclaredFields();
-        return Arrays.stream(atributos)
-                .filter(f -> f.isAnnotationPresent(JsonAtributo.class))
+        Field[] atributos = object.getClass().getDeclaredFields();//los campos declarados en el objeto
+        return Arrays.stream(atributos)//lo convertimos a stream
+                .filter(f -> f.isAnnotationPresent(JsonAtributo.class)) //de que clase quiero obtener anotaciones
                 .map(f -> {
-                    f.setAccessible(true);
+                    f.setAccessible(true);//para acceder a los atributos de producto,si no dice que estan protegidos
+                    //si el nombre esta vacio le pasamos el nombre del campo,else el nombre de la anotacion
                     String nombre = f.getAnnotation(JsonAtributo.class).nombre().equals("")
                             ? f.getName()
                             : f.getAnnotation(JsonAtributo.class).nombre();
@@ -61,7 +77,7 @@ public class JsonSerializador {
                     }
                 })
                 .reduce("{" , (a,b) -> {
-                    if("{".equals(a)){
+                    if("{".equals(a)){//la primera vez no añade "," despues del primer elemento de flujo
                         return a + b;
                     }
                     return a + ", " + b;
