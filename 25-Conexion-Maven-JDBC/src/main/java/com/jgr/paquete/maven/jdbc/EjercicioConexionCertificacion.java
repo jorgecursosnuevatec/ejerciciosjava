@@ -2,6 +2,7 @@ package com.jgr.paquete.maven.jdbc;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -116,6 +117,9 @@ public class EjercicioConexionCertificacion {
 	        rsGet.close();
 	        st.close();
 	        conexion.close();
+	        
+	        
+	        
 			 //resultSet con EXECUTEQUERY
 	        Connection  conexion1 = DriverManager.getConnection(url, "jorge", "jorge");
 	        Statement st1= conexion1.createStatement();	        
@@ -123,18 +127,24 @@ public class EjercicioConexionCertificacion {
 	        
 	        while(rsExecute.next()) {
 	        	System.out.println("SalidaexecuteQuery()->"+rsExecute.getString("nombre"));
-	        	
-	        	
-	        }
-	       
-	        
+	        } 
 	        rsExecute.close();
 	        st1.close();
 	        conexion1.close();
 	        
-	        
-	        
-	        
+	        //cargando variables de la query	        
+	        String sqlStatement2= "SELECT * from persona WHERE nombre=?";
+	        Connection  conexion2 = DriverManager.getConnection(url, "jorge", "jorge");
+	        PreparedStatement ps2= conexion2.prepareStatement(sqlStatement2);	        
+	        ps2.setString(1, "Carlos3");
+	        ResultSet rsExecute2=ps2.executeQuery();
+	        while(rsExecute2.next()) {
+	        	System.out.println("SalidaexecuteQueryPREPAREDSTATEMENT()->"+rsExecute2.getString("nombre"));
+	        	
+	        } 
+	        rsExecute2.close();
+	        ps2.close();
+	        conexion2.close();
 	        
 
 	}
