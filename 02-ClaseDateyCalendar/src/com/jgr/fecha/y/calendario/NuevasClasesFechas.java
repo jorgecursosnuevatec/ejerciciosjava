@@ -1,8 +1,4 @@
-/*
- * 
- */
-package com.jgr.pruebas.fechas;
-
+package com.jgr.fecha.y.calendario;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;

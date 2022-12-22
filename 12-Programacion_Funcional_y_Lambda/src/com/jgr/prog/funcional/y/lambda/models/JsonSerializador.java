@@ -7,7 +7,8 @@ import java.util.Arrays;
 import java.util.Objects;
 import java.util.stream.Collectors;
 
-import com.jgr.anotaciones.excepciones.JsonSerializadorException;
+
+
 /**
  * The Class JsonSerializador.
  */

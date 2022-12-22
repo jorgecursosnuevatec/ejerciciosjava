@@ -2,9 +2,13 @@ package com.jgr.fecha.y.calendario;
 
 import java.time.DayOfWeek;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
 import java.time.Month;
+import java.time.format.DateTimeFormatter;
 import java.time.format.TextStyle;
 import java.time.temporal.ChronoUnit;
+import java.util.Date;
 import java.util.Locale;
 
 public class JavaLocalDate {
@@ -102,24 +106,24 @@ public class JavaLocalDate {
 		System.out.println("d1>d2->"+d1.compareTo(d2));
 		System.out.println("d1.before(d2)->"+d1.before(d2));
 		System.out.println("d1.after(d2)->"+d1.after(d2));
-		LocalDate f1=LocalDate.of(2019, 10, 30);
-		LocalDate f2=LocalDate.of(2016, 01, 31);
+		LocalDate f11=LocalDate.of(2019, 10, 30);
+		LocalDate f21=LocalDate.of(2016, 01, 31);
 		//comparación fechas
-		if(f1.isBefore(f2)) {
-			System.out.println("La fecha más antigua es: "+f1);
-			System.out.println("La fecha más reciente es: "+f2);
+		if(f11.isBefore(f21)) {
+			System.out.println("La fecha más antigua es: "+f11);
+			System.out.println("La fecha más reciente es: "+f21);
 		}else {
-			System.out.println("La fecha más antigua es: "+f2);
-			System.out.println("La fecha más reciente es: "+f1);
+			System.out.println("La fecha más antigua es: "+f21);
+			System.out.println("La fecha más reciente es: "+f11);
 		}
-		System.out.println(f1.plusMonths(8));
-		System.out.println(f1.plusDays(200));
-		System.out.println(f2.plusMonths(1));
-		DateTimeFormatter format1=DateTimeFormatter.ofPattern("dd/MM/yyyy");
+		System.out.println(f11.plusMonths(8));
+		System.out.println(f11.plusDays(200));
+		System.out.println(f21.plusMonths(1));
+		DateTimeFormatter format11=DateTimeFormatter.ofPattern("dd/MM/yyyy");
 		System.out.println(f1.format(format1));
-		String mf="11/11/2018";
-		LocalDate nuevaFecha = LocalDate.parse(mf,format1);
-		System.out.println("mf->"+nuevaFecha);
+		String mf1="11/11/2018";
+		LocalDate nuevaFecha1 = LocalDate.parse(mf1,format1);
+		System.out.println("mf->"+nuevaFecha1);
 
 		
 

@@ -1,4 +1,5 @@
-package com.jgr.fecha.y.calendario;import java.time.Duration;
+package com.jgr.fecha.y.calendario;
+import java.time.Duration;
 import java.time.LocalDateTime;
 
 /**
