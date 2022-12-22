@@ -1,12 +1,11 @@
 package com.jgr.prog.funcional.y.lambda.models;
 
-
-
 import java.time.LocalDate;
 import java.util.Arrays;
 import java.util.stream.Collectors;
 
-
+import com.jgr.anotaciones.serializador.Init;
+import com.jgr.anotaciones.serializador.JsonAtributo;
 
 /**
  * The Class Producto.
@@ -19,14 +18,15 @@ public class Producto {
     private String nombre;
 
     /** The precio. */
-    @JsonAtributo(nombre = "coste del producto")
+    @JsonAtributo(nombre = "coste")
     private Long precio;
 
-    /** The fecha.este NO va salir como atributo listado en listaatributos,no lo definimos */
+    /** The fecha. */
     private LocalDate fecha;
 
     /**
      * Inits the.
+     * esta es una anotacion 
      */
     @Init
     private void init(){
@@ -90,5 +90,3 @@ public class Producto {
         this.fecha = fecha;
     }
 }
-
-

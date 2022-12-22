@@ -26,6 +26,7 @@ public class Producto {
 
     /**
      * Inits the.
+     * esta es una anotacion 
      */
     @Init
     private void init(){

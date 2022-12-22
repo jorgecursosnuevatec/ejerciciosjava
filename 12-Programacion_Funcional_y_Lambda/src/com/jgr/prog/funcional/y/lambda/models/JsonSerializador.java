@@ -1,4 +1,4 @@
-package com.jgr.anotaciones.serializador;
+package com.jgr.prog.funcional.y.lambda.models;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
@@ -23,8 +23,7 @@ public class JsonSerializador {
             throw new JsonSerializadorException("El objeto a serializar no puede ser null!");
         }//aqui se obtienen metodos,no atributos
         Method[] metodos = object.getClass().getDeclaredMethods();
-        Arrays.stream(metodos)
-        .filter(m -> m.isAnnotationPresent(Init.class))//mira si esta definido en init
+        Arrays.stream(metodos).filter(m -> m.isAnnotationPresent(Init.class))
                 .forEach(m-> {
                     m.setAccessible(true);
                     try {
