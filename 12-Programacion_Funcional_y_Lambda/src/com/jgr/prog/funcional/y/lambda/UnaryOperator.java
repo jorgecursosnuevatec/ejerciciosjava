@@ -11,6 +11,7 @@ import com.jgr.prog.funcional.y.lambda.models.Persona;
  *subinterfaz de function, el tipo de entrada coincide con el de salida,como function,para transformar datos
  *static <T> UnaryOperator<T> identity()
  *T - the type of the input and output of the operator
+ *Equivale a Function<T,T>
  *Returns:a unary operator that always returns its input argument
  *https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/UnaryOperator.html
  */

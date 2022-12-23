@@ -12,6 +12,8 @@ import com.jgr.prog.funcional.y.lambda.models.Usuario;
 
 /**
  * The Class InterfazPredicate.
+ * Predicate. Establecimiento de condiciones
+
  * recibe un objeto/dato y devuelve un boolean
  * metodo abstracto test que realiza una comprobacion y devuelve un boolean
  * boolean test(T t)
@@ -22,9 +24,18 @@ public class InterfazPredicate {
 	
 	
 	public static void main(String[] args) {
+		//implementación que comprueba una cadena 
+		//y devuelve true si su longitud es mayor que 10
+		Predicate<String> pr=a->a.length()>10;
+		//uso
+		if(pr.test("hola")){
+		 System.out.println("aceptada");
+		}else{
+		 System.out.println("no aceptada");
+		}
+		
 		
 		//este metodo pregunta si es mayor que 10
-
         Predicate<Integer> test = num -> num > 10;
         boolean r = test.test(11);
         System.out.println("r = " + r);

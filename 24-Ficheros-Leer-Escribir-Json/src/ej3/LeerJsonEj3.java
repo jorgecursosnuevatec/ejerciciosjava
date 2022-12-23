@@ -14,8 +14,18 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+
+/**
+ * The Class LeerJsonEj3.
+ * Leo y escribo fichero JSON
+ */
 public class LeerJsonEj3 {
 
+    /**
+     * The main method.
+     *
+     * @param args the arguments
+     */
     public static void main(String[] args) {
 
         // Creo una instancia de GSON
@@ -38,7 +48,8 @@ public class LeerJsonEj3 {
         
         String salida = "";
         
-        if(!fichero.exists()) {
+        
+        if(!fichero.exists()) {//METODO FILE PARA SABER SI EXISTE O NO
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(ruta))) {
             bw.write(json);
             System.out.println("Fichero creado");
@@ -51,7 +62,7 @@ public class LeerJsonEj3 {
                   while ((linea = br.readLine()) != null) {
                       salida += linea;
                       Persona persona2 = gson.fromJson(salida, Persona.class);
-                      System.out.println("Leyendo->"+persona2);                      
+                      System.out.println("Leyendo->"+persona2);                    
                   }
                   
               } catch (FileNotFoundException ex) {

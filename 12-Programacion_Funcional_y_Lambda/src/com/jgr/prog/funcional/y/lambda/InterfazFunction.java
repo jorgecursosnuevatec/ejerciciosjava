@@ -11,9 +11,12 @@ import com.jgr.prog.funcional.y.lambda.models.Persona;
 
 /**
  * The Class InterfazFunction.
+ * Function. Transformación de datos y cálculos
  * interfaz function <T,R>,recibe un argumento y devuelve un objeto Resultado R R apply(T t)
  * metodo apply que a partir de un objeto realiza una operacion y devuelve un resultado R apply(T t)
  * para transformar datos,como map de Stream
+ * Método abstracto apply, que a partir de un objeto 
+ *	realiza una operación y devuelve un resultado
  * https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/Function.html
  * con dos parametros es BiFunction
  * https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/function/BiFunction.html
@@ -21,6 +24,12 @@ import com.jgr.prog.funcional.y.lambda.models.Persona;
 public class InterfazFunction {
 
 	public static void main(String[] args) {
+		
+		//implementación que transforma 
+		//un String en un Integer
+		Function<String, Integer> fr=(String a)->Integer.getInteger(a);
+		//uso
+		Integer num=fr.apply("45");
 
 		Persona array []= {
 				new Persona("Nombre3",66),new Persona("Nombre2",67),

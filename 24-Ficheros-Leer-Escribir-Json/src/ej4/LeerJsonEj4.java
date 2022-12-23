@@ -1,6 +1,6 @@
 package ej4;
 
-import ej4.Persona;
+
 import com.google.gson.Gson;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;

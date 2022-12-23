@@ -15,6 +15,7 @@ import com.jgr.prog.funcional.y.lambda.models.*;
 
 /**
  * The Class InterfazConsumeryBi.
+ * Consumer. Procesamiento de datos
  * tiene un metodo abstracto que se llama accept que realiza algun proceso con lo que recibe
  *void accept(T t).NO DEVUELVE NADA
  *default Consumer<T> andThen(Consumer<? super T> after) a un consumer le aplica otro
