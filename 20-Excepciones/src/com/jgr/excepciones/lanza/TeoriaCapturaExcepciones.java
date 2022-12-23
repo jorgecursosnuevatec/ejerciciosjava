@@ -2,8 +2,34 @@ package com.jgr.excepciones.lanza;
 
 import java.io.FileNotFoundException;
 import java.io.PrintStream;
-
-public class CapturaErrores {
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+/**
+ * The Class TeoriaCapturaExcepciones.
+ * TODAS HEREDAN DE EXCEPTION
+ * LAS CHECKED SON IOEXCEPTION,SQLEXCEPTION... Y EL COMPILADOR OBLIGA A CONTROLARLAS
+ * LAS UNCHECKED SON EN TIEMPO DE EJECUCION, ARITHMETICEXCEPTION,NULLPOINTER... Y NO ES OBLIGATORIO CONTROLARLAS
+ * 
+ * 
+ * UNCHECKED
+ * ArrayIndexOutOfBoundsException->acceder fuera del limite de un array
+ * NullPointerException->acceder a metodos de un objeto que referencia a ull
+ * SecurityException->violacion de seguridad
+ * ClassCastException->error en conversion de tipos
+ * ArithmeticException->operacion matematica incorrecta(ojo que int/0 SI da error,
+ * pero double/0.0 NO double r=3/0.0 NO DA ERROR)
+ * IllegalArgumentException->el parametro de un metodo tiene un valor incorrecto
+ * 
+ * ERRORES
+ * NO SON EXCEPCIONES,acaban en Error
+ * una situacion de la que no se puede recuperar,fallo de memoria en JVM, falta de espacio....
+ * los errores que heredan OutOfMemoryError,StackOverFlowError,InternalError
+ * 
+ * 
+ * 
+ */
+public class TeoriaCapturaExcepciones {
 
 	public static void main(String[] args) {
 		
