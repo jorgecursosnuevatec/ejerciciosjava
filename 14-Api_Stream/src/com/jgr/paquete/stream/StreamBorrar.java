@@ -28,7 +28,8 @@ public class StreamBorrar {
 		}
 		
 		
-//OJO QUE BORRA TODO LO QUE SEA MENOR, SI LE PONGO >= DEBERIA ORDENAR EN DESCENDENTE	
+//funciona si NO encuentra la condicion al principio,es decir para borrar por importe habria que ordenar
+//previamente en descendente para que no lo encuentre al principio		
 		
 		List<Curso> cursoMod=cursos.stream()
 				.sorted((a, b) -> a.getPrecio()>b.getPrecio()?1:a.getPrecio()<b.getPrecio()?-1:0)
