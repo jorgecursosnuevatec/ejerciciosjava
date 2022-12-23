@@ -14,7 +14,7 @@ public class Persona {
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.edad = edad;
-        this.asignaturas = new ArrayList();
+        this.asignaturas = new ArrayList<Asignatura>();
     }
 
     public String getNombre() {
