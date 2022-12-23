@@ -19,12 +19,19 @@ import java.util.List;
  * utiliza eljuego de caracteres del tercero con las opciones del cuarto parametro
  * 
  * static Path	write​(Path path, Iterable<? extends CharSequence> lines, OpenOption... options)	
- *	Write lines of text to a file.
- *	escribe la cadena de caracteres del iterable
+ * Write lines of text to a file.
+ * escribe la cadena de caracteres del iterable
+ *
+ *ESCRIBIR
+ *FileOutputStream fos = new FileOutputStream(String con la ruta,true)
+ *PrintStream out = new PrintStream(fos);
+ *LEER
+ *FileReader fr = new FileReader(ruta);
+ *BufferedReader br = new BufferedReader(fr);
  *
  *  
  */
-public class EscrituraFicheros {
+public class EscrituraLecturaFicheros {
 
 	public static void main(String[] args) {
 		
@@ -84,7 +91,7 @@ public class EscrituraFicheros {
 	        try(PrintStream out = new PrintStream(cadenaStringB)){
 	        	out.println(cadenaStringB);
 	        } catch (FileNotFoundException e) {
-				// TODO Auto-generated catch block
+			
 				e.printStackTrace();
 			}
 	        
