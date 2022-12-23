@@ -10,17 +10,36 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 
+
+/**
+ * The Class GestorFicheroSerializado.
+ *
+ * @param <T> the generic type
+ */
 public class GestorFicheroSerializado<T> {
 
+    /** The fichero. */
     private File fichero;
+    
+    /** The datos. */
     private ArrayList<T> datos;
 
+    /**
+     * Instantiates a new gestor fichero serializado.
+     *
+     * @param fichero the fichero
+     */
     public GestorFicheroSerializado(String fichero) {
         this.fichero = new File(fichero);
         this.datos = new ArrayList();
         obtenerDatos();
     }
 
+    /**
+     * Instantiates a new gestor fichero serializado.
+     *
+     * @param fichero the fichero
+     */
     public GestorFicheroSerializado(File fichero) {
         this.fichero = fichero;
         this.datos = new ArrayList();
@@ -28,7 +47,7 @@ public class GestorFicheroSerializado<T> {
     }
 
     /**
-     * Obtiene todos los datos de un fichero serializado y los mete en una lista
+     * Obtiene todos los datos de un fichero serializado y los mete en una lista.
      */
     public void obtenerDatos() {
 
@@ -55,9 +74,9 @@ public class GestorFicheroSerializado<T> {
     }
 
     /**
-     * Guarda el elemento T en el fichero y en la lista
+     * Guarda el elemento T en el fichero y en la lista.
      *
-     * @param elemento
+     * @param elemento the elemento
      */
     public void guardarDato(T elemento) {
 
@@ -93,16 +112,16 @@ public class GestorFicheroSerializado<T> {
     }
 
     /**
-     * Obtengo los datos
+     * Obtengo los datos.
      *
-     * @return
+     * @return the datos
      */
     public ArrayList<T> getDatos() {
         return datos;
     }
 
     /**
-     * Muestra los datos de la lista, la clase debe tener un toString
+     * Muestra los datos de la lista, la clase debe tener un toString.
      */
     public void mostrarDatos() {
         for (T e : datos) {
@@ -110,6 +129,12 @@ public class GestorFicheroSerializado<T> {
         }
     }
 
+    /**
+     * Existe dato.
+     *
+     * @param elemento the elemento
+     * @return true, if successful
+     */
     public boolean existeDato(T elemento) {
 
         for (T e : datos) {
@@ -122,6 +147,11 @@ public class GestorFicheroSerializado<T> {
 
     }
 
+    /**
+     * Borrar dato.
+     *
+     * @param elemento the elemento
+     */
     public void borrarDato(T elemento) {
 
         if (datos.remove(elemento)) {
