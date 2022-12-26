@@ -7,12 +7,12 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 /**
  * The Class TeoriaCapturaExcepciones.
- * TODAS HEREDAN DE EXCEPTION
- * LAS CHECKED SON IOEXCEPTION,SQLEXCEPTION... Y EL COMPILADOR OBLIGA A CONTROLARLAS
- * LAS UNCHECKED SON EN TIEMPO DE EJECUCION, ARITHMETICEXCEPTION,NULLPOINTER... Y NO ES OBLIGATORIO CONTROLARLAS
- * 
+ * TODAS HEREDAN DE Throwable->Exception
+ * CHECKED 
+ * IoException,SqlException... excepciones propias de API'S,el compilador obliga a capturarlas 
  * 
  * UNCHECKED
+ * heredan de RuntimeException,en tiempo de ejecucioin
  * ArrayIndexOutOfBoundsException->acceder fuera del limite de un array
  * NullPointerException->acceder a metodos de un objeto que referencia a ull
  * SecurityException->violacion de seguridad
@@ -26,11 +26,13 @@ import java.util.Date;
  * una situacion de la que no se puede recuperar,fallo de memoria en JVM, falta de espacio....
  * los errores que heredan OutOfMemoryError,StackOverFlowError,InternalError
  * 
+ * LAS EXCEPCIONES DEL MULTICATCH NO PUEDEN TENER RELACION DE HERENCIA,DA ERROR DE COMPILACION
  * 
+ * String getMessage()->devuelve string con msg
+ * void printStackTrace()->volcado de error enviado a consola
  * 
  */
 public class TeoriaCapturaExcepciones {
-
 	public static void main(String[] args) {
 		
 		

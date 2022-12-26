@@ -30,7 +30,7 @@ public class StreamParallel {
 
         long t1 = System.currentTimeMillis();
  
-        //
+        //es una lista,se usa stream().parallel()
         String resultado = lista.stream()
                 .parallel()
                 .map(u -> u.toString().toLowerCase())
@@ -58,6 +58,8 @@ public class StreamParallel {
         System.out.println(resultado);
         
         t1 = System.currentTimeMillis();
+        
+        //al ser stream se usa parallelStream()
         String salidaStream = lista
         		.parallelStream()        		
                 .map(u -> u.toString().toLowerCase())
