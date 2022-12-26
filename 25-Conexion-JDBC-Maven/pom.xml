@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.jgr.paquete.maven.jdbc</groupId>
-  <artifactId>25-Conexion-Maven-JDBC</artifactId>
+  <artifactId>25-Conexion-JDBC-Maven</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>Proyecto_maven</name>
   <description>Proyecto_maven</description>

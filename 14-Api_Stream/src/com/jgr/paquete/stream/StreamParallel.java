@@ -13,7 +13,7 @@ import com.jgr.paquete.stream.modelo.Usuario;
  * The Class StreamParallel.
  * en un stream usamos el metodo parallel()
  * en una coleccion usamos parallelStream()
- * Cuidado que NO ORDENA,lo puede hacer si lo pasamos a secuencial antes de ordenarlos
+ * Cuidado que NO ORDENA,lo puede hacer si lo pasamos a secuencial con sequential() antes de ordenarlos
  */
 public class StreamParallel {
 	public static void main(String[] args) {
