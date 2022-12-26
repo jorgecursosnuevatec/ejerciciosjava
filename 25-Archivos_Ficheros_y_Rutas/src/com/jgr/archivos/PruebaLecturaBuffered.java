@@ -16,7 +16,7 @@ public class PruebaLecturaBuffered {
 	public static void main(String[] args) {
 		
 		
-		String dir="c:\\ficheros\\mydata.txt";
+		String dir="d:\\ficheros\\mydata.txt";
 		try (FileOutputStream fos = new FileOutputStream(dir, true); PrintStream out = new PrintStream(fos)) {
 			out.append("dir1");
 			out.append("dir2");

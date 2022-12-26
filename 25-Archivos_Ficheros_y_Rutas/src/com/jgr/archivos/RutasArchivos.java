@@ -49,7 +49,7 @@ public class RutasArchivos {
 		System.out.println("p2 nombre->"+p2.getFileName());
 		
 		//Path to absolutePath()->ruta completa del fichero o directorio
-		Path p3 = Path.of("d:\\user\\mydata.txt");
+		Path p3 = Path.of("\\user\\mydata.txt");
 		Path p4 = Path.of("datos.txt");
 		//SI LE PASO LA RUTA SACA TODO
 		System.out.println("p3 AbsolutePath->"+p3.toAbsolutePath());
@@ -59,9 +59,9 @@ public class RutasArchivos {
 		//normalize() DEVUELVE EL PATH NORMALIZADO
 		//. EL DIRECTORIO ACTUAL, .. SUBE UNO,estariamos en el mismo nivel en este caso
 		
-		String url = "D:\\temp\\..\\data.txt";
-		String url2 = "D:\\temp\\mydata.txt";
-		String url3 = "D:\\temp\\..\\fichero.txt";
+		String url = "\\temp\\..\\data.txt";
+		String url2 = "\\temp\\mydata.txt";
+		String url3 = "\\temp\\..\\fichero.txt";
 		String url4 = "new.txt";
 		
 		p4= Paths.get(url);
@@ -88,8 +88,8 @@ public class RutasArchivos {
 		p1= Path.of(url2);		
 		System.out.println("\ngetName()->"+p1.getName(0));
 
-		p1 = Path.of("c:\\user\\.\\..\\texto.txt"); // sube un directorio desde user,estaria en raiz
-		p2 = Path.of("c:\\user\\..\\datos.txt");// sube un directorio desde user,estaria en raiz
+		p1 = Path.of("\\user\\.\\..\\texto.txt"); // sube un directorio desde user,estaria en raiz
+		p2 = Path.of("\\user\\..\\datos.txt");// sube un directorio desde user,estaria en raiz
 
 
 		//como los dos estan en c, la direccion relativa de uno respecto a otro seria ..\fichero
@@ -98,7 +98,7 @@ public class RutasArchivos {
 		
 		
 		//el resolve nos sacaria que los dos estan en el mismo directorio
-		p1 = Path.of("c:\\user\\.\\..\\texto.txt"); // sube un directorio desde user,estaria en raiz
+		p1 = Path.of("\\user\\.\\..\\texto.txt"); // sube un directorio desde user,estaria en raiz
 		p2 = Path.of("new.txt");
 		System.out.println("\n"+p1.resolve(p2));
 		

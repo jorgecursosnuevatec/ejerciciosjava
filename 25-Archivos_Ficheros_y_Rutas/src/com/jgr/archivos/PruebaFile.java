@@ -11,7 +11,7 @@ public class PruebaFile {
 	
 	public static void main(String[] args) {
 		
-		String dir="c:\\ficheros\\mydata.txt";
+		String dir="d:\\ficheros\\mydata.txt";
 		File ficheroFile = new File(dir);
 		
 		System.out.println("HashCode->"+ficheroFile.hashCode());

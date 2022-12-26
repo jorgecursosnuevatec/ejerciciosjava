@@ -14,7 +14,7 @@ PushLog="/dev/null"
 # Mensaje
 message=$@
 if [ -z "$message" ]; then
-message="$(date)2022-12-26 SUBIDA DESDE CASA"
+message="$(date)2022-12-26 seguir con el 75 preguntas examen"
 fi
 
 start=`date +%s`

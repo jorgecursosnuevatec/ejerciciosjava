@@ -1,8 +1,12 @@
 package com.jgr.archivos;
 
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintStream;
+import java.io.Reader;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -29,6 +33,17 @@ public class TestClaseFilesLectura {
 	public static void main(String[] args) throws IOException {
 
 		
+		String dirnn="d:\\archivosprobarlectura.txt";		
+		try(PrintStream outPrintStream= new PrintStream(dirnn)){
+			outPrintStream.println("textoPrintStream");	
+			System.out.println("printStream.txt");
+		} catch (FileNotFoundException e) {			
+			e.printStackTrace();
+		}
+		
+		
+		
+		
 		// static Stream<String> lines​(Path path) Read all lines from a file as a Stream.
 		String nombreArchivoFileWriter = "d:\\archivosBufferedWriter.txt";
 		//read file into stream, try-with-resources
@@ -44,17 +59,26 @@ public class TestClaseFilesLectura {
 		list.forEach(s->System.out.println("\n leyendo como lista->"+s.toLowerCase()));
 		
 
-		//static BufferedReader	newBufferedReader​(Path path) Opens a file for reading,		
-		BufferedReader entrada  = (BufferedReader) Path.of(nombreArchivoFileWriter);
-		 var lectura = entrada.readLine();
-         while(lectura != null){
-             System.out.println("\nlectura BufferedReader= " + lectura.toUpperCase());
-             lectura = entrada.readLine();
-         }
+		//static BufferedReader	newBufferedReader​(Path path) Opens a file for reading,	
+		
+		
+		try(FileReader fr = new FileReader(dirnn);
+				BufferedReader br = new BufferedReader(fr);){
+			String linea= "";
+			while((linea=br.readLine())!=null) {
+				System.out.println("SALIDA->"+linea);
+			}
+			
+		} catch (FileNotFoundException e) {		
+			e.printStackTrace();
+		} catch (IOException e) {		
+			e.printStackTrace();
+		}
+		
          
 		//USANDO BUFFERED READER Y FILEREADER
          //CON RECURSOS PORQUE LO CIERRA SOLO
-         String dir="c:\\user\\myFile.txt";
+         String dir="d:\\archivos\\myFile.txt";
          try(FileReader fr = new FileReader(dir)){
          BufferedReader br= new BufferedReader(fr);
          String linea;
