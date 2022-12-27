@@ -6,6 +6,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="lib" path="D:/Java/Ejercicios Java/99-Leer_y_escribir_JSON/gson-2.8.6.jar"/>
+	<classpathentry kind="lib" path="D:/Java/Ejercicios Java/24-Ficheros-Leer-Escribir-Json/gson-2.8.6.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

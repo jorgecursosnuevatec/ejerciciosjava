@@ -14,7 +14,7 @@ PushLog="/dev/null"
 # Mensaje
 message=$@
 if [ -z "$message" ]; then
-message="$(date)2022-12-26 seguir con el 75 preguntas examen"
+message="$(date)2022-12-27 REVISAR APUNTES DE JSON Y OBJECTWRITER"
 fi
 
 start=`date +%s`
