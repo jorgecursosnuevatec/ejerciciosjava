@@ -21,7 +21,7 @@ inicio=`date +%s`
 # Mensaje
 message=$@
 if [ -z "$message" ]; then
-message="$(date)2022-12-27 ++JAVA NIO"
+message="$(date)2022-12-27 TERMINADO JDBC"
 fi
 
 git add .

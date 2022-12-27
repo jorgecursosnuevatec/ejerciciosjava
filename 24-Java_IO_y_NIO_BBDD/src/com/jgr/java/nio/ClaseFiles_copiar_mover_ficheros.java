@@ -17,11 +17,12 @@ import java.util.List;
  *  si origen es un directorio en target crea directorio vacio
  *  si destino es un directorio FileAlreadyExistsException
  *  
- *  static Path	move​(Path source, Path target, CopyOption... options)	
+ * static Path	move​(Path source, Path target, CopyOption... options)	
  * Move or rename a file to a target file.
  * 
  * static boolean deleteIfExists​(Path path) Deletes a file if it exists.
- * static void	delete​(Path path) Deletes a file.
+ * static void	delete​(Path path) Deletes a file,si no existe excepcion,debe estar vacio
+ * static Path createFile(Path path,FileAttribute<?>...attrs),crea fichero vacio,si existe provoca excepcion
  * 
  */
 public class ClaseFiles_copiar_mover_ficheros {
@@ -31,7 +32,7 @@ public class ClaseFiles_copiar_mover_ficheros {
 		Path origen = Path.of("d:\\origen​.txt");
 		Path intermedio = Path.of("d:\\intermedio.txt");
 		Path destino = Path.of("d:\\destino.txt");
-		Path destinoError =  Path.of("d:\\ficheros\\");
+		Path destinoError =  Path.of("d:\\ficheros");
 		List<String> miLista = new ArrayList<String>();
 		miLista.add("Lunes");
 		miLista.add("Martes");
@@ -62,10 +63,11 @@ public class ClaseFiles_copiar_mover_ficheros {
 			e.printStackTrace();
 		}
 		
+		
+		//¿deberia dar error FileAlreadyExistsException?
 		try {
-			Files.copy(origen, destinoError,StandardCopyOption.REPLACE_EXISTING);
-		} catch (IOException e) {
-			
+			Files.copy(origen, destinoError,StandardCopyOption.COPY_ATTRIBUTES);
+		} catch (IOException e) {			
 			e.printStackTrace();
 		}
 		

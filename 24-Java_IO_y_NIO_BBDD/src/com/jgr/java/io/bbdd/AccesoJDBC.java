@@ -1,4 +1,4 @@
-package com.jgr.paquete.maven.jdbc;
+package com.jgr.java.io.bbdd;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -7,12 +7,17 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+
+
 /**
-DriverManager-> metodo estatico para conexion bbdd
+ * The Class AccesoJDBC.
+
+* DriverManager-> metodo estatico para conexion bbdd
 * Connection->conexion bbdd
 * Connection con = DriverManager.getConnection(String cadena,String user,String pwd)
 * Connection con = DriverManager.getConnection(String cadena,Properties prop)
 * la cadena es jdbc<subprotocolo> :subname
+* el subprotocolo es el tipo de bbdd y el subname depende de la bbdd
 * ej->jdbc:mysql://localhost:3306/mydata
 * 	   jdbc:oracle:thin@localhost:1521/servicedata  	
 * 
@@ -76,12 +81,15 @@ DriverManager-> metodo estatico para conexion bbdd
 *  DESDE JDBC4 NO HACE FALTA cargar el Driver el Class.forName("com.mysql.jdbc.Driver"), es decir desde
 *  java 6;
 *  
-*  El close es obligatorio,podemos hacerlo con un try con recursos o en el finally  
-*/
-public class EjercicioConexionCertificacion {
+*  El close es obligatorio,podemos hacerlo con un try con recursos o en el finally
+*  
+*/ 
+
+public class AccesoJDBC {
+
 
 	public static void main(String[] args) throws SQLException {
-
+		
 		var url = "jdbc:mysql://localhost:3306/prueba?useSSL=false&useTimezone=true&serverTimezone=UTC&allowPublicKeyRetrieval=true";
 		var sql = "SELECT id_persona, nombre, apellido, email, telefono FROM persona";
 
