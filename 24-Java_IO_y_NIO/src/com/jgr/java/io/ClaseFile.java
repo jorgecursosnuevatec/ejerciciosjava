@@ -37,26 +37,26 @@ public class ClaseFile {
 		
 		
 		//lectura Bytes con FileInputStream para ficheros binarios
-				File file = new File(dirnn);		
-				try(FileInputStream fis = new FileInputStream(file)){
-					byte[] bytesSalida = new byte[(int) file.length()];			
-					System.out.println("\nFileInputStream BYTES->"+ fis.read(bytesSalida));			
-					
-				} catch (FileNotFoundException e) {		
-					e.printStackTrace();
-				} catch (IOException e) {		
-					e.printStackTrace();
-				}
-				
-				String dirnn2="d:\\archivosprobarlectura.txt";	
-				File file2 = new File(dirnn2);
-				
-				System.out.println("Existe fichero->"+file.exists());
-				System.out.println("Es fichero->"+file.isFile());
-				System.out.println("Es directorio->"+file.isDirectory());
-				System.out.println("Lo borro->"+file2.delete());
-				
-				
+		File file = new File(dirnn);		
+		try(FileInputStream fis = new FileInputStream(file)){
+			byte[] bytesSalida = new byte[(int) file.length()];			
+			System.out.println("\nFileInputStream BYTES->"+ fis.read(bytesSalida));			
+
+		} catch (FileNotFoundException e) {		
+			e.printStackTrace();
+		} catch (IOException e) {		
+			e.printStackTrace();
+		}
+
+		String dirnn2="d:\\archivosprobarlectura.txt";	
+		File file2 = new File(dirnn2);
+
+		System.out.println("Existe fichero->"+file.exists());
+		System.out.println("Es fichero->"+file.isFile());
+		System.out.println("Es directorio->"+file.isDirectory());
+		System.out.println("Lo borro->"+file2.delete());
+
+
 				
 
 	}

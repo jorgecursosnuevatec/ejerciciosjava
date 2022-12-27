@@ -17,7 +17,7 @@ import com.jgr.peliculas.excepciones.ErrorEscrituraDatos;
 import com.jgr.peliculas.excepciones.ErrorLecturaDatos;
 import com.jgr.peliculas.modelo.Pelicula;
 
-// TODO: Auto-generated Javadoc
+
 /**
  * The Class PeliculasRepositorio.
  * AÑADIDA LIBRERIA GSON-2.2.2.jar de GOOGLE para escribir/leer ficheros en formato json

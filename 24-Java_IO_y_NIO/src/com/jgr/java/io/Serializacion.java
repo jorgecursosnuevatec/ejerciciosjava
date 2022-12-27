@@ -27,39 +27,39 @@ public class Serializacion {
 
 	public static void main(String[] args) {
 		
-		
+
 		int limite = 5;
-		
+
 		PersonaSerializable per = new PersonaSerializable();
-		
+
 		List<PersonaSerializable> personas = new ArrayList<PersonaSerializable>();
-		
+
 		for(int i=0;i<limite;i++) {
-			
+
 			per = new PersonaSerializable();
 			per.setApellido("Apellidos"+i);
 			per.setEmail("email@mail"+i+"@correo.com");
 			per.setNombre("Nombre"+i);
 			per.setTelefono(""+i+i+i+i);
 			personas.add(per);			
-			
+
 		}
-		
+
 		String ruta="/ficheros/PersonaSerializable.txt";
-		
+
 		//ESCRITURA DE FICHEROS
 		try(FileOutputStream fos= new FileOutputStream(ruta);
 				ObjectOutputStream oos= new ObjectOutputStream(fos);){			
 			for(PersonaSerializable persona:personas) {
 				oos.writeObject(persona);				
 			}			
-			
+
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
+
 		//LECTURA
 		//IMPORTANTE QUE NO DA FIN DE FICHERO,HAY QUE CONTROLAR EOFException
 		try(FileInputStream fis= new FileInputStream(ruta);
@@ -69,8 +69,8 @@ public class Serializacion {
 				System.out.println("\nPersona leida->"+personaLeida);
 				personaLeida = (PersonaSerializable) ois.readObject();
 			}
-			
-			
+
+
 		} catch (EOFException exc) {
 			System.out.println("*****Hemos llegado al fin fichero********");			
 		} catch (FileNotFoundException e) {
