@@ -6,13 +6,15 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 /**
- * The Class TeoriaCapturaExcepciones.
+ * The Class A_TeoriaCapturaExcepciones.
  * TODAS HEREDAN DE Throwable->Exception
+ * 
+ * 
  * CHECKED 
  * IoException,SqlException... excepciones propias de API'S,el compilador obliga a capturarlas 
  * 
  * UNCHECKED
- * heredan de RuntimeException,en tiempo de ejecucioin
+ * heredan de RuntimeException,en tiempo de ejecucion NO es obligatorio capturarlas
  * ArrayIndexOutOfBoundsException->acceder fuera del limite de un array
  * NullPointerException->acceder a metodos de un objeto que referencia a ull
  * SecurityException->violacion de seguridad
@@ -22,7 +24,7 @@ import java.util.Date;
  * IllegalArgumentException->el parametro de un metodo tiene un valor incorrecto
  * 
  * ERRORES
- * NO SON EXCEPCIONES,acaban en Error
+ * NO SON EXCEPCIONES,acaban en Error y 
  * una situacion de la que no se puede recuperar,fallo de memoria en JVM, falta de espacio....
  * los errores que heredan OutOfMemoryError,StackOverFlowError,InternalError
  * 
@@ -32,7 +34,7 @@ import java.util.Date;
  * void printStackTrace()->volcado de error enviado a consola
  * 
  */
-public class TeoriaCapturaExcepciones {
+public class A_TeoriaCapturaExcepciones {
 	public static void main(String[] args) {
 		
 		

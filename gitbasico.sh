@@ -21,7 +21,7 @@ inicio=`date +%s`
 # Mensaje
 message=$@
 if [ -z "$message" ]; then
-message="$(date)2022-12-27 SEGUIR CON EL 82"
+message="$(date)2022-12-28 PRIMERA SUBIDA DEL DIA"
 fi
 
 git add .
