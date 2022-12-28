@@ -1,21 +1,14 @@
 package com.jgr.excepciones.lanza;
 
 import java.util.Scanner;
-
 import com.jgr.excepciones.lanza.personalizadas.ExcepcionPersonalizadaRuntime;
 
 /**
- * The Class LanzaExcepcionPersonalizadaException.
+ * The Class LanzaExcepcionPersonalizadaExceptionVentana.
  * Como la excepcion hereda exception ES OBLIGATORIO poner el throws
  */
 public class LanzaExcepcionPersonalizadaRuntime {
 
-	/**
-	 * The main method.
-	 *
-	 * @param args the arguments
-	 * @throws ExcepcionPersonalizadaException the excepcion personalizada exception
-	 */
 	public static void main(String[] args)  {
 
 		int dividendo = 0;
@@ -37,6 +30,7 @@ public class LanzaExcepcionPersonalizadaRuntime {
 		}
 		finally {
 			System.out.println("tratado el dividendo");
+			sc.close();
 		}
 
 		if (dividendo == 0) {

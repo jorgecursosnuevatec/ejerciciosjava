@@ -7,17 +7,12 @@ public class ExcepcionPersonalizadaException extends Exception {
 		super(mensaje);
 		e.printStackTrace();
 		e.getMessage();
-
 	}
 
 	public ExcepcionPersonalizadaException(String mensaje) {
 		super(mensaje);
 
 	}
-
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 
 }

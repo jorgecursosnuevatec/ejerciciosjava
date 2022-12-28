@@ -10,14 +10,13 @@ public class TareaThread extends Thread{
 	public TareaThread(String name) {
 		super(name);
 		this.name=name;
-				
 	}
 	
 	/**
 	 * Run.
 	 */
 	public void run() {
-		System.out.println("Entro en Clase TareaThread llamada->"+getName());
+		System.out.println("\nEntro en Clase TareaThread llamada->"+getName());
 		
 		for (int i=0;i<10;i++) {
 			System.out.println("Dentro del run de :"+ getName()+" ->"+this.getState() +" "+ i);

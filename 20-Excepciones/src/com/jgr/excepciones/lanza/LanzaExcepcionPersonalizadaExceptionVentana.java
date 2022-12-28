@@ -1,34 +1,24 @@
 package com.jgr.excepciones.lanza;
 
-import java.util.Scanner;
-
+import javax.swing.JOptionPane;
 import com.jgr.excepciones.lanza.personalizadas.ExcepcionPersonalizadaException;
 
-// TODO: Auto-generated Javadoc
 /**
- * The Class LanzaExcepcionPersonalizadaException.
+ * The Class LanzaExcepcionPersonalizadaExceptionVentana.
  * Como la excepcion hereda de runtimeexception NO ES OBLIGATORIO poner el throws
  */
 public class LanzaExcepcionPersonalizadaExceptionVentana {
-
-	/**
-	 * The main method.
-	 *
-	 * @param args the arguments
-	 * @throws ExcepcionPersonalizadaException the excepcion personalizada exception
-	 */
 	public static void main(String[] args) throws ExcepcionPersonalizadaException {
 
-		int dividendo = 0;
-		int divisor = 0;
+		double dividendo = 0;
+		double divisor = 0;
 		String datos = null;
 
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Introduce dividendo=");
+		datos = JOptionPane.showInputDialog(null, "Mete el dividendo");
 
 		try {
-			datos = sc.nextLine();
-			dividendo = Integer.parseInt(datos);
+			
+			dividendo= Double.parseDouble(datos);
 
 		} catch (Exception e) {
 			//le paso un mensaje y la excepcion
@@ -39,11 +29,11 @@ public class LanzaExcepcionPersonalizadaExceptionVentana {
 			throw new ExcepcionPersonalizadaException("Dividendo es cero");
 		}
 		
-		System.out.println("Introduce divisor=");
+		datos = JOptionPane.showInputDialog(null, "Mete el divisor");
 		
 		try {
-			datos = sc.nextLine();
-			divisor = Integer.parseInt(datos);
+			
+			divisor = Double.parseDouble(datos);
 		
 		
 		} catch (NumberFormatException n) {
@@ -55,10 +45,8 @@ public class LanzaExcepcionPersonalizadaExceptionVentana {
 		}
 		
 		
-		System.out.println("Resultado->"+ dividendo/divisor);
+		JOptionPane.showMessageDialog(null, "El resultado es "+ dividendo/divisor);
 		
-		
-		sc.close();
 		System.exit(-1);
 
 	}

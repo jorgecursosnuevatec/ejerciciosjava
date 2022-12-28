@@ -2,7 +2,6 @@ package com.jgr.paquete.hilos.thread;
 
 import com.jgr.paquete.hilos.modelos.ImprimirFrases;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class Sincronizacion.
  * sincronizamos la ejecucion de los hilos

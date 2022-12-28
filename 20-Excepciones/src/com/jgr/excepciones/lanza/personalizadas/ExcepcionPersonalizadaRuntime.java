@@ -10,13 +10,11 @@ public class ExcepcionPersonalizadaRuntime extends RuntimeException{
 		e.getMessage();
 		e.toString();
 		
-		
 	}
 	
 	
 	public ExcepcionPersonalizadaRuntime(String mensaje) {
 		super(mensaje);
-		
 		
 	}
 	
