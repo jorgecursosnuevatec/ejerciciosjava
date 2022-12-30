@@ -16,8 +16,15 @@ import java.util.List;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
-public class Lanzadora {
 
+/**
+ * The Class LanzadoraFicherosJson.
+ * Da error si escribimos mas de un objeto,habria que escribir como una lista si hay mas de un objeto
+ * 
+ */
+public class LanzadoraFicherosJson {
+
+	
 	public static void main(String[] args) throws ParseException {
 
 		/** The cursos. */

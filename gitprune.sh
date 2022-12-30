@@ -14,7 +14,7 @@ PushLog="/dev/null"
 # Mensaje
 message=$@
 if [ -z "$message" ]; then
-message="$(date)2022-12-27 REVISAR APUNTES DE JSON Y OBJECTWRITER"
+message="$(date)2022-12-30 NUEVA MULTITAREA 1 90"
 fi
 
 start=`date +%s`

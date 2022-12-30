@@ -1,4 +1,4 @@
-package com.jgr.paquete.hilos.thread;
+package com.jgr.paquete.hilos.thread.nuevas;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
@@ -8,9 +8,11 @@ import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
 
 /**
- * The Class ExecutorFuture.
- * Devuelve un future,la tarea que se esta ejecutando se puede seguir.
- * si es runnable o callable este resultado se puede dar cuando aunque acabe esto
+ * The Class LanzadoraInterfazFuture.
+ * -el metodo submit(Callable tarea) de executorService devuelve un objeto Future que pede usarse para acceder
+ * al resultado y controlar su ejecucion
+ * -isDone()->para saber si ha finalizado
+ * -get()->devuelve el valor generado por callable,si no ha terminado se queda esperando el resultado
  * 
  * Future<Integer> f= exservice.submit(()->System.out.println("by"))
  * seria erronea porque no devuelve nada,el tipo de dato deberia ser ?
@@ -20,11 +22,13 @@ import java.util.concurrent.TimeUnit;
  * 
  * Future<?> f= exservice.submit((n)->System.out.println(n));
  * seria erronea porque submit no admite parametros
+ * 
  */
-public class ExecutorFuture {
+public class LanzadoraInterfazFuture {
+
 	
 	public static void main(String[] args) throws InterruptedException, ExecutionException {
-
+		
 		ExecutorService executor = Executors.newSingleThreadExecutor();
 
 		Callable<String> tarea = () -> {
@@ -54,6 +58,8 @@ public class ExecutorFuture {
 		System.out.println("Haciendo que espere a que termine->" + resultado.get());
 
 		System.out.println("Continuando.....");
+
+	
 
 	}
 

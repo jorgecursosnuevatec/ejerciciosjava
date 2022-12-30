@@ -4,14 +4,11 @@ package com.jgr.paquete.hilos.thread;
  * The Class InterfaceRunnable.
  * ejecutamos todos estos hilos a la vez, como el orden no esta controlado,
  *  no se puede saber cual acabara antes sacando el msg Finalmente me voy de viaje a: " + nombre
+ *  
  */
 public class InterfaceRunnableFuncionLambda {
 
-	/**
-	 * The main method.
-	 *
-	 * @param args the arguments
-	 */
+	
 	public static void main(String[] args) {
 
 		// instancio un runnable y creo una funcion lambda igual que la clase viajetarea
