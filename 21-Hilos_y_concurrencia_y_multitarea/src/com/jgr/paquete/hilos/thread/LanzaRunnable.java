@@ -2,8 +2,16 @@ package com.jgr.paquete.hilos.thread;
 
 import com.jgr.paquete.hilos.modelos.TareaRunnable;
 
-public class LanzaRunnable {
 
+/**
+ * The Class LanzaRunnable.
+ * 
+ * public abstract void run();
+ * 
+ * La diferencia con Callable es que esta ultima devuelve un valor, Runnable NO
+ * 
+ */
+public class LanzaRunnable {
 	public static void main(String[] args) {
 		
 		Runnable tareaRunnable = new TareaRunnable("Runnable");		

@@ -3,7 +3,7 @@ package com.jgr.paquete.hilos.thread.nuevas;
 /**
  * The Class LanzadoraInterfazCallable.
  * en el paquete java.util.concurrent
- * Interfaz Callable
+ * LanzadoraInterfaz Callable
  * -solo tiene el metodo call() que devuelve un resultado
  * -se usa desde Future
  * 

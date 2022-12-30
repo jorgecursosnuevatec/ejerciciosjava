@@ -9,7 +9,7 @@ import java.util.concurrent.Executors;
  * 
  * Clase Executors
  * 
- * Interfaz ExecutorService,es la principal para lanzar y ejecutar tareas de forma concurrente,usando un pool de threads
+ * LanzadoraInterfaz ExecutorService,es la principal para lanzar y ejecutar tareas de forma concurrente,usando un pool de threads
  * -submit(Runnable tarea)->lanza la tarea y la pone en ejecucion concurrente con el resto
  * -submit(Callable tarea)->igual que Runnable para objetos Callable
  * -shutdown()->finaliza el pool de hilos,no se admiten mas tareas.HASTA QUE NO SE LLAMA A ESTE METODO SIGUE EN MAQUINA,NO SE PARA
@@ -34,6 +34,11 @@ public class LanzadoraInterfazExecutorService {
 		ExecutorService ex = Executors.newCachedThreadPool();
 		ex.submit(()->System.out.println("Hola"));
 		ex.submit(()->System.out.println("Mundo"));
+		
+		ExecutorService ex2 = Executors.newSingleThreadExecutor();
+		ex2.submit(()->System.out.println("newSingleThreadExecutorHola"));
+		ex2.submit(()->System.out.println("newSingleThreadExecutorMundo"));
+		
 	
 
 	}
