@@ -2,6 +2,7 @@ package com.jgr.paquete.hilos.thread.nuevas;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * The Class LanzadoraInterfazExecutorService.
@@ -39,7 +40,18 @@ public class LanzadoraInterfazExecutorService {
 		ex2.submit(()->System.out.println("newSingleThreadExecutorHola"));
 		ex2.submit(()->System.out.println("newSingleThreadExecutorMundo"));
 		
+		
+	//en este caso el orden en el que van a imprimir es impredecible,porque llegara a 3 pero no sabemos que
+	//hilo lo va a hacer
+	ExecutorService ejecutor = Executors.newFixedThreadPool(10);
+	AtomicInteger ai = new AtomicInteger();
 	
+	for (int i=0;i<50;i++) {
+		ejecutor.submit(()->System.out.println("hilo->"+ejecutor.hashCode()
+		+" valor->"+ai.incrementAndGet()));
+		
+	}
+	ejecutor.shutdown();
 
 	}
 
