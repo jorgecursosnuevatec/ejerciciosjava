@@ -3,7 +3,6 @@ package com.jgr.paquete.hilos.thread;
 import java.util.concurrent.ThreadLocalRandom;
 
 import com.jgr.paquete.hilos.modelos.Panaderia;
-import com.jgr.paquete.hilos.modelos.Panadero;
 
 /**
  * igual que Sincronizados1ProductorPanaderia pero con programacion funcional

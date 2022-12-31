@@ -1,14 +1,11 @@
 package com.jgr.anotaciones;
 
 import java.lang.reflect.Field;
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.lang.reflect.Modifier;
 import java.time.LocalDate;
 import java.util.Arrays;
-import java.util.Objects;
-import java.util.stream.Collectors;
 
-import com.jgr.anotaciones.excepciones.JsonSerializadorException;
 import com.jgr.anotaciones.modelo.Producto;
 import com.jgr.anotaciones.serializador.JsonAtributo;
 
@@ -49,6 +46,34 @@ public class LanzadoraProductoAnotaciones {
                 }).concat("}");
 		 
 		 System.out.println("salida"+salida);
+		 
+		 //obtener las propiedades de un objeto
+		 
+		 Field[] propiedades = (Producto.class).getDeclaredFields();
+		 /*
+		 for (Field variable : propiedades) {
+			 System.out.println("getDeclaredFields() de producto->"+variable);
+		 }
+		 */
+		 //para saber que tipo de modificador es
+		 for (Field variable : propiedades) {
+			 System.out.println("\ngetDeclaredFields().nombre de producto->"+variable.getName());
+			 System.out.println("getDeclaredFields().modificadores de producto->"+variable.getModifiers());
+			 System.out.println("getDeclaredFields().modificadores de producto es privada->"+Modifier.isPrivate(variable.getModifiers()));
+			 System.out.println("getGenericType().tipo generico->"+variable.getGenericType());
+			 System.out.println("getType().tipo->"+variable.getType());
+		 }
+		 System.out.println("\n****************************************************");
+		 
+		//obtener los metodos de un objeto
+		 Method[] metodos = (Producto.class).getDeclaredMethods();
+		 
+		 for ( Method metodo : metodos) {
+			 System.out.println("\n.getDeclaredMethods() metodo->"+metodo);			 
+			 System.out.println("\n.getDeclaredMethods() modificadores de metodo->"+metodo.getModifiers());			 
+			 System.out.println("\n.getDeclaredMethods() nombre metodo->"+metodo.getName());			 
+		 }
+		
                
     }
 }

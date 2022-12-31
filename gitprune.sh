@@ -14,7 +14,7 @@ PushLog="/dev/null"
 # Mensaje
 message=$@
 if [ -z "$message" ]; then
-message="$(date)2022-12-30 SEGUIR CON ANOTACIONES"
+message="$(date)2022-12-30++ejemplos anotaciones"
 fi
 
 start=`date +%s`
