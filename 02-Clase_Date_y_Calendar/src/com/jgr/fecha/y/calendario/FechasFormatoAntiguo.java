@@ -1,4 +1,4 @@
-package com.jgr.fechas;
+package com.jgr.fecha.y.calendario;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

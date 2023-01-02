@@ -24,8 +24,11 @@ public class JavaUtilCalendar {
         System.out.println("fecha sin formato = " + fecha);
 
         SimpleDateFormat formato = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SSS a");
+        SimpleDateFormat formato2 = new SimpleDateFormat("yyyy-MM-dd");
         String fechaConFormato = formato.format(fecha);
-        System.out.println("fecha Con Formato = " + fechaConFormato);
+        String fechaConFormato2 = formato2.format(fecha);
+        System.out.println("fecha Con Formato yyyy-MM-dd HH:mm:ss:SSS a->" + fechaConFormato);
+        System.out.println("fecha Con Formato yyyy-MM-dd->" + fechaConFormato2);
 
         Calendar calActual = Calendar.getInstance();
         Date fecha2 = calActual.getTime();

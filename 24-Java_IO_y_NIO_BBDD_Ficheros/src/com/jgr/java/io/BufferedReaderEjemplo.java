@@ -1,4 +1,4 @@
-package com.jgr.ficheros.y.stream;
+package com.jgr.java.io;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;

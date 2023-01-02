@@ -40,11 +40,15 @@ public class NuevasClasesFechas{
 		System.out.println(f1.plusMonths(8));
 		System.out.println(f1.plusDays(200));
 		System.out.println(f2.plusMonths(1));
+		
 		DateTimeFormatter format1=DateTimeFormatter.ofPattern("dd/MM/yyyy");
-		System.out.println(f1.format(format1));
+		DateTimeFormatter format4=DateTimeFormatter.ofPattern("dd/MM/yyyy-HH:mm:ss a");
+		System.out.println("dd/MM/yyyy->"+f1.format(format1));
+		LocalDateTime t2 = LocalDateTime.now();
+		System.out.println("dd/MM/yyyy-HH:mm:ss a->"+t2.format(format4));
 		String mf="11/11/2018";
 		LocalDate nuevaFecha = LocalDate.parse(mf,format1);
-		System.out.println("mf->"+nuevaFecha);
+		System.out.println("dd/MM/yyyy parse ->"+nuevaFecha);
 		
 		
 		

@@ -10,17 +10,20 @@ public class JavaLocalDateTime {
 
         LocalDateTime fechaTiempo = LocalDateTime.now();
         System.out.println("fechaTiempo = " + fechaTiempo);
+        DateTimeFormatter dt =DateTimeFormatter.ofPattern("yyyy/MM/dd");
+        System.out.println("fechaTiempoFormateada ->"+ fechaTiempo.format(dt));
+       
 
         fechaTiempo = LocalDateTime.of(2020, Month.DECEMBER, 24, 20, 45, 59);
-        System.out.println("fechaTiempo = " + fechaTiempo);
+        System.out.println("fechaTiempo Formateada año-mes-dia-hora-minuto-segundo= " + fechaTiempo);
         
         fechaTiempo = LocalDateTime.parse("2020-12-25T21:45:59.821339800");
-        System.out.println("fechaTiempo = " + fechaTiempo);
+        System.out.println("fechaTiempo desde un string con parse= " + fechaTiempo);
 
         LocalDateTime fechaTiempo2 = fechaTiempo.plusDays(1).plusHours(3);
-        System.out.println("fechaTiempo2 = " + fechaTiempo2);
-        System.out.println("fechaTiempo = " + fechaTiempo);
-        System.out.println("fechaTiempo3 = " + fechaTiempo.minusHours(5));
+        System.out.println("fechaTiempo2 sumando 1 dia 3 horas= " + fechaTiempo2);
+        ///System.out.println("fechaTiempo = " + fechaTiempo);
+        System.out.println("fechaTiempo3 quitando 5 horas= " + fechaTiempo.minusHours(5));
         
         Month mes = fechaTiempo.getMonth();
         System.out.println("mes = " + mes);
@@ -35,10 +38,8 @@ public class JavaLocalDateTime {
         System.out.println("formato1 = " + formato1);
         DateTimeFormatter df = DateTimeFormatter.ofPattern("yyyy/MM/dd hh:mm:ss a");
         String formato2 = fechaTiempo.format(df);
-        System.out.println("formato2 = " + formato2);
+        System.out.println("formato2 yyyy/MM/dd hh:mm:ss a->" + formato2);
         
-        String formato3 = df.format(fechaTiempo);
-        System.out.println("formato3 = " + formato3);
 
 	}
 
