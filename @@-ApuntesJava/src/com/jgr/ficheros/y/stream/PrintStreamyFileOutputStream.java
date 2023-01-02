@@ -8,6 +8,7 @@ import java.io.PrintStream;
 /**
  * The Class PrintStreamyFileOutputStream.
  * permite realiar la escritura en modo append
+ * https://www.baeldung.com/java-outputstream
  */
 public class PrintStreamyFileOutputStream {
 
@@ -17,10 +18,8 @@ public class PrintStreamyFileOutputStream {
 				PrintStream salida = new PrintStream(fos)){
 			salida.println("escribiendo PrintStreamyFileOutputStream");
 		} catch (FileNotFoundException e) {
-
 			e.printStackTrace();
-		} catch (IOException e1) {
-			
+		} catch (IOException e1) {			
 			e1.printStackTrace();
 		}
 

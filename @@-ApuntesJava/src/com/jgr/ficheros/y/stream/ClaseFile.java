@@ -20,9 +20,13 @@ public class ClaseFile {
 	public static void main(String[] args) {
 		
 		File file = new File("./ClaseFile.txt");
+		file.exists();
+		file.delete();
 		
 		try(PrintStream salida = new PrintStream(file)){
 			salida.println("escrito en ClaseFile");
+			salida.println("escrito en ClaseFile2");
+			salida.println("escrito en ClaseFile3");
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
@@ -40,8 +44,7 @@ public class ClaseFile {
 		} catch (FileNotFoundException e) {
 			
 			e.printStackTrace();
-		} catch (IOException e) {
-			
+		} catch (IOException e) {			
 			e.printStackTrace();
 		}
 		

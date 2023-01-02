@@ -31,29 +31,21 @@ public class PruebaLecturaBuffered {
 		}
 				
 		//para leer con bufferedReader hay que crer un Reader intermedio, que puede ser un InputStreamReader o un FileReader
-		
-		
 		try(FileReader fileReader = new FileReader(dir);
 				BufferedReader bufferedReader = new BufferedReader(fileReader);) {
-			
+
 			var salida=bufferedReader.readLine();
 			while(salida!=null) {
-				System.out.println("Salida->"+salida);
-				
+				System.out.println("Salida->"+salida);				
 				salida=bufferedReader.readLine();
-				
-
-			}
-			
+			}			
 		} catch (FileNotFoundException e) {
-
 			e.printStackTrace();
 		} catch (IOException e1) {
-
 			e1.printStackTrace();
 		}
-		
-		
+
+
 		
 		
 

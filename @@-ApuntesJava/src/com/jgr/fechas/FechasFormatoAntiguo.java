@@ -19,6 +19,13 @@ public class FechasFormatoAntiguo {
 		// fecha y hora actual
 		Date date = new Date();
 		System.out.println("fecha y hora actual Date->" + date);
+		Date date2 = new Date();
+		System.out.println("fecha y hora actual Date->" + date2);
+		
+		System.out.println(
+		date.before(date2)?"Date>"+date +" mayor que "+date2:"Date2>"+date2 +" mayor que "+date
+				);
+	
 
 		// fecha y hora concreta
 		Calendar cal = Calendar.getInstance();
@@ -31,11 +38,16 @@ public class FechasFormatoAntiguo {
 		try {
 			fechaFormat = formateo.parse(fecha);
 		} catch (ParseException e) {
-
 			e.printStackTrace();
 		} finally {
-			System.out.println("Fecha Date formateada->" + fechaFormat);
+			System.out.println("Fecha Date formateada con parse->" + fechaFormat);
 		}
+		
+		
+		SimpleDateFormat cadenaValores = new SimpleDateFormat("GyMdkHmsSEDFwWahKzZYuXL");
+		Date fechaF = new Date();
+		
+		System.out.println("Todos los valores->"+cadenaValores.format(fechaF));
 
 	}
 

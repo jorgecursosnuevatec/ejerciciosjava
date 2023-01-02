@@ -5,6 +5,8 @@ import java.time.ZoneId;
 import java.time.ZoneOffset;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * The Class JavaZonedDateTime.
@@ -31,5 +33,8 @@ public class JavaZonedDateTime {
 	        System.out.println("llegada Madrid: " + f.format(zonaMadrid));
 
 	        ZoneId.getAvailableZoneIds().forEach(System.out::println);
+	        
+
+	        
 	    }
 	}

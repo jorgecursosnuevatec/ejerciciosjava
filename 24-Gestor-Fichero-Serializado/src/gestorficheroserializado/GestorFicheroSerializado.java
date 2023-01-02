@@ -13,6 +13,7 @@ import java.util.ArrayList;
 
 /**
  * The Class GestorFicheroSerializado.
+ * USAMOS LA CLASE GENERICA T
  *
  * @param <T> the generic type
  */

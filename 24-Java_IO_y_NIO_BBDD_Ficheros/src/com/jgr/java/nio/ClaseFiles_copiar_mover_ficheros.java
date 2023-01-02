@@ -1,5 +1,6 @@
 package com.jgr.java.nio;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
@@ -29,10 +30,15 @@ public class ClaseFiles_copiar_mover_ficheros {
 
 	public static void main(String[] args) {
 
-		Path origen = Path.of("d:\\origen​.txt");
-		Path intermedio = Path.of("d:\\intermedio.txt");
-		Path destino = Path.of("d:\\destino.txt");
-		Path destinoError =  Path.of("d:\\ficheros");
+		Path origen = Path.of(".\\origen​.txt");
+		Path intermedio = Path.of(".\\intermedio.txt");
+		Path destino = Path.of(".\\destino.txt");
+		Path destinoError =  Path.of(".\\ficheros");
+		/*para que NO DE ERROR java.nio.file.FileAlreadyExistsException:
+		String destinoErrorString = destinoError.toString();
+		File fichero = new File(destinoErrorString);
+		fichero.delete();
+		*/
 		List<String> miLista = new ArrayList<String>();
 		miLista.add("Lunes");
 		miLista.add("Martes");
@@ -58,8 +64,7 @@ public class ClaseFiles_copiar_mover_ficheros {
 		//si origen es un fichero y el destino es un directorio se produce excepcion
 		try {
 			Files.copy(origen, intermedio,StandardCopyOption.REPLACE_EXISTING);
-		} catch (IOException e) {
-		
+		} catch (IOException e) {		
 			e.printStackTrace();
 		}
 		

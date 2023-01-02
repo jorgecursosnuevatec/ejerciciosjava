@@ -1,5 +1,7 @@
 package gestorficheroserializado;
 
+import java.io.Serializable;
+
 /**
  * Clase que contiene el nombre de la mascota y el número de patas.
  * @author Javier Abellán

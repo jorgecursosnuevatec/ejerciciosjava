@@ -23,7 +23,7 @@ public class FormatearFechas {
 		
 		System.out.println("fecha 1 formato Date->"+ format.parse(fecEntra1));
 		System.out.println("fecha 2 formato Date->"+ format.parse(fecEntra2));
-		Date d3 = format.parse(fecEntra1);
+	
 
 	}
 

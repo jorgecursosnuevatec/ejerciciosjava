@@ -19,12 +19,10 @@ import java.io.PrintStream;
  * 
  */
 public class ClaseFile {
-
-	
 	public static void main(String[] args) {
 		
 		//para que exista y podamos leerla
-		String dirnn="d:\\archivosprobarlectura.txt";		
+		String dirnn=".\\archivosprobarlectura.txt";		
 		try(PrintStream outPrintStream= new PrintStream(dirnn)){
 			outPrintStream.println("textoPrintStream");	
 			outPrintStream.println("textoPrintStream2");	
@@ -48,7 +46,7 @@ public class ClaseFile {
 			e.printStackTrace();
 		}
 
-		String dirnn2="d:\\archivosprobarlectura.txt";	
+		String dirnn2=".\\archivosprobarlectura.txt";	
 		File file2 = new File(dirnn2);
 
 		System.out.println("Existe fichero->"+file.exists());

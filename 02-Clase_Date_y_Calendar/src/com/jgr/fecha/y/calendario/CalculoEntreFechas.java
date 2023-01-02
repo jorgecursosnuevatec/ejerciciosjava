@@ -11,6 +11,7 @@ public class CalculoEntreFechas {
 
         LocalDateTime fecha1 = LocalDateTime.now();
         // fecha1 = fecha1.withMonth(10);
+        //le suma hora,minutos y dias
         LocalDateTime fecha2 = LocalDateTime.now().plusHours(3).plusMinutes(20).plusDays(1);
         Duration lapsus = Duration.between(fecha1, fecha2);
         System.out.println("lapsus->" + lapsus);

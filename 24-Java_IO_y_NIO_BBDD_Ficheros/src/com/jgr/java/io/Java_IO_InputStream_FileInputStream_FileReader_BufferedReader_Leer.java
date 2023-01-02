@@ -20,14 +20,14 @@ import java.util.Scanner;
  * 
  * BufferedReader->mas eficiente para lectura de cadenas de texto de fuente externa
  * 
- * 
+ * https://www.youtube.com/watch?v=gqrRieAbHws
  */
 public class Java_IO_InputStream_FileInputStream_FileReader_BufferedReader_Leer {
 
 	public static void main(String[] args)  {
 		
 		
-		String dirnn="d:\\archivosprobarlectura.txt";		
+		String dirnn=".\\archivosprobarlectura.txt";		
 		try(PrintStream outPrintStream= new PrintStream(dirnn)){
 			outPrintStream.println("textoPrintStream");	
 			System.out.println("printStream.txt");

@@ -21,9 +21,13 @@ public class EscribirYLeer
     public static void main(String[] args)
     {
         EscribirYLeer eyl = new EscribirYLeer();
-        eyl.escribeFichero("d:/mascotas.dat");
-        eyl.anhadeFichero("d:/mascotas.dat");
-        eyl.leeFichero("d:/mascotas.dat");
+        
+        eyl.escribeFichero("./CrearFicheroParaBufferedReader.txt");
+        eyl.anhadeFichero("./CrearFicheroParaBufferedReader.txt");
+        eyl.leeFichero("./CrearFicheroParaBufferedReader.txt");
+        //eyl.escribeFichero("d:/mascotas.dat");
+        //eyl.anhadeFichero("d:/mascotas.dat");
+        //eyl.leeFichero("d:/mascotas.dat");
     }
 
     /**

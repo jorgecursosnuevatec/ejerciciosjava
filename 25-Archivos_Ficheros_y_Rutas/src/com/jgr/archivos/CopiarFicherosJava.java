@@ -28,7 +28,7 @@ public class CopiarFicherosJava {
 
 	public static void main(String[] args) {
 
-		Path origen = Path.of("d:\\origen​.txt");
+		Path origen = Path.of(".\\origen​.txt");
 		Path intermedio = Path.of("d:\\intermedio.txt");
 		Path destino = Path.of("d:\\destino.txt");
 		List<String> miLista = new ArrayList<String>();
@@ -41,8 +41,7 @@ public class CopiarFicherosJava {
 		miLista.add("Martes");
 		miLista.add("Miercoles");
 		miLista.add("Jueves");
-		miLista.add("Viernes");
-		
+		miLista.add("Viernes");		
 		try {
 			Files.write(origen,
 					miLista, Charset.forName("UTF-8"),
@@ -55,13 +54,11 @@ public class CopiarFicherosJava {
 		//copia
 		try {
 			Files.copy(origen, intermedio,StandardCopyOption.REPLACE_EXISTING);
-		} catch (IOException e) {
-		
+		} catch (IOException e) {		
 			e.printStackTrace();
 		}
 		
-		///mueve
-		
+		///mueve		
 		try {
 			Files.move(intermedio, destino,StandardCopyOption.REPLACE_EXISTING);
 		} catch (IOException e) {

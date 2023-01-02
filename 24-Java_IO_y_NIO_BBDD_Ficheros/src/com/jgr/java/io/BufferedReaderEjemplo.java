@@ -29,7 +29,6 @@ public class BufferedReaderEjemplo {
 		try(PrintStream salida = new PrintStream(ruta)){
 			salida.println("escrito en el FicheroParaBufferedReader");
 		} catch (FileNotFoundException e) {
-
 			e.printStackTrace();
 		}
 		
@@ -44,11 +43,9 @@ public class BufferedReaderEjemplo {
 				System.out.println("Leyendo fichero FicheroParaBufferedReader->"+salida);				
 			}			
 			
-		} catch (FileNotFoundException e) {
-	
+		} catch (FileNotFoundException e) {	
 			e.printStackTrace();
 		} catch (IOException e) {
-
 			e.printStackTrace();
 		}
 		

@@ -5,10 +5,10 @@ import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 
 /**
- * The Class NuevasClasesFechas.
+ * The Class FechasFormatoNuevo2.
  * estan en java.time
  */
-public class NuevasClasesFechas{
+public class FechasFormatoNuevo2{
 	public static void main(String[] args) {
 		
 		LocalDate ld1 = LocalDate.now();
@@ -51,11 +51,6 @@ public class NuevasClasesFechas{
 		System.out.println("dd/MM/yyyy parse ->"+nuevaFecha);
 		
 		
-		
-				
-		
-
-
 	}
 
 }

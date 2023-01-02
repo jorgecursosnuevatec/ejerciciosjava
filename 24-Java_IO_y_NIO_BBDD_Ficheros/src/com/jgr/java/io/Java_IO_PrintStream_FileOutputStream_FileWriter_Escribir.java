@@ -22,6 +22,7 @@ import java.io.PrintStream;
  * FileWriter->clase especifica para escribir texto
  * puede sobreescribir o no,crea fichero, si se usa con BufferedWriter mejora el rendimiento
  * 
+ * https://www.youtube.com/watch?v=gqrRieAbHws
  */
 public class Java_IO_PrintStream_FileOutputStream_FileWriter_Escribir {
 	public static void main(String[] args)  {
@@ -54,8 +55,7 @@ public class Java_IO_PrintStream_FileOutputStream_FileWriter_Escribir {
 		
 		//con FileWriter
 		//se puede usar con/sin sobreescritura,crea fichero si no existe,y se puede usar BufferedWriter
-		//para mejorar el rendimiento
-		
+		//para mejorar el rendimiento		
 		//este no hace append
 		String dir3="3fileWriter.txt";
 		try(FileWriter fileWriter = new FileWriter(dir3)){
@@ -69,6 +69,7 @@ public class Java_IO_PrintStream_FileOutputStream_FileWriter_Escribir {
 		//con sobreescritura
 		String dir4="4fWriter_Append.txt";		
 		try(FileWriter fileWriter2 = new FileWriter(dir4,true)){
+			fileWriter2.write("fileWriterAppend");	
 			fileWriter2.write("fileWriterAppend");	
 			System.out.println("fileWriterAppend.txt");
 		} catch (IOException e) {			

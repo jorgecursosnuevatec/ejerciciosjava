@@ -45,7 +45,7 @@ public class Serializacion {
 
 		}
 
-		String ruta="/ficheros/PersonaSerializable.txt";
+		String ruta=".\\PersonaSerializable.txt";
 
 		//ESCRITURA DE FICHEROS
 		try(FileOutputStream fos= new FileOutputStream(ruta);
@@ -53,7 +53,6 @@ public class Serializacion {
 			for(PersonaSerializable persona:personas) {
 				oos.writeObject(persona);				
 			}			
-
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
@@ -69,7 +68,6 @@ public class Serializacion {
 				System.out.println("\nPersona leida->"+personaLeida);
 				personaLeida = (PersonaSerializable) ois.readObject();
 			}
-
 
 		} catch (EOFException exc) {
 			System.out.println("*****Hemos llegado al fin fichero********");			
