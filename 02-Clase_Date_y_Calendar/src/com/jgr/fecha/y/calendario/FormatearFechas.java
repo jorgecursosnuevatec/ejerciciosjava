@@ -4,6 +4,13 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 
+
+/**
+ * The Class FormatearFechas.
+ * constantes a usar para el formateado
+ * https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/time/format/DateTimeFormatter.html
+ * 
+ */
 public class FormatearFechas {
 
 	public static void main(String[] args) throws ParseException {
