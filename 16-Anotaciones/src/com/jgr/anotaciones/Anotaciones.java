@@ -24,11 +24,9 @@ public class Anotaciones {
         //obtengo los atributos declarados en producto
         Field[] atributos = p.getClass().getDeclaredFields();
         
-        for (int i=0;i<atributos.length;i++) {
-        	
+        for (int i=0;i<atributos.length;i++) {        	
         	System.out.println("\n atributos declarados en producto->"+
-        	atributos[i].isAnnotationPresent(JsonAtributo.class));
-        	
+        	atributos[i].isAnnotationPresent(JsonAtributo.class));        	
         }
 
         System.out.println("json = " + JsonSerializador.convertirJson(p));
