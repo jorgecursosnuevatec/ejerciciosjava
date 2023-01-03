@@ -21,7 +21,7 @@ inicio=`date +%s`
 # Mensaje
 message=$@
 if [ -z "$message" ]; then
-message="$(date)2022-12-30 NUEVA MULTITAREA 1 90"
+message="$(date)2023-01-03 SEGUIR CON CODIFICACION SEGURA"
 fi
 
 git add .
