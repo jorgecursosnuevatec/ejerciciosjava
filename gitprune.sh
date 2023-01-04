@@ -14,7 +14,7 @@ PushLog="/dev/null"
 # Mensaje
 message=$@
 if [ -z "$message" ]; then
-message="$(date)2023-01-04 REORGANIZADOS PDF"
+message="$(date)2023-01-04 EMPEZAR SECCION 12 JAVA 17"
 fi
 
 start=`date +%s`
