@@ -21,7 +21,7 @@ inicio=`date +%s`
 # Mensaje
 message=$@
 if [ -z "$message" ]; then
-message="$(date)2023-01-03 SEGUIR CON CODIFICACION SEGURA"
+message="$(date)2023-01-04 TERMINADO EL PRIMERO DE BLOQUES TEXTO"
 fi
 
 git add .
