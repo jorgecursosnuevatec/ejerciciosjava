@@ -76,6 +76,22 @@ public class BloquesTexto {
 		System.out.println("\nvariable->"+json);
 		System.out.println("variable longitud->"+json.length());
 		
+		String c1= "esto es texto";
+		String c2 ="""
+				esto es texto""";		
+		String c3 = """
+				esto es texto
+				
+				""";
+		
+		System.out.println("\nc1.equals(c2)->"+c1.equals(c2));
+		System.out.println("c1.equals(c3)->"+c1.equals(c3));
+		System.out.println("c2.equals(c3)->"+c2.equals(c3));
+		System.out.println("c1.length()==c2.length()->"+(c1.length()==c2.length()));
+		
+		
+		
+		
 	}
 
 }

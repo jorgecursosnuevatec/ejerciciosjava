@@ -14,7 +14,7 @@ PushLog="/dev/null"
 # Mensaje
 message=$@
 if [ -z "$message" ]; then
-message="$(date)2023-01-09 SEGUIR CON 109 REVISION PREGUNTAS"
+message="$(date)2023-01-09 SEGUIR CON 110 RECORDS"
 fi
 
 start=`date +%s`
