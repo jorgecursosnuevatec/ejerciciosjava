@@ -21,7 +21,7 @@ inicio=`date +%s`
 # Mensaje
 message=$@
 if [ -z "$message" ]; then
-message="$(date)2023-01-04 TERMINADO EL PRIMERO DE BLOQUES TEXTO"
+message="$(date)2023-01-09 SUBIDA DESDE CLASE"
 fi
 
 git add .
