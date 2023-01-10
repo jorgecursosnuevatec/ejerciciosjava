@@ -15,8 +15,7 @@ import com.jgr.enumeraciones.modelo.ContinentesHabitantes;
  * 
  */
 public class LanzadoraContinentesHabitantes {
-	   
-   
+	 
    	public static void main(String[] args) {
 
    		System.out.println("Continente no. 4: " + ContinentesHabitantes.AMERICA);
