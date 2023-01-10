@@ -14,7 +14,7 @@ PushLog="/dev/null"
 # Mensaje
 message=$@
 if [ -z "$message" ]; then
-message="$(date)2023-01-10 PRIMERA SUBIDA DESDE CASA"
+message="$(date)2023-01-10 REORGANIZACION EJERCICIOS INCLUIDO ENUM"
 fi
 
 start=`date +%s`
