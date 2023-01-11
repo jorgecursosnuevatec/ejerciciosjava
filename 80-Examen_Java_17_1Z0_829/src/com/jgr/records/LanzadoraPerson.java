@@ -1,9 +1,7 @@
-package com.jgr.clases.sealed;
-
-import com.jgr.clases.sealed.records.Person;
+package com.jgr.records;
 
 /**
- * The Class LanzadoraRecord.
+ * The Class LanzadoraPerson.
  * https://www.baeldung.com/java-record-keyword
  * https://www.youtube.com/watch?v=4i9ga5xJ72Y
  * A partir de JDK 14, podemos reemplazar nuestras clases de datos repetitivas con registros. 
@@ -14,7 +12,7 @@ import com.jgr.clases.sealed.records.Person;
  * 
  * 
  */
-public class LanzadoraRecord {
+public class LanzadoraPerson {
 
 	public static void main(String[] args) {
 		

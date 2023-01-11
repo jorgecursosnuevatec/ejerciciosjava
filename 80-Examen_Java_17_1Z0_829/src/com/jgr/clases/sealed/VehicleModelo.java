@@ -1,4 +1,4 @@
-package com.jgr.clases.sealed.modelo;
+package com.jgr.clases.sealed;
 
 /**
  * The Class VehicleModelo.

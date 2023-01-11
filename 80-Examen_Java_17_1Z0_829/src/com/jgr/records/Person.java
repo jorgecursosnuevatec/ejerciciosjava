@@ -1,4 +1,4 @@
-package com.jgr.clases.sealed.records;
+package com.jgr.records;
 
 import java.util.Objects;
 
