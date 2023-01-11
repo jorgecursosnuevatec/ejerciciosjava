@@ -14,7 +14,7 @@ PushLog="/dev/null"
 # Mensaje
 message=$@
 if [ -z "$message" ]; then
-message="$(date)2023-01-11 EMPIEZO SEALED"
+message="$(date)2023-01-11 SEGUIR CON 115 INSTANTES E INTERVALOS"
 fi
 
 start=`date +%s`

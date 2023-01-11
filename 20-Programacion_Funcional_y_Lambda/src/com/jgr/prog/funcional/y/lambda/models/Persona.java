@@ -1,5 +1,5 @@
 package com.jgr.prog.funcional.y.lambda.models;
-// TODO: Auto-generated Javadoc
+// 
 
 /**
  * The Class Persona.
