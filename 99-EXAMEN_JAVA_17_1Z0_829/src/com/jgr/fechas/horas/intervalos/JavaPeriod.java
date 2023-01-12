@@ -7,6 +7,7 @@ import java.time.Period;
 /**
  * The Class JavaPeriod.
  * representa un periodo medido en años,meses,dias 
+ * cuando operamos con el, a diferencia de Duration, si sumamos un dia NO sumamos 24 horas
  * 
  * P2Y50M100D->2 años,50 meses,100 dias
  * P10D->10 dias

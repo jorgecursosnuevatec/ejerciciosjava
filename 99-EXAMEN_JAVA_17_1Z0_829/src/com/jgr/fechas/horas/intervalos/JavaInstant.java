@@ -36,8 +36,8 @@ public class JavaInstant {
 		var ldt1 = LocalDateTime.now();
 		var zdt1 = ZonedDateTime.of(ldt1, z1);
 		System.out.println("\nz1->"+z1);
-		System.out.println("ldt1->"+ldt1);
-		System.out.println("ldt1->"+zdt1);//este son 6 horas menos que greenwich
+		System.out.println("LocalDateTime ldt1->"+ldt1);
+		System.out.println("ZonedDateTime zdt1->"+zdt1);//este son 6 horas menos que greenwich
 		System.out.println("Instant->"+zdt1.toInstant());
 		
 

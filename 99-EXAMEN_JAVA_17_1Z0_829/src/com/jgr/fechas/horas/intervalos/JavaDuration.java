@@ -11,6 +11,8 @@ import java.time.temporal.ChronoUnit;
  * The Class JavaDuration.
  * 
  * intervalo de tiempo en horas,minutos,segundos
+ * se opera con HORAS,MINUTOS, p.ej se sumaria 24 horas aunque pongamos un dia
+ * a diferencia de Period, en el que SI se sumaria un dia 
  * se pueden sumar/restar duraciones a objetos de hora,pero NO a LocalDate
  * between tiene en cuenta la zona horaria
  *
