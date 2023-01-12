@@ -21,7 +21,7 @@ inicio=`date +%s`
 # Mensaje
 message=$@
 if [ -z "$message" ]; then
-message="$(date)2023-01-10 subida desde casa"
+message="$(date)2023-01-12 PRIMERA SUBIDA DESDE CASA INTERVALOS DE TIEMPO 115"
 fi
 
 git add .
