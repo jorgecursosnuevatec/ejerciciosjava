@@ -6,7 +6,6 @@ import java.util.List;
 import java.util.function.BiPredicate;
 import java.util.function.Predicate;
 
-import com.jgr.prog.funcional.y.lambda.models.Persona;
 import com.jgr.prog.funcional.y.lambda.models.Usuario;
 
 
@@ -21,8 +20,6 @@ import com.jgr.prog.funcional.y.lambda.models.Usuario;
  * por ejemplo removeIf
  */
 public class InterfazPredicate {
-	
-	
 	public static void main(String[] args) {
 		//implementación que comprueba una cadena 
 		//y devuelve true si su longitud es mayor que 10
@@ -48,8 +45,7 @@ public class InterfazPredicate {
         
         Predicate<Integer> validaMayor = a->a>5;
         System.out.println("es mayor->" + validaMayor.test(4));
-        
-        
+                
 
         BiPredicate<String, String> t3 = String::equals;// (a, b) -> a.equals(b);        
         System.out.println("t3->"+t3.test("andres", "andres"));

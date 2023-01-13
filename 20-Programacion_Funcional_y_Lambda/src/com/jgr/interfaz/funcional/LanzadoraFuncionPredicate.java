@@ -10,10 +10,7 @@ import java.util.stream.IntStream;
  * The Class LanzadoraFuncionPredicate.
  * 
  * saca el resultado de la suma de la lista con la condicion que le pasamos como parametro Predicate
- * 
- * 
- * 
- */
+  */
 public class LanzadoraFuncionPredicate {
 	public static void main(String[] args) {
 		

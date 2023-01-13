@@ -15,13 +15,13 @@ public class EjemploClaseMath {
         System.out.println("min = " + min);
         
         double techo = Math.ceil(3.5);
-        System.out.println("techo = " + techo);
+        System.out.println("ceil/techo = " + techo);
         
         double piso = Math.floor(3.5);
-        System.out.println("piso = " + piso);
+        System.out.println("floor/piso = " + piso);
         
         long entero = Math.round(Math.PI);
-        System.out.println("entero = " + entero);
+        System.out.println("round/entero = " + entero);
         
         double exp = Math.exp(1);
         System.out.println("exp = " + exp);

@@ -13,8 +13,6 @@ import java.util.function.Predicate;
  */
 public class ImplementaFuncionPredicate {
 	
-	
-	
 	/**
 	 * Calculo por criterio.
 	 *

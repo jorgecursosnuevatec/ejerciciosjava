@@ -53,7 +53,7 @@ public class EjemploDeclaracionesArray {
 		for (int i[] : n) {
 			//vuelca la fila en el array i[]
 			//muestra posiciones 0 y 1 de la fila
-			System.out.println(i[0] + "-" + i[1]);
+			System.out.println("\nfila0->"+ i[0] + "->" + i[1]);
 		}
 
 		for (Integer[] i : n2){

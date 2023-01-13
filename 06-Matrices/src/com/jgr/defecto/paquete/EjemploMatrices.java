@@ -2,6 +2,8 @@ package com.jgr.defecto.paquete;
 public class EjemploMatrices {
     public static void main(String[] args) {
 
+    	
+//    	[Fila][Columna]
         int[][] numeros = new int[2][4];
         
         /*
@@ -44,10 +46,10 @@ public class EjemploMatrices {
         System.out.println("num8 = " + num8);
        
         
-        for (int i=0;i<numeros.length;i++) {
+        for (int fila=0;fila<numeros.length;fila++) {
         	
-        	for (int j=0;j<numeros[i].length;j++) {
-        		System.out.println("valor de i->"+i + " j->"+j +" guardado->" + numeros[i][j]);
+        	for (int columna=0;columna<numeros[fila].length;columna++) {
+        		System.out.println("valor de fila->"+fila + " columna->"+columna +" guardado->" + numeros[fila][columna]);
         	}
         	
         }
@@ -88,6 +90,15 @@ public class EjemploMatrices {
         	for (int k=0;k<edades[i].length;k++) {
         		System.out.println("Edades "+i + " valor "+ edades[i][k]);
         	}
+        }
+        
+        
+        //con el for each no sabemos en que posicion estamos
+        for (int[] num :edades) {
+        	
+        	for( int subnum : num)
+        		System.out.println("num->"+num + "subnum->"+subnum);
+        	
         }
         
         

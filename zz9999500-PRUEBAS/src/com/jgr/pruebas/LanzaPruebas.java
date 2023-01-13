@@ -1,5 +1,6 @@
 package com.jgr.pruebas;
 
+import java.util.ArrayList;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -20,38 +21,10 @@ public class LanzaPruebas {
 		ex.submit(()->System.out.println("Mundo"));
 		*/
 		
-		StringBuilder cadena=new StringBuilder();
-		 long numero1= System.currentTimeMillis();
-		 for(int i=0;i<10000;i++) {
-		 
-		 cadena.append("hola");
-		 cadena.append("que");
-		 cadena.append("tal");
-		 cadena.append("estas");
-		 
-		 }
-		 long numero2=System.currentTimeMillis();
-//		 System.out.println("\n"+cadena);
-		 System.out.println("\n"+ (numero2-numero1));
-		 
-		 String cadena2="";;
-		 numero1= System.currentTimeMillis();
-		 for(int i=0;i<10000;i++) {
-		 
-			 cadena2+="hola";
-			 cadena2+="que";
-			 cadena2+="tal";
-			 cadena2+="estas";
-			 
-		 
-		 
-		 }
-		 numero2=System.currentTimeMillis();
-//		 System.out.println("\n"+cadena2);
-		 System.out.println("\n"+ (numero2-numero1));
-		 
-		 
-		 
+		ArrayList<String> nombres=new ArrayList<>();
+		System.out.println("add"+nombres.add("Maria"));
+		nombres.add("Maria"); //elemento en posición 0
+		System.out.println("set"+nombres.set(1,"Angel")); //elemento en posición 1
 
 		 }
 		
