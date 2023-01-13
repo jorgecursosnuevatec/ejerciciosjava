@@ -9,6 +9,13 @@ package com.jgr.metodos.estaticos.interfaces;
  *    
  * 
  * 
+=======
+
+/**
+ * The Class ClaseHeredaMetodoEstatico.
+ * 
+ * EL METODO PRINT DE LA INTERFACE COMO ES ESTATICO NO SE VA A HEREDAR
+>>>>>>> 7f05977e0cecf51be10a19a527af944eb5cf2ecd
  */
 public class ClaseHeredaMetodoEstatico implements InterfaceMetodoEstatico {
 	

@@ -21,7 +21,11 @@ inicio=`date +%s`
 # Mensaje
 message=$@
 if [ -z "$message" ]; then
+<<<<<<< HEAD
 message="$(date)2023-01-13 SUBIDA DESDE CASA"
+=======
+message="$(date)2023-01-13 SUBIDA DESDE CLASE"
+>>>>>>> 7f05977e0cecf51be10a19a527af944eb5cf2ecd
 fi
 
 git add .
