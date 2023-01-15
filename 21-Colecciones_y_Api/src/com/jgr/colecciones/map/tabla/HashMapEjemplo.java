@@ -1,25 +1,18 @@
-package com.jgr.colecciones.map;
+package com.jgr.colecciones.map.tabla;
 
-import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
 /**
  * The Class HashMapEjemplo.
  * HashMapEjemplo-> usa el algoritmo Hash lo necesita,no admite duplicados 
+ * Los elementos no tienen posición ni orden, pero si
+ * una clave única asociada. La información se almacena en parejas clave-valor
  */
 public class HashMapEjemplo {
     
-    /**
-     * The main method.
-     *
-     * @param args the arguments
-     */
     public static void main(String[] args) {
 
         Map<String, Object> persona = new HashMap<>();
@@ -31,6 +24,7 @@ public class HashMapEjemplo {
         persona.put("apellidoPaterno", "Doe");
         persona.put("email", "john.doe@email.com");
         persona.put("edad", 30);
+ 
         
         //OTRO MAP ,HASHMAP ANIDADO
         Map<String, String> direccion = new HashMap<>();
@@ -114,6 +108,7 @@ public class HashMapEjemplo {
                 System.out.println(llave + " => " + valor);
             }
         }
+        //con java 8 y funcion anonima BiConsumer,le pasamos la clave y el valor para que las lista
         System.out.println("========================== java 8 forEach");
         persona.forEach((llave, valor) ->{
             System.out.println(llave + " => " + valor);

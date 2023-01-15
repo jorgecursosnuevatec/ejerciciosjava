@@ -1,7 +1,5 @@
 package com.jgr.colecciones.listas;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 import com.jgr.colecciones.modelo.*;
@@ -11,11 +9,7 @@ import com.jgr.colecciones.modelo.*;
  */
 public class ArrayListEjemplo {
     
-    /**
-     * The main method.
-     *
-     * @param args the arguments
-     */
+  
     public static void main(String[] args) {
 
         List<Alumno> al = new ArrayList<>();

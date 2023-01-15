@@ -1,4 +1,4 @@
-package com.jgr.colecciones.set;
+package com.jgr.colecciones.set.conjunto;
 
 
 import java.util.HashSet;

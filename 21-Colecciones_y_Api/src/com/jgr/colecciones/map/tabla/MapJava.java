@@ -1,9 +1,7 @@
-package com.jgr.colecciones.map;
+package com.jgr.colecciones.map.tabla;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -21,11 +19,7 @@ import java.util.Set;
  */
 public class MapJava {
 
-	/**
-	 * The main method.
-	 *
-	 * @param args the arguments
-	 */
+	
 	public static void main(String[] args) {
 		List<String> miLista = new ArrayList<String>();
 		miLista.add("Lunes");

@@ -1,4 +1,4 @@
-package com.jgr.colecciones.map;
+package com.jgr.colecciones.map.tabla;
 
 import java.util.Comparator;
 import java.util.Map;

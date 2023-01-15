@@ -4,9 +4,23 @@ import java.time.LocalDateTime;
 import java.time.Month;
 import java.time.format.DateTimeFormatter;
 
-public class JavaLocalDateTime {
 
+/**
+ * The Class JavaLocalDateTime.
+ * LocalDateTime. Para respresentar una combinación de fecha más hora:
+ * Para parsear y formatear fechas, utilizamos la clase
+java.time.format.DateTimeFormatter:
+
+ */
+public class JavaLocalDateTime {
 	public static void main(String[] args) {
+		
+		//fecha+hora
+		LocalDateTime f1t1 = LocalDateTime.now();
+		System.out.println("LocalDateTime now->"+f1t1);
+		LocalDateTime f2t2 = LocalDateTime.of(0001,01,01, 00,00,00);
+		System.out.println("LocalDateTime of->"+f2t2);
+
 
         LocalDateTime fechaTiempo = LocalDateTime.now();
         System.out.println("fechaTiempo = " + fechaTiempo);

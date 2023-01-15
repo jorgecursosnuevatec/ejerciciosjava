@@ -6,14 +6,14 @@ import java.util.Calendar;
 import java.util.Date;
 
 /**
- * The Class FechasFormatoAntiguo.
+ * The Class FechasFormatoAntiguoDateCalendar.
  * 
  * java.util.Date->fecha y hora concreta,deprecated 
  * java.util.Calendar->para trabajar con componentes de la fecha,hora,año.... 
  * java.sql.Date y java.sql.Timestamp->para bbdd 
  * java.text.SimpleDateFormat->para formatear/parse fechas
  */
-public class FechasFormatoAntiguo {
+public class FechasFormatoAntiguoDateCalendar {
 	public static void main(String[] args) {
 
 		// fecha y hora actual
@@ -36,6 +36,22 @@ public class FechasFormatoAntiguo {
 		} finally {
 			System.out.println("Fecha Date formateada->" + fechaFormat);
 		}
+		
+		
+		
+		
+		//comparar fechas
+		Date d1=new Date();
+		Date d2=new Date(3345022223495L);
+		//comprobaciones fechas
+		if(d1.before(d2)) {
+			System.out.println("Fecha más antigua: "+d1);
+			System.out.println("Fecha más moderna: "+d2);
+		}else {
+			System.out.println("Fecha más antigua: "+d2);
+			System.out.println("Fecha más moderna: "+d1);
+		}
+		
 
 	}
 

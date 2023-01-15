@@ -6,6 +6,8 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
+import com.jgr.colecciones.modelo.Alumno;
+
 /**
  * The Class Listas.
  *     /**
@@ -30,6 +32,16 @@ public class Listas {
         miLista.add("Viernes");
         
         imprimir(miLista);
+        
+        Alumno al = new Alumno("nombre", 15);
+        Alumno al1 = new Alumno("nombre2", 15);
+        Alumno al2 = new Alumno("nombre3", 15);
+        Alumno al3 = new Alumno("nombre4", 15);
+        Alumno al4 = new Alumno("nombre4", 15);
+        
+        List<Alumno> alumnos = new ArrayList<Alumno>();
+        alumnos = List.of(al,al1,al2,al3,al4);
+        imprimir(alumnos);
 
     }
     
@@ -37,9 +49,10 @@ public class Listas {
         coleccion.forEach(elemento -> {
             System.out.println("elemento = " + elemento);
         });
-        System.out.println("****************************");
+       
        
         System.out.println(coleccion.getClass().getName());
+        System.out.println("****************************");
 
 //        for(Object elemento: coleccion){
 //            System.out.println("elemento = " + elemento);
