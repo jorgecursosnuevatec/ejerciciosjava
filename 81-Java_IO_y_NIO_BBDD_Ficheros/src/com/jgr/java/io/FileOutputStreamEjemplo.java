@@ -7,17 +7,19 @@ import java.io.PrintStream;
 
 
 /**
- * The Class PrintStreamyFileOutputStream.
- * permite realiar la escritura en modo append
+ * The Class FileOutputStreamEjemplo.
+ * permite realizar la escritura en modo append
+ * creamos el FileOutputStream con la ruta y el indicador de si añade o sobreescribe como 
+ * parametro de un PrintStream
  * https://www.baeldung.com/java-outputstream
  */
-public class PrintStreamyFileOutputStream {
+public class FileOutputStreamEjemplo {
 
 	public static void main(String[] args) {
-		String ruta = "./PrintStreamyFileOutputStream.txt";
+		String ruta = "./FileOutputStreamEjemplo.txt";
 		try(FileOutputStream fos = new FileOutputStream(ruta,true);
 				PrintStream salida = new PrintStream(fos)){
-			salida.println("escribiendo PrintStreamyFileOutputStream");
+			salida.println("escribiendo FileOutputStreamEjemplo");
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e1) {			

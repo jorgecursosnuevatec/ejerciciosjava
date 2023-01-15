@@ -28,9 +28,9 @@ public class CopiarFicherosJava {
 
 	public static void main(String[] args) {
 
-		Path origen = Path.of(".\\origen​.txt");
-		Path intermedio = Path.of("d:\\intermedio.txt");
-		Path destino = Path.of("d:\\destino.txt");
+		Path origen = Path.of("./origen​.txt");
+		Path intermedio = Path.of("./intermedio.txt");
+		Path destino = Path.of("./destino.txt");
 		List<String> miLista = new ArrayList<String>();
 		miLista.add("Lunes");
 		miLista.add("Martes");

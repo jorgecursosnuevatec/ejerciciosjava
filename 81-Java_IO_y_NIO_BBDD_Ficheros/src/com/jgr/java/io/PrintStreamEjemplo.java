@@ -14,11 +14,15 @@ import java.util.List;
 
 /**
  * The Class PrintStream
- * de java.nio
+ * de java.io
  * escritura con formato, sobreescribe y si no existe el fichero lo crea
  * System.out.println->estatico,contiene un PrintStream que apunta a la pantalla
  * PrintStream(String file)->se asocia a un fichero
  * PrintStream(OutputStream)->asociado a otra fuente para obtener datos
+ * Escritura con formato
+ * Graba los datos en modo sobrescritura
+ * Si el fichero no existe se crea
+ * 
  * 
  */
 public class PrintStreamEjemplo {
@@ -28,7 +32,8 @@ public class PrintStreamEjemplo {
 		//escribe en directorio actual
 		String ruta = "./PrintStreamEjemplo.txt";
 		try(PrintStream salida = new PrintStream(ruta)){
-			salida.println("escribiendo en salida");
+			salida.println("escribiendo en salida PrintStream->" + PrintStream.class);
+			System.out.println("escribiendo en salida PrintStream->" + salida.toString());
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
@@ -38,7 +43,7 @@ public class PrintStreamEjemplo {
 				BufferedReader bufferedReader = new BufferedReader(fileReader);) {
 			var salida=bufferedReader.readLine();
 			while(salida!=null) {
-				System.out.println("SalidaPrintStreamEjemplo->"+salida);				
+				System.out.println("SalidaPrintStreamEjemplo bufferedReader.getClass()->"+bufferedReader.getClass());				
 				salida=bufferedReader.readLine();
 			}			
 		} catch (FileNotFoundException e) {

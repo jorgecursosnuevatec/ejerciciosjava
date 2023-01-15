@@ -31,14 +31,12 @@ public class FechasFormatoAntiguoDateCalendar {
 		try {
 			fechaFormat = formateo.parse(fecha);
 		} catch (ParseException e) {
-
 			e.printStackTrace();
 		} finally {
 			System.out.println("Fecha Date formateada->" + fechaFormat);
 		}
 		
-		
-		
+				
 		
 		//comparar fechas
 		Date d1=new Date();

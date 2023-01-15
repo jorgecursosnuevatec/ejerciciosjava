@@ -23,7 +23,7 @@ import java.util.List;
  * escribe la cadena de caracteres del iterable
  *
  *ESCRIBIR
- *FileOutputStream fos = new FileOutputStream(String con la ruta,true)
+ *FileOutputStreamEjemplo fos = new FileOutputStreamEjemplo(String con la ruta,true)
  *PrintStream out = new PrintStream(fos);
  *LEER
  *FileReader fr = new FileReader(ruta);

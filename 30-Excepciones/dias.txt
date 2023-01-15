@@ -1,0 +1,3 @@
+printStreamruta1
+printStreamruta2printStreamruta3
+false

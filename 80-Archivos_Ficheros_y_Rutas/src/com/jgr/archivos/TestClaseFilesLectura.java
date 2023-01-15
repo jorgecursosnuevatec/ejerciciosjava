@@ -33,7 +33,7 @@ public class TestClaseFilesLectura {
 	public static void main(String[] args) throws IOException {
 
 		
-		String dirnn="d:\\archivosprobarlectura.txt";		
+		String dirnn="./archivosprobarlectura.txt";		
 		try(PrintStream outPrintStream= new PrintStream(dirnn)){
 			outPrintStream.println("textoPrintStream");	
 			System.out.println("printStream.txt");
@@ -45,7 +45,7 @@ public class TestClaseFilesLectura {
 		
 		
 		// static Stream<String> lines​(Path path) Read all lines from a file as a Stream.
-		String nombreArchivoFileWriter = "d:\\archivosBufferedWriter.txt";
+		String nombreArchivoFileWriter = "./archivosBufferedWriter.txt";
 		//read file into stream, try-with-resources
 		try (Stream<String> stream = Files.lines(Paths.get(nombreArchivoFileWriter))) {
 			stream.forEach(System.out::println);
@@ -78,7 +78,7 @@ public class TestClaseFilesLectura {
          
 		//USANDO BUFFERED READER Y FILEREADER
          //CON RECURSOS PORQUE LO CIERRA SOLO
-         String dir="d:\\archivos\\myFile.txt";
+         String dir="./myFile.txt";
          try(FileReader fr = new FileReader(dir)){
          BufferedReader br= new BufferedReader(fr);
          String linea;

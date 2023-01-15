@@ -13,7 +13,7 @@ public class EjercicioCalcularEdad {
 
         System.out.println("Ingrese un fecha de nacimiento con formato yyyy-MM-dd:");
         String fechaStr = scanner.next();
-
+        scanner.close();
         LocalDate fechaNacimiento = LocalDate.parse(fechaStr, DateTimeFormatter.ofPattern("yyyy-MM-dd"));
         LocalDate actual = LocalDate.now();
 
@@ -22,16 +22,19 @@ public class EjercicioCalcularEdad {
         		periodo.getMonths(), periodo.getDays());
       
         Scanner scanner2 = new Scanner(System.in);
+        
 
         System.out.println("\nIngrese un fecha de nacimiento con formato yyyy-MM-dd:");
-        String fechaStr2 = scanner.next();
-
+        String fechaStr2 = scanner2.next();
+        scanner2.close();
+        
         LocalDate fechaNacimiento2 = LocalDate.parse(fechaStr, DateTimeFormatter.ofPattern("yyyy-MM-dd"));
         LocalDate actual2 = LocalDate.now();
 
         long anios = ChronoUnit.YEARS.between(fechaNacimiento, actual);
         System.out.printf("Tu edad es: %s años", anios);
         
+
         
         
         

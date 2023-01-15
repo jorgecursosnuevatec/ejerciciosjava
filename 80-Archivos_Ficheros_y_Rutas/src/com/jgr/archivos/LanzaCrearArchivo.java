@@ -11,9 +11,9 @@ public class LanzaCrearArchivo {
 	public static void main(String[] args) {
 		
 		//las rutas con \\ DOBLE
-		String nombreArchivoFileWriter = "d:\\archivosFileWriter.txt";
-		String nombreArchivoBufferedWriter = "d:\\archivosBufferedWriter.txt";
-		String nombreArchivoPrintWriter = "d:\\archivosPrintWriter.txt";
+		String nombreArchivoFileWriter = "./archivosFileWriter.txt";
+		String nombreArchivoBufferedWriter = "./archivosBufferedWriter.txt";
+		String nombreArchivoPrintWriter = "./archivosPrintWriter.txt";
 		ArchivoService archivoService = new ArchivoService();
 		archivoService.crearYEscribirArchivoFileWriter(nombreArchivoFileWriter);
 		archivoService.crearYEscribirArchivoBufferedWriter(nombreArchivoBufferedWriter,

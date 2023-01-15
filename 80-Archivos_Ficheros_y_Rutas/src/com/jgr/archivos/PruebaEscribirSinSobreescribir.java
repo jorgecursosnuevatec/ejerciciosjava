@@ -10,7 +10,7 @@ import java.io.PrintStream;
 public class PruebaEscribirSinSobreescribir {
 	public static void main(String[] args) {
 		
-		String printStreamruta = "d:\\ficheros\\dias.txt";
+		String printStreamruta = "./dias.txt";
 		PrintStream salida =null;		
 		//con PrintStream
 		try{

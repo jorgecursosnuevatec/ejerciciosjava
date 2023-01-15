@@ -5,13 +5,21 @@ import java.io.File;
 /**
  * The Class PruebaFile.
  * File e la ruta a un fichero/directorio
+* 
+ * File->representa la ruta a un fichero o directorio
+ * File file = new File("/user/myData.txt");
+ * boolean exists()
+ * boolean isFile();
+ * boolean isDirectory();
+ * boolean delete();
+ * 
  */
 public class PruebaFile {
 
 	
 	public static void main(String[] args) {
 		
-		String dir="d:\\ficheros\\mydata.txt";
+		String dir="/.mydata.txt";
 		File ficheroFile = new File(dir);
 		
 		System.out.println("HashCode->"+ficheroFile.hashCode());

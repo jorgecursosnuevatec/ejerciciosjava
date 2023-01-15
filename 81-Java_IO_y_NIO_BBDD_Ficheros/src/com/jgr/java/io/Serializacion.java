@@ -20,7 +20,7 @@ import com.jgr.java.io.modelo.PersonaSerializable;
  * las clases envoltorio, String y coleccion ya lo implementan
  * los parametros definidos como TRANSIENT no salen
  * 
- * para escribirlo usamos FileOutputStream y ObjectOutputStream para escribirlo
+ * para escribirlo usamos FileOutputStreamEjemplo y ObjectOutputStream para escribirlo
  * para leerlo usamos FileInputStream y ObjetctInputStream para leerlo. OJO QUE HAY QUE CONTROLAR EOFException
  */
 public class Serializacion {

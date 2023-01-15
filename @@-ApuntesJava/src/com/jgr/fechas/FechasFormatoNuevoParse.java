@@ -17,7 +17,7 @@ public class FechasFormatoNuevoParse {
 		System.out.println("A partir de una cadena->" + LocalDate.parse(fecha, format));
 
 		// formateamos fecha
-		DateTimeFormatter format2 = DateTimeFormatter.ofPattern("yy/MM/dd");
+		DateTimeFormatter format2 = DateTimeFormatter.ofPattern("yy-MM-dd");
 		LocalDate date = LocalDate.now();
 		System.out.println("A partir de una LocalDate->" + date.format(format2));
 

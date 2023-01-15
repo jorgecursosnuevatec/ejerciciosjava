@@ -16,7 +16,7 @@ import java.io.PrintStream;
  * 	printf(String format,Object args...) escritura datos con formato
  * 	se puede escribir en un fichero,sobreescribre y si no existe el fichero se crea
  * 	
- * FileOutputStream->subclase de  OutputStream,flujo de salida para ficheros
+ * FileOutputStreamEjemplo->subclase de  OutputStream,flujo de salida para ficheros
  * 	podemos usarlo como intermedio para escribir con el  PrintStream
  * 
  * FileWriter->clase especifica para escribir texto
@@ -39,7 +39,7 @@ public class Java_IO_PrintStream_FileOutputStream_FileWriter_Escribir {
 		}
 		
 		
-		//PrintStream+ FileOutputStream
+		//PrintStream+ FileOutputStreamEjemplo
 		//permite realizar la escritura en modo append	
 		//aqui usamos el fileoutputstream como objeto auxiliar para escribir con el printstream
 		String dir2="2OutputStream_y_printStream.txt";		

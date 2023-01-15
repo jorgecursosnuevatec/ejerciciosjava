@@ -37,7 +37,7 @@ public class EscrituraLecturaFicheros {
 		
 		//static Path	writeString​(Path path, CharSequence csq, OpenOption... options) Write a CharSequence to a file.
 		
-		Path p1= Path.of("d:\\writeString.txt");
+		Path p1= Path.of("./writeString.txt");
 		try {
 			Files.writeString(p1, "Files.writeString",
 					Charset.forName("UTF-8"),

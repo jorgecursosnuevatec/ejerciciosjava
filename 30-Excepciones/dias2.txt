@@ -1,0 +1,3 @@
+printStreamruta21
+printStreamruta22printStreamruta23
+true

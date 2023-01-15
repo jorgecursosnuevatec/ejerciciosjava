@@ -14,10 +14,10 @@ import java.io.Reader;
  * The Class BufferedReader.
  * para lectura de datos
  * las cadenas de caracteres se leen con ReadLine()
- * Para crearlo hace falta un Reader intermedio, BufferedReader(Reader reader)
+ * Para crearlo hace falta un Reader intermedio, BufferedReader(Reader reader), FileReader,InputStreamReader....
  * 
  * implementaciones
- * -InputStreamReader para leer teclado
+ * -InputStreamReader para leer teclado,o un fichero
  * -FileReader para leer fichero,lee todas las lineas del fichero. Si no existe provoca excepcion
  * 
  * 
@@ -50,12 +50,11 @@ public class BufferedReaderEjemplo {
 		}
 		
 	
-		 
-		
+		 //leo un InputStreamReader y lo paso a char		
 		try(InputStream inputStream = new FileInputStream(ruta);
-				Reader   inputStreamReader = new InputStreamReader(inputStream);) {
+				Reader inputStreamReader = new InputStreamReader(inputStream);) {
 			int data = inputStreamReader.read();
-			 System.out.println("Enconding de INputStream->"+((InputStreamReader) inputStreamReader).getEncoding() );
+			 System.out.println("Encoding de INputStream->"+((InputStreamReader) inputStreamReader).getEncoding() );
 			while(data != -1){
 			    char theChar = (char) data;
 			    System.out.println("Dentro el INputStream->"+String.valueOf(theChar) );
