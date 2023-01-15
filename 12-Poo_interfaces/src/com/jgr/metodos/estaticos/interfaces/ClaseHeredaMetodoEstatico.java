@@ -21,7 +21,7 @@ public class ClaseHeredaMetodoEstatico implements InterfaceMetodoEstatico {
 	
 	@Override
 	public void imprime() {
-		System.out.println("Metodo imprime en clase recupero constante"+constante);
+		System.out.println("Metodo imprime en DESDE LA clase recupero constante->"+constante);
 		
 	}
 	

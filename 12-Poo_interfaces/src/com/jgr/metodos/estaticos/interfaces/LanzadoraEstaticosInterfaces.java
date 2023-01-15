@@ -17,8 +17,8 @@ public class LanzadoraEstaticosInterfaces {
 			@Override
 			public void imprime() {
 				System.out.println("Ejecutando como clase anonima CON INTERFACE" );
-				System.out.println("Clase anonima INTERFACE->" +this.getClass().getName());
-				System.out.println("Clase anonima INTERFACE->" +this.getClass().getAnnotatedInterfaces());
+				System.out.println("Clase anonima INTERFACE->" +this.getClass().getName().toString());
+				System.out.println("Clase anonima INTERFACE->" +this.getClass().getAnnotatedInterfaces().toString());
 				
 			}
 		};
@@ -26,11 +26,24 @@ public class LanzadoraEstaticosInterfaces {
 		//ESTE METODO ES ESTATICO Y ESTA DEFINIDO EN LA INTERFACE
 		InterfaceMetodoEstatico.print();
 		f.imprime();
+		//puedo acceder a la constante estatica desde la propia interface,y desde una instancia
+		int numero=InterfaceMetodoEstatico.constante;
+		int error = f.constante;
+		//accedo a un metodo implementado de la interface,desde la clase que lo implementa NO PUEDO
+		InterfaceMetodoEstatico.print();
+		
+		
+
 		
 		
 		//directamente de la clase
 		ClaseHeredaMetodoEstatico clase = new ClaseHeredaMetodoEstatico();		
 		clase.imprime();
+		//puedo acceder a las variables estaticas desde una instancia de la clase que implementa
+		//la interface
+		int constante=clase.constante;
+		
+		
 		
 		
 	}
