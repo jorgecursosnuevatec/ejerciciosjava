@@ -4,7 +4,7 @@ import com.jgr.lambda.simples.interfaz.modelo.ImplementaBiPredicate;
 
 /**
  * The Class LanzadoraBiPredicate
- * Dispone del método abstracto test, que a partir de un objeto realiza una comprobación y devuelve un boolean
+ * Dispone del método abstracto test, que a partir de un objeto realiza una comprobación y DEVUELVE un boolean
  * 
  * 
  * 1->recibe dos numeros y nos indica si son o no iguales

@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Consumer;
 
 import com.jgr.lambda.simples.interfaz.modelo.GeneraListaNumeros;
 import com.jgr.lambda.simples.interfaz.modelo.ImplementaConsumer;
@@ -13,7 +14,8 @@ import com.jgr.lambda.simples.interfaz.modelo.ImplementaConsumer;
 /**
  * The Class LanzadoraConsumer.
  * 
- * Dispone del método abstracto accept, que realiza algún tipo de procesamiento con el objeto recibido
+ * Dispone del método abstracto accept, que realiza algún tipo de procesamiento con el objeto recibido 
+ * NO DEVUELVE NADA
  *void accept(T t) 
  * 
  * 1->recibe lista y los imprime
@@ -21,13 +23,12 @@ import com.jgr.lambda.simples.interfaz.modelo.ImplementaConsumer;
  * 
  */
 public class LanzadoraConsumer {
-
-	
 	public static void main(String[] args) {
 		
 		List<Integer> numeros = new ArrayList<Integer>();
 		
-		numeros = new GeneraListaNumeros().getLista();
+		new GeneraListaNumeros();
+		numeros = GeneraListaNumeros.getLista();
 				
 		//creo la clase que es la que implementa el metodo
 		ImplementaConsumer iConsumer = new ImplementaConsumer();
@@ -84,6 +85,11 @@ public class LanzadoraConsumer {
 		//solo los pares
 				,x->x>0);
 	
+		
+		Consumer<String> cr = (String a)->System.out.println(a);			
+		String agradece = "Muuuchas gracias,Elsa";
+		cr.accept(agradece);
+		
 		
 	}
 

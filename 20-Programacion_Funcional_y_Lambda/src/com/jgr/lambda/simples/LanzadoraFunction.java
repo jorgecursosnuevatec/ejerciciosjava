@@ -10,11 +10,10 @@ import com.jgr.lambda.simples.interfaz.modelo.ImplementaFunction;
 /**
  * The Class LanzadoraFunction.
  * 
- * Método abstracto apply, que a partir de un objeto realiza una operación y devuelve un resultado
+ * Método abstracto apply, que a partir de un objeto realiza una operación y DEVUELVE un resultado,del tipo
+ * que queramos 
  */
 public class LanzadoraFunction {
-
-
 	public static void main(String[] args) {
 				
 	ImplementaFunction iPF = new ImplementaFunction();

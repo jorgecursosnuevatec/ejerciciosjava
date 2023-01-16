@@ -11,9 +11,9 @@ public class GeneraListaNumeros {
 	
 	private static List<Integer> lista;
 	private static List<Double> listaD;
-	private final int LIMITE = 5;	
-	private final int numero_maximo = 49;// Integer.MAX_VALUE;
-	private final int numero_minimo = 1;// Integer.MIN_VALUE;
+	private final static int LIMITE = 5;	
+	private final static int numero_maximo = 49;// Integer.MAX_VALUE;
+	private final static int numero_minimo = 1;// Integer.MIN_VALUE;
 	
 	
 	public GeneraListaNumeros(){
@@ -26,8 +26,8 @@ public class GeneraListaNumeros {
 	}
 
 
-	public List<Integer> getLista() {
-		 return this.lista = IntStream
+	public static List<Integer> getLista() {
+		 return lista = IntStream
 	 				.generate(()-> (int)(Math.random() * (numero_maximo-numero_minimo)+numero_minimo))
 //					.generate(()-> (int)(Math.random() * (Integer.MAX_VALUE-Integer.MIN_VALUE)+Integer.MIN_VALUE))
 					.parallel()

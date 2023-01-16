@@ -13,6 +13,9 @@ import java.util.function.Predicate;
 public class ImplementaPredicate {
 	/**
 	 * Calculo por criterio.
+	 * Le pasamos una lista de enteros y un predicate que es una interfaz que 
+	 * devuelve un boolean.
+	 * si pasamos t->t%2==0; lo que hace en el criterio.test es validar que se cumple que t es par,	
 	 *
 	 * @param numeros the numeros
 	 * @param criterio the criterio
@@ -29,6 +32,8 @@ public class ImplementaPredicate {
 		}
 		return suma;
 	}
+	
+	
 
 	
 
