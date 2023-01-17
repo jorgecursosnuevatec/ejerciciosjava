@@ -33,10 +33,10 @@ public class LanzadoraFunction {
 		
 		System.out.println("\nSuma de los cuadrados de la lista->"+iPF.procesaLista(numeros, n->(n*n)));
 		
-		//suma los cuadrados de lsa raices cubicas de cada elemento
-		//probar con el andthen
 		
+		//devuelve la suma del numero
 		Function<Integer,Integer> suma = (n)->(n+n);
+		//devuelve la multiplicacion del numero
 		Function<Integer,Integer> multiplica = (n)->(n*n);
 		//Returns a composed function that first applies this function to its input, and then applies the after function to the result.
 		Function<Integer,Integer> todoAndThen = suma.andThen(multiplica);
@@ -45,11 +45,10 @@ public class LanzadoraFunction {
 		Function<Integer,Integer> todoCompose = multiplica.compose(suma);
 		
 		
-		System.out.println("\nSuma de los cuadrados de la lista SEPARADO->"+iPF.procesaLista(numeros,suma.andThen(multiplica)));
+		System.out.println("\nSuma de los cuadrados de la lista SEPARADO->"
+		+iPF.procesaLista(numeros,suma.andThen(multiplica)));
 		System.out.println("\nSuma de los cuadrados de la lista TODOANDTHEN->"+iPF.procesaLista(numeros,todoAndThen));
 		System.out.println("\nSuma de los cuadrados de la lista TODOCOMPOSE->"+iPF.procesaLista(numeros,todoCompose));
-				
-
 		
 
 	}

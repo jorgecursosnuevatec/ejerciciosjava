@@ -2,11 +2,16 @@ package com.jgr.lambda.simples;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.function.Supplier;
+
+import com.jgr.lambda.simples.interfaz.modelo.GeneraListaNumeros;
+import com.jgr.lambda.simples.interfaz.modelo.ImplementaSupplier;
 
 /**
  * The Class LanzadoraSupplier.
- * Dispone del método abstracto get, que no recibe ningún parámetro y devuelve como resultado un objeto:
+ * Dispone del método abstracto get, que NO recibe ningún parámetro y devuelve como resultado un objeto:
  * T get()
  * 
  * 
@@ -31,8 +36,19 @@ public class LanzadoraSupplier {
         Supplier<String> s1 = () -> dtf.format(LocalDateTime.now());
         String time2 = s1.get();
         System.out.println(time2);
-		
-	
+        
+        List<Integer> numeros = new ArrayList<Integer>();
+		new GeneraListaNumeros();
+		numeros = GeneraListaNumeros.getLista();
+        
+        ImplementaSupplier iS = new ImplementaSupplier();
+        
+        iS.sumaListaYObtieneValorExterno(numeros, //le paso la lista
+        		//esta seria la expersion Supplier, es la unica que no tiene parametros de entrada
+        		()->(int)Math.random()*100+1      
+        		);
+        		
+        		
 	}
 
 }
