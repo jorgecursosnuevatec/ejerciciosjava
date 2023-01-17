@@ -1,8 +1,6 @@
 package com.jgr.lambda.simples.interfaz.modelo;
 
-import java.util.List;
 import java.util.function.BiPredicate;
-import java.util.function.Predicate;
 
 
 /**
@@ -28,19 +26,5 @@ public class ImplementaBiPredicate {
 		return criterio.test(n1, n2);
 		
 	}
-	
-	
-	public int calculoPorCriterio(List<Integer> numeros , Predicate<Integer> criterio) {
-		
-		int suma=0;
-		
-		for (int n : numeros)   {
-			if (criterio.test(n)) {
-				suma+=n;
-			}
-		}
-		return suma;
-	}
-
 
 }

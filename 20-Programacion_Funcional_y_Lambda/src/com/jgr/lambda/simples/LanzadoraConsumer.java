@@ -6,7 +6,6 @@ import java.io.IOException;
 import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Consumer;
 
 import com.jgr.lambda.simples.interfaz.modelo.GeneraListaNumeros;
 import com.jgr.lambda.simples.interfaz.modelo.ImplementaConsumer;
@@ -14,15 +13,19 @@ import com.jgr.lambda.simples.interfaz.modelo.ImplementaConsumer;
 /**
  * The Class LanzadoraConsumer.
  * 
- * Dispone del método abstracto accept, que realiza algún tipo de procesamiento con el objeto recibido 
- * NO DEVUELVE NADA
+ * Dispone del método abstracto accept, que realiza algún tipo de procesamiento con el objeto recibido
  *void accept(T t) 
+ * 
+ * 
+ * https://mkyong.com/tag/functional-interface/
  * 
  * 1->recibe lista y los imprime
  * 2->recibe lista y los guarda en fichero
  * 
  */
 public class LanzadoraConsumer {
+
+	
 	public static void main(String[] args) {
 		
 		List<Integer> numeros = new ArrayList<Integer>();
@@ -85,11 +88,6 @@ public class LanzadoraConsumer {
 		//solo los pares
 				,x->x>0);
 	
-		
-		Consumer<String> cr = (String a)->System.out.println(a);			
-		String agradece = "Muuuchas gracias,Elsa";
-		cr.accept(agradece);
-		
 		
 	}
 
