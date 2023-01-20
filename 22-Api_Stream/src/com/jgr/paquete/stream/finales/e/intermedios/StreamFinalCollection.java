@@ -26,7 +26,7 @@ public class StreamFinalCollection {
 		
 		//elimino duplicados y lo convierto a una lista
 		Integer [][] numeritos = {{2,11,7},{2,11,7},{4,1,9,6}};
-		List<Integer> salida = Stream.of(numeritos).//lo convierto a stream
+		List<Integer> salida = Stream.of(numeritos).//lo convierto a com.jgr.stream
 				flatMap(a->Arrays.stream(a)).//lo aplano a array de 1 dimension
 				distinct().//dejo los no repetidos
 				sorted().//ordeno
@@ -100,7 +100,7 @@ public class StreamFinalCollection {
 		System.out.println("\ntodos->"+todos); 
 		
 		
-		//calcular la temperatura media de dos ciudades
+		//calcular la temperatura media de dos com.jgr.ejercicio.ciudades.ciudades
 		
 		List<Ciudad> ciudades = Arrays.asList(
 				new Ciudad("Ciudad1",11.0),
@@ -108,7 +108,7 @@ public class StreamFinalCollection {
 				new Ciudad("Ciudad3",33.0)
 				);
 		
-		//calcular la media de temperatura de las ciudades
+		//calcular la media de temperatura de las com.jgr.ejercicio.ciudades.ciudades
 		Stream<Ciudad> streamCiudad = ciudades.stream();		
 		System.out.println("\nla media de temperatura es->"+
 				streamCiudad.collect(Collectors.

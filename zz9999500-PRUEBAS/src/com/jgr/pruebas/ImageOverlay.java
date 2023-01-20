@@ -13,7 +13,7 @@ package com.jgr.pruebas;
  * License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.jgr.pruebas;
+
 
 import java.awt.Color;
 import java.awt.Font;
@@ -150,4 +150,4 @@ public class ImageOverlay {
             y += g.getFontMetrics().getHeight();
         }
     }
-}}
+}

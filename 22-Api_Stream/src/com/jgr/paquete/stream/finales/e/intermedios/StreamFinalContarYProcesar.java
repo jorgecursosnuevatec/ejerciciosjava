@@ -6,7 +6,7 @@ import java.util.stream.Stream;
  * The Class StreamFinalContarYProcesar.
  * es Final,devuelve un resultado 
  * -long count()->devuelve el numero de elementos de un Stream
- * -void forEach(Consumer<? super T> action) realiza una accion para cada elemento del stream
+ * -void forEach(Consumer<? super T> action) realiza una accion para cada elemento del com.jgr.stream
  * 
  */
 public class StreamFinalContarYProcesar {

@@ -8,15 +8,15 @@ import java.util.stream.Stream;
 
 /**
  * The Class StreamCrear.
- * Creamos un stream a partir de un array o con streambuilder
- * tiene metodos intermedios que devuelven otro stream,como filtrar,transformar,ordenar...
+ * Creamos un com.jgr.stream a partir de un array o con streambuilder
+ * tiene metodos intermedios que devuelven otro com.jgr.stream,como filtrar,transformar,ordenar...
  * tiene metodos finales que generan un resultado o void, como calcular,buscar,reduccion...
  * una vez que se usa NO se puede volver a utilizar
  */
 public class StreamCrear {
 	public static void main(String[] args) {
 		
-		//a partir de otro stream
+		//a partir de otro com.jgr.stream
 		Stream<String> nombres = Stream.of("Pato", "Paco", "Pepa", "Pepe");
 		nombres.forEach(System.out::println);
 
@@ -40,7 +40,7 @@ public class StreamCrear {
 		stintrangeC.forEach(System.out::println);
 		
 
-		//Usando un stream builder
+		//Usando un com.jgr.stream builder
 		Stream<String> nombres3 = Stream.<String>builder().
 				add("Pato").add("paco").add("pepa").add("pepe").build();
 		nombres3.forEach(System.out::println);

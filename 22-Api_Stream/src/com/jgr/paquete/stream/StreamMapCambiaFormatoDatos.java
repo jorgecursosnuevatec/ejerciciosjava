@@ -19,7 +19,7 @@ public class StreamMapCambiaFormatoDatos {
 		List<String> listaNombres = Arrays.asList(nombresString);
 
 
-		//lo convierto a un stream 
+		//lo convierto a un com.jgr.stream 
 		Stream<AlumnoComparable> modificado = Stream.of("Pato", "Paco", "Pepa", "Pepe")
 				//como parametro le paso el nombre que recupero del array
 				.map(nombre->new AlumnoComparable(nombre,null, null))

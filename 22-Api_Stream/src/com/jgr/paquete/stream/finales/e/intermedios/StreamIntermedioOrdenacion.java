@@ -9,9 +9,9 @@ import com.jgr.paquete.stream.modelo.CajaNegra;
 /**
  * The Class StreamIntermedioOrdenacion.
  * Stream<T> sorted() 
- * Returns a stream consisting of the elements of this stream, sorted according to natural order.
+ * Returns a com.jgr.stream consisting of the elements of this com.jgr.stream, sorted according to natural order.
  * Stream<T>	sorted​(Comparator<? super T> comparator) 
- * Returns a stream consisting of the elements of this stream, sorted according to the provided Comparator.
+ * Returns a com.jgr.stream consisting of the elements of this com.jgr.stream, sorted according to the provided Comparator.
  */
 public class StreamIntermedioOrdenacion {
 

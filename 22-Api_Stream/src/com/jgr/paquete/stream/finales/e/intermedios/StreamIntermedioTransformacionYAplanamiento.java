@@ -9,7 +9,7 @@ import java.util.stream.Stream;
 
 /**
  * The Class TransformacionYAplanamiento 
- * devuelven otro stream segun el criterio aplicado
+ * devuelven otro com.jgr.stream segun el criterio aplicado
  * -flatMap
  */
 public class StreamIntermedioTransformacionYAplanamiento {
@@ -56,21 +56,21 @@ public class StreamIntermedioTransformacionYAplanamiento {
         }
 				 */
 				System.out.println(
-						Arrays.stream(numeritos). //lo convierto a stream
-						flatMap(a->Arrays.stream(a))//cada array a stream,lo aplano a 1 dimension
+						Arrays.stream(numeritos). //lo convierto a com.jgr.stream
+						flatMap(a->Arrays.stream(a))//cada array a com.jgr.stream,lo aplano a 1 dimension
 						//.reduce(0, (ac, e) -> ac > e? ac: e))//comparo y saco el mayor
 						.max((a,b)->a-b) //compara y saca el mayor
 						) ;
 
-				Optional<Integer> resultado=Arrays.stream(numeritos). //lo convierto a stream
-						flatMap(a->Arrays.stream(a))//cada array a stream,lo aplano a 1 dimension
+				Optional<Integer> resultado=Arrays.stream(numeritos). //lo convierto a com.jgr.stream
+						flatMap(a->Arrays.stream(a))//cada array a com.jgr.stream,lo aplano a 1 dimension
 						//.reduce(0, (ac, e) -> ac > e? ac: e))//comparo y saco el mayor
 						.max((a,b)->a-b); //compara y saca el mayor
 						
 				//Solucion del profesor
 				System.out.println(
-						Arrays.stream(numeritos). //lo convierto a stream
-						flatMap(a->Arrays.stream(a)).//cada array a stream,lo aplano a 1 dimension
+						Arrays.stream(numeritos). //lo convierto a com.jgr.stream
+						flatMap(a->Arrays.stream(a)).//cada array a com.jgr.stream,lo aplano a 1 dimension
 						mapToInt(n->n).//transformarlo a intStream
 						max().//sacamos el mayor
 						getAsInt());

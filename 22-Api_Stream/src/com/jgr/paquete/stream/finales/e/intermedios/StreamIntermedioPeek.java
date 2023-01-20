@@ -6,8 +6,8 @@ import java.util.stream.Stream;
 /**
  * The Class StreamIntermedioPeek.
  * Stream<T>	peek​(Consumer<? super T> action)
- * Returns a stream consisting of the elements of this stream, additionally performing 
- * the provided action on each element as elements are consumed from the resulting stream.
+ * Returns a com.jgr.stream consisting of the elements of this com.jgr.stream, additionally performing 
+ * the provided action on each element as elements are consumed from the resulting com.jgr.stream.
  * aplica el consumer a cada elemento y devuelve uno igual 
  * 
  * SI NO SE INVOCA DIRECTAMENTE NO HACE NADA,NECESITA UNA OPERACION FINAL,VER EJEMPLOS

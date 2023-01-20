@@ -1,10 +1,8 @@
 package com.jgr.fichero.json;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
+
 
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 import com.jgr.fichero.json.modelo.Empleado;
 
 import java.io.BufferedReader;
@@ -20,9 +18,7 @@ import java.text.ParseException;
 import java.util.Date;
 import java.util.List;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.jgr.fichero.json.modelo.Empleado;
+
 
 public class LanzadorFicheroJson {
 

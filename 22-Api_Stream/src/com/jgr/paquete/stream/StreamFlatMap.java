@@ -3,7 +3,7 @@ import java.util.stream.Stream;
 import com.jgr.paquete.stream.modelo.Usuario;
 
 /**
- * The Class StreamFlatMap. parecido al map, devuelve otro stream, si lo hacemos
+ * The Class StreamFlatMap. parecido al map, devuelve otro com.jgr.stream, si lo hacemos
  * con varios se unen en una unica corriente
  */
 public class StreamFlatMap {
@@ -15,9 +15,9 @@ public class StreamFlatMap {
 				.map(nombre -> new Usuario(nombre.split(" ")[0], nombre.split(" ")[1])).
 				flatMap(u -> {
 					if (u.getNombre().equalsIgnoreCase("Pepe")) {
-						return Stream.of(u);// devuelve un stream con este usuario
+						return Stream.of(u);// devuelve un com.jgr.stream con este usuario
 					}
-					return Stream.empty();// si no lo es devuelve un stream vacio
+					return Stream.empty();// si no lo es devuelve un com.jgr.stream vacio
 				}).peek(System.out::println);
 
 		// nombres.forEach(System.out::println);

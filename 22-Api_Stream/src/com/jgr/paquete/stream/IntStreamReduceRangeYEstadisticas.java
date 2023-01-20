@@ -5,7 +5,7 @@ import java.util.stream.IntStream;
 
 /**
  * The Class IntStreamReduceRangeYEstadisticas. hay que usar IntStream para crear un rango
- * https://www.geeksforgeeks.org/stream-reduce-java-examples/
+ * https://www.geeksforgeeks.org/com.jgr.stream-reduce-java-examples/
  */
 public class IntStreamReduceRangeYEstadisticas {
 

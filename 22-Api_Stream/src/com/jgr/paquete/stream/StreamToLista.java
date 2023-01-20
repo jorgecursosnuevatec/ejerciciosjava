@@ -10,7 +10,7 @@ import java.util.stream.DoubleStream;
 
 /**
  * The Class StreamToLista.
- * convertir stream a lista
+ * convertir com.jgr.stream a lista
  */
 public class StreamToLista {
 

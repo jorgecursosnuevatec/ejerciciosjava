@@ -4,7 +4,7 @@ import java.util.stream.Stream;
 
 /**
  * The Class StreamIntermedioTransformacionMap.
- * devuelven otro stream segun el criterio aplicado
+ * devuelven otro com.jgr.stream segun el criterio aplicado
  * -map
  * -mapToInt
  * -mapToDouble
@@ -14,7 +14,7 @@ import java.util.stream.Stream;
 public class StreamIntermedioTransformacionMap {
 	public static void main(String[] args) {
 
-		//devuelve un stream convertido a mayusculas
+		//devuelve un com.jgr.stream convertido a mayusculas
 		Stream<String> st = Stream.of("Luis","Javier","Pepe");
 		Stream<String> st2 = st.map(s->s.toUpperCase());
 		st2.forEach(System.out::println);

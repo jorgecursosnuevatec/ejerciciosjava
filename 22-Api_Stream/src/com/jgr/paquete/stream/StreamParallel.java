@@ -11,7 +11,7 @@ import com.jgr.paquete.stream.modelo.Usuario;
 
 /**
  * The Class StreamParallel.
- * en un stream usamos el metodo parallel()
+ * en un com.jgr.stream usamos el metodo parallel()
  * en una coleccion usamos parallelStream()
  * Cuidado que NO ORDENA,lo puede hacer si lo pasamos a secuencial con sequential() antes de ordenarlos
  */
@@ -30,7 +30,7 @@ public class StreamParallel {
 
         long t1 = System.currentTimeMillis();
  
-        //es una lista,se usa stream().parallel()
+        //es una lista,se usa com.jgr.stream().parallel()
         String resultado = lista.stream()
                 .parallel()
                 .map(u -> u.toString().toLowerCase())
@@ -59,7 +59,7 @@ public class StreamParallel {
         
         t1 = System.currentTimeMillis();
         
-        //al ser stream se usa parallelStream()
+        //al ser com.jgr.stream se usa parallelStream()
         String salidaStream = lista
         		.parallelStream()        		
                 .map(u -> u.toString().toLowerCase())

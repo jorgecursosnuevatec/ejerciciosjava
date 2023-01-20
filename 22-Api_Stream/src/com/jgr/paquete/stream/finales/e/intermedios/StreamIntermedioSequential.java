@@ -5,7 +5,7 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 /**
- * The Class StreamIntermedioSequential. Cuando usamos un stream paralelo lo
+ * The Class StreamIntermedioSequential. Cuando usamos un com.jgr.stream paralelo lo
  * volvemos a unir en uno solo usando sequential()
  */
 public class StreamIntermedioSequential {

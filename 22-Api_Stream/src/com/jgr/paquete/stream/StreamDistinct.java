@@ -5,7 +5,7 @@ import java.util.stream.Stream;
 
 /**
  * The Class StreamDistinct.
- * saco un stream de los que no estan duplicados
+ * saco un com.jgr.stream de los que no estan duplicados
  */
 public class StreamDistinct {
 

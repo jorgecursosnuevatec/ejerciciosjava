@@ -13,15 +13,15 @@ import com.jgr.paquete.stream.modelo.Usuario;
  * Se le pasan dos argumentos,el inicial que es lo que va a hacer y luego se le pasan dos parametros
  * a es el anterior y b el actual
  * Identity – an element that is the initial value of the reduction operation and the default result
- *  if the stream is empty,acumula iteraciones
+ *  if the com.jgr.stream is empty,acumula iteraciones
  *	Accumulator – a function that takes two parameters: 
- *  a partial result of the reduction operation and the next element of the stream
+ *  a partial result of the reduction operation and the next element of the com.jgr.stream
  *	Combiner – a function used to combine the partial result of the reduction operation
  *  when the reduction is parallelized or when there's a mismatch between the types of the accumulator 
  *  arguments and the types of the accumulator implementation
- *  https://www.baeldung.com/java-stream-reduce
+ *  https://www.baeldung.com/java-com.jgr.stream-reduce
  *  
- *  https://www.geeksforgeeks.org/stream-reduce-java-examples/
+ *  https://www.geeksforgeeks.org/com.jgr.stream-reduce-java-examples/
  *  
  *  T reduce(T identity, BinaryOperator<T> accumulator);
  *  Where, identity is initial value 

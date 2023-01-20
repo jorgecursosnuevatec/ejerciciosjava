@@ -5,7 +5,7 @@ import java.util.stream.Stream;
 /**
  * The Class StreamFinalReduccion.
  * Optional<T>	reduce​(BinaryOperator<T> accumulator)	
-Performs a reduction on the elements of this stream, using an associative accumulation function,
+Performs a reduction on the elements of this com.jgr.stream, using an associative accumulation function,
  and returns an Optional describing the reduced value, if any.
  */
 public class StreamFinalReduccion {
@@ -13,7 +13,7 @@ public class StreamFinalReduccion {
 		Integer [][] numeritos = {{8,3,5},{2,11,7},{4,1,9,6}};
 		
 		System.out.println( Stream.of(numeritos)
-				.flatMap(a->Arrays.stream(a))//cada array a stream,lo aplano a 1 dimension
+				.flatMap(a->Arrays.stream(a))//cada array a com.jgr.stream,lo aplano a 1 dimension
 				.reduce((a,b)->a+b)
 				
 				);

@@ -16,7 +16,7 @@ public class GeneraStreamNumeros {
 			.collect(Collectors.toList());
 	;
 				
-	//stream de double	,SI NO se empaqueta con boxed no crea un stream normal que es el que se usa para lista		
+	//com.jgr.stream de double	,SI NO se empaqueta con boxed no crea un com.jgr.stream normal que es el que se usa para lista		
 	DoubleStream streamDouble=DoubleStream
 	.generate(()->(double) Math.random()*100)
 	.peek(System.out::println)
@@ -30,10 +30,10 @@ public class GeneraStreamNumeros {
 	
 	
 	List<Double> streamDouble3 =
-			DoubleStream //NO es un stream,no funcionan igual
+			DoubleStream //NO es un com.jgr.stream,no funcionan igual
 			.generate(() -> (double) Math.random() * 100)//genera numero aleatorio
 //			.peek(p->System.out.println("antes del filtro->"+p))
-			.boxed()//lo convierte a stream para que luego podamos pasarlo a lista
+			.boxed()//lo convierte a com.jgr.stream para que luego podamos pasarlo a lista
 			.limit(7)
 			.filter(p->(p>5))
 			.collect(Collectors.toList())//lo convertimos a lista

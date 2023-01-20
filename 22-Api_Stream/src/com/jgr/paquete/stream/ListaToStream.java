@@ -24,7 +24,7 @@ public class ListaToStream {
 		lista.add(new Usuario("Bruce", "Lee"));
 		lista.add(new Usuario("Bruce", "Willis"));
 
-		Stream<String> nombres = lista.stream()// devolvemos un stream
+		Stream<String> nombres = lista.stream()// devolvemos un com.jgr.stream
 				.map(u -> u.getNombre().toUpperCase()// de cada elemeto el nombre
 						.concat(" ")// espacio en blanco
 						.concat(u.getApellido().toUpperCase())) // apellido en mayusculas
@@ -39,7 +39,7 @@ public class ListaToStream {
 		//System.out.println(nombres.count());
 		nombres.forEach(System.out::println);
 /*
-		Stream<String> nombres2 = lista.stream()// devolvemos un stream
+		Stream<String> nombres2 = lista.stream()// devolvemos un com.jgr.stream
 				.filter(u -> u.getNombre().equalsIgnoreCase("Exequiel")).
 				map(u -> u.getNombre().toUpperCase()// de cada elemento el nombre
 						.concat("*")// espacio en blanco

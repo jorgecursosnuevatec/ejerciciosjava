@@ -6,7 +6,7 @@ import java.util.function.Function;
 public class NumeroMayorEnArreglo {
 
     public static void main(String[] args) {
-        // la función lambda que obtiene el numero mayor del arreglo usando api stream en su implementación
+        // la función lambda que obtiene el numero mayor del arreglo usando api com.jgr.stream en su implementación
         Function<Integer[], Integer> max = arr -> Arrays.
         		stream(arr).
         		reduce(0, (ac, e) -> ac > e? ac: e);
