@@ -26,7 +26,6 @@ public class CiudadServiceImpl implements ICiudadService{
 	}
 
 
-
 	/**
 	 * Alta ciudad.
 	 *
@@ -60,7 +59,6 @@ public class CiudadServiceImpl implements ICiudadService{
 	}
 
 
-
 	/**
 	 * Num ciudades pais.
 	 *
@@ -75,7 +73,6 @@ public class CiudadServiceImpl implements ICiudadService{
 				.count()
 				;
 	}
-
 
 
 	/**
@@ -154,7 +151,6 @@ public class CiudadServiceImpl implements ICiudadService{
 				.min((a,b)->Double.compare(a.getTemperaturaMedia(), b.getTemperaturaMedia()))	;
 
 	}
-
 
 
 	/**
