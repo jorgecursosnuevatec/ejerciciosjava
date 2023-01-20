@@ -2,23 +2,24 @@
  * 
  */
 package com.jgr.ejercicio.ciudades.test.servicio;
+
 import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.Test;
-
-
-
-
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.function.Predicate;
 
-
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestMethodOrder;
+import org.junit.jupiter.api.condition.DisabledIfEnvironmentVariable;
+import org.junit.jupiter.api.condition.DisabledOnJre;
+import org.junit.jupiter.api.condition.EnabledIfEnvironmentVariable;
+import org.junit.jupiter.api.condition.EnabledOnJre;
+import org.junit.jupiter.api.condition.JRE;
 
 import com.github.javafaker.Faker;
 import com.jgr.ejercicio.ciudades.modelo.Ciudad;
@@ -40,6 +41,7 @@ class CiudadServiceImplTest {
 	private List<Ciudad> ciudades;
 	
 	private ICiudadService ciudadService;
+
 	
 	/**
 	 * @throws java.lang.Exception
@@ -59,33 +61,45 @@ class CiudadServiceImplTest {
 			c1.setTemperaturaMedia(fake.number().randomDouble(2, -15, 50));
 			ciudades.add(c1);			
 		}
-		
-		
+				
 		c1 = new Ciudad();
-		c1.setNombreCiudad("NombreCiudad");
+		c1.setNombreCiudad("NombreCiudadInicial");
 		c1.setPaisCiudad("PaisCiudad");
 		c1.setHabitantesCiudad(1.0);
 		c1.setTemperaturaMedia(1.0);
 		
-//		com.jgr.ejercicio.ciudades.ciudades.forEach(System.out::println);
-				
+//		ciudades.forEach(System.out::println);
+			
 
 	}
 
 	@Test
+	@Order(3)
+	@DisplayName("Prueba de alta ciudad")
 	void testAltaCiudad() {
 		
-		//lista de com.jgr.ejercicio.ciudades.ciudades debe estar vacia
-		assertEquals(ciudadService.listaCiudades().size(),0,()->"El numero de com.jgr.ejercicio.ciudades.ciudades deberia ser 0->"+
+		//lista de ciudades debe estar vacia
+		assertEquals(ciudadService.listaCiudades().size(),0,
+				()->"El numero de ciudades deberia ser 0->"+
 				ciudadService.listaCiudades().size());
 		
 		//debe haber al menos una ciudad
 		ciudadService.altaCiudad(c1);				
-		assertTrue(ciudadService.listaCiudades().size()==1,()->"El numero de com.jgr.ejercicio.ciudades.ciudades deberia ser 1->"+
+		assertTrue(ciudadService.listaCiudades().size()==1,
+				()->"El numero de ciudades deberia ser 1->"+
 				ciudadService.listaCiudades().size());
+		
 		//no tiene que dejar dar de alta la misma
 		ciudadService.altaCiudad(c1);				
-		assertTrue(ciudadService.listaCiudades().size()==1,()->"El numero de com.jgr.ejercicio.ciudades.ciudades deberia ser 1->"+
+		assertTrue(ciudadService.listaCiudades().size()==1,
+				()->"El numero de ciudades deberia ser 1->"+
+				ciudadService.listaCiudades().size());
+		
+		//damos de alta otra ciudad distinta,debe guardarse tambien
+		c2= new Ciudad("NombreCiudad2","PaisCiudad",1000.0,-99.0);		
+		ciudadService.altaCiudad(c2).get();		
+		assertTrue(ciudadService.listaCiudades().size()==2
+				,()->"El numero de ciudades deberia ser 2->"+
 				ciudadService.listaCiudades().size());
 		
 	}
@@ -94,26 +108,37 @@ class CiudadServiceImplTest {
 	 * Test method for {@link com.jgr.ejercicio.ciudades.servicio.CiudadServiceImpl#altaCiudades(java.util.List)}.
 	 */
 	@Test
+	@DisplayName("Prueba de alta de un array de ciudades")
 	void testAltaCiudades() {
 		
 		//lista a cargar no debe estar vacia
-		assertNotNull(ciudades,()->"No se han dado bien de alta las com.jgr.ejercicio.ciudades.ciudades en el foreach");
+		assertNotNull(ciudades,
+				()->"No se han dado bien de alta las ciudades en el foreach");
+		
+		//lista de servicio no debe ser nula
+		assertNotNull(ciudadService.listaCiudades(),
+				()->"No se han dado bien de alta las ciudades en el foreach");
 
-		//lista de com.jgr.ejercicio.ciudades.ciudades de la capa com.jgr.ejercicio.ciudades.servicio debe estar a cero
+		//lista de ciudades de la capa servicio debe estar a cero
 		assertEquals(ciudadService.listaCiudades().size(),0
-				,()->"El numero de com.jgr.ejercicio.ciudades.ciudades deberia ser 0->"+
+				,()->"El numero de ciudades deberia ser 0->"+
 				ciudadService.listaCiudades().size());
-		
+
+		//debe coincidir el numero de ciudades dadas de alta
 		ciudadService.altaCiudades(ciudades);
-		
-		//debe coincidir el numero de com.jgr.ejercicio.ciudades.ciudades dadas de alta		
-		assertTrue(ciudades.size()==ciudadService.listaCiudades().size(),()->"El numero de com.jgr.ejercicio.ciudades.ciudades deberia ser igual->"+
+		assertTrue(ciudades.size()==ciudadService.listaCiudades().size(),
+				()->"El numero de ciudades deberia ser igual->"+
 				ciudadService.listaCiudades().size() +" no es igual que los dados de alta->"+ciudades.size());
 		
 		//lo que hemos cargado debe ser igual que lo que recibimos
 		assertEquals(this.ciudades,ciudadService.listaCiudades(),
-				()->"No se han dado de alta las com.jgr.ejercicio.ciudades.ciudades correctamente");
+				()->"No se han dado de alta las ciudades correctamente");
 		
+		//damos de alta otra lista de ciudades,no debe darse de alta ninguno porque ya existen todos
+		ciudadService.altaCiudades(ciudades);
+		assertTrue(ciudades.size()==ciudadService.listaCiudades().size(),
+				()->"El numero de ciudades deberia ser igual->"+
+				ciudadService.listaCiudades().size() +" no es igual que los dados de alta->"+ciudades.size());
 				
 	}
 
@@ -121,16 +146,18 @@ class CiudadServiceImplTest {
 	 * Test method for {@link com.jgr.ejercicio.ciudades.servicio.CiudadServiceImpl#numCiudadesPais(java.lang.String)}.
 	 */
 	@Test
+	@DisplayName("Numero de ciudades por pais")
 	void testNumCiudadesPais() {
 
 		//lista a cargar no debe estar vacia
-		assertNotNull(ciudades,()->"No se han dado bien de alta las com.jgr.ejercicio.ciudades.ciudades en el foreach");
+		assertNotNull(ciudades,()->"No se han dado bien de alta las ciudades en el foreach");
 
-		//lista de com.jgr.ejercicio.ciudades.ciudades de la capa com.jgr.ejercicio.ciudades.servicio debe estar a cero
+		//lista de ciudades de la capa servicio debe estar a cero
 		assertEquals(ciudadService.listaCiudades().size(),0
-				,()->"El numero de com.jgr.ejercicio.ciudades.ciudades deberia ser 0->"+
+				,()->"El numero de ciudades deberia ser 0->"+
 				ciudadService.listaCiudades().size());
 		
+		//damos de alta la lista de 
 		ciudadService.altaCiudades(ciudades);		
 		assertTrue(ciudadService.numCiudadesPorPais("Neverland")==0,
 				()->"Neverland no deberia existir como pais");
@@ -138,18 +165,16 @@ class CiudadServiceImplTest {
 		ciudadService.altaCiudad(c1);
 		assertTrue(ciudadService.numCiudadesPorPais(c1.getPaisCiudad())==1.0,
 				()->"Neverland deberia existir como pais");
-		
-		
-		
 	}
 
 	/**
 	 * Test method for {@link com.jgr.ejercicio.ciudades.servicio.CiudadServiceImpl#buscaCiudadMasPoblada()}.
 	 */
 	@Test
+	@DisplayName("Busqueda de la ciudad ms poblada")
 	void testCiudadMasPoblada() {
 
-		//lista de com.jgr.ejercicio.ciudades.ciudades de la capa com.jgr.ejercicio.ciudades.servicio debe estar a cero
+		//lista de ciudades de la capa servicio debe estar a cero
 		assertFalse(ciudadService.buscaCiudadMasPoblada().isPresent()
 				,()->"No deberia haber nada->"+
 						ciudadService.buscaCiudadMasPoblada().get());
@@ -163,14 +188,14 @@ class CiudadServiceImplTest {
 		//deberia encontrar la ciudad c2
 		assertEquals(c2,ciudadService.buscaCiudadMasPoblada().get(),
 				()->"Deberia haber encontrado->"+c2 + " y no->"+ ciudadService.buscaCiudadMasPoblada().get());
-		
-		
+
 	}
 
 	/**
 	 * Test method for {@link com.jgr.ejercicio.ciudades.servicio.CiudadServiceImpl#buscaCiudadPorNombreYPais(java.lang.String, java.lang.String)}.
 	 */
 	@Test
+	@DisplayName("Busqueda de ciudad por nombre y pais")
 	void testBuscaCiudadPorNombreYPais() {
 		c2=c1;		
 		c2.setNombreCiudad("Nombre de la ciudad c2");
@@ -178,9 +203,8 @@ class CiudadServiceImplTest {
 		ciudadService.altaCiudad(c1);
 		ciudadService.altaCiudad(c2);
 		ciudadService.altaCiudades(ciudades);
-		//deberia encontrar la ciudad c2
 		
-
+		//deberia encontrar la ciudad c2
 		assertEquals(c2,
 				ciudadService.buscaCiudadPorNombreYPais(c2.getNombreCiudad(),
 						c2.getPaisCiudad()).get(),
@@ -191,6 +215,7 @@ class CiudadServiceImplTest {
 	 * Test method for {@link com.jgr.ejercicio.ciudades.servicio.CiudadServiceImpl#buscaCiudadPorFiltro(java.util.function.Predicate)}.
 	 */
 	@Test
+	@DisplayName("Busqueda por filtro predicate")
 	void testBuscaCiudadPorFiltro() {
 		
 	ciudadService.altaCiudad(c1);
@@ -246,7 +271,7 @@ class CiudadServiceImplTest {
 			.buscaCiudadPorFiltro(pred).get()		
 			,
 			()->"Ciudad No encontrada"+c1);
-	//doy de alta com.jgr.ejercicio.ciudades.ciudades,tb deberia encontrarla
+	//doy de alta ciudades,tb deberia encontrarla
 	ciudadService.altaCiudades(ciudades);
 	assertEquals(c1, 
 			ciudadService
@@ -254,15 +279,13 @@ class CiudadServiceImplTest {
 			,
 			()->"Ciudad No encontrada despues de dar de alta la lista"+c1);
 	
-	
-	
-	
 	}
 
 	/**
 	 * Test method for {@link com.jgr.ejercicio.ciudades.servicio.CiudadServiceImpl#buscaCiudadMasFria()}.
 	 */
 	@Test
+	@DisplayName("Busqueda de la ciudad mas fria")
 	void testBuscaCiudadMasFria() {
 		
 		//no hay nada dado de alta,lo sabemos con el ispresent
@@ -271,7 +294,7 @@ class CiudadServiceImplTest {
 		
 		ciudadService.altaCiudad(c1);
 		
-		//de la lista de com.jgr.ejercicio.ciudades.ciudades busco la que se llama igual
+		//de la lista de ciudades busco la que se llama igual
 		assertTrue(
 		ciudadService.buscaCiudadPorFiltro(c->c.getNombreCiudad().equals(c1.getNombreCiudad()))
 		.get()//otengo la temperatura media
@@ -287,27 +310,97 @@ class CiudadServiceImplTest {
 		
 	}
 	@Test
+	@DisplayName("Lista de ciudades")
 	void testlistaCiudades() {
 		
-		// lista de com.jgr.ejercicio.ciudades.ciudades debe estar vacia
-		assertEquals(ciudadService.listaCiudades().size(), 0,
-				() -> "El numero de com.jgr.ejercicio.ciudades.ciudades deberia ser 0->" + ciudadService.listaCiudades().size());
+		// lista de ciudades no debe ser nula
+		assertNotNull(ciudadService.listaCiudades(),
+				() -> "La lista no deberia ser nula->" + ciudadService.listaCiudades().size());
 
-		// lista de com.jgr.ejercicio.ciudades.ciudades de la capa com.jgr.ejercicio.ciudades.servicio debe estar a cero
+		// lista de ciudades de la capa servicio debe estar a cero
 		assertEquals(ciudadService.listaCiudades().size(), 0,
-				() -> "El numero de com.jgr.ejercicio.ciudades.ciudades deberia ser 0->" + ciudadService.listaCiudades().size());
+				() -> "El numero de ciudades deberia ser 0->" + ciudadService.listaCiudades().size());
 
 		ciudadService.altaCiudades(ciudades);
 
-		// debe coincidir el numero de com.jgr.ejercicio.ciudades.ciudades dadas de alta
+		// debe coincidir el numero de ciudades dadas de alta
 		assertTrue(ciudades.size() == ciudadService.listaCiudades().size(),
-				() -> "El numero de com.jgr.ejercicio.ciudades.ciudades deberia ser igual->" + ciudadService.listaCiudades().size()
+				() -> "El numero de ciudades deberia ser igual->" + ciudadService.listaCiudades().size()
 						+ " no es igual que los dados de alta->" + ciudades.size());
 
 		// lo que hemos cargado debe ser igual que lo que recibimos
 		assertEquals(this.ciudades, ciudadService.listaCiudades(),
-				() -> "No se han dado de alta las com.jgr.ejercicio.ciudades.ciudades correctamente");
+				() -> "No se han dado de alta las ciudades correctamente");
 		
 	}
+	
+	@Test
+	@DisplayName("Compara iguales")
+	void testEquals(){
+		
+		c2=c1;
+		assertTrue(c1.equals(c2),
+				()->"Deberian ser iguales->"+ c1.toString()+ "/"+ c2.toString());
+		
+		c2.setNombreCiudad("Nombre cambiado");
+		
+		//este si es verdad, porque apuntan a la misma direccion de memoria
+		assertTrue(c1.equals(c2),
+		()->"NO Deberian ser iguales C1->"+ c1.toString()+ "/C2->"+ c2.toString());
+		
+	}
+	
+	@Test
+    @EnabledOnJre(JRE.JAVA_9)
+	@DisplayName("Ejecuta en java 9")
+    void onJava9() {
+        System.out.println("Run this on Java 9");
+    }
+	
+	@Test
+	@EnabledOnJre({JRE.JAVA_11, JRE.JAVA_17})
+	@DisplayName("Ejecuta en java 11 O 17")
+	void onJava17() {
+		System.out.println("Run this on Java 17");
+	}
+
+    @Test
+    @EnabledOnJre({JRE.JAVA_12, JRE.JAVA_13})
+	@DisplayName("Ejecuta en java 12 y 13 ")
+    void onJava12OrJava13() {
+        System.out.println("Run this on Java 12 or Java 13");
+    }
+
+    @Test
+    @DisabledOnJre(JRE.JAVA_9)
+    @DisplayName("NO ejecuta en java 9")
+    void notOnJava9() {
+        System.out.println("Do not run this on Java 9");
+    }
+    
+    @Test
+    @EnabledIfEnvironmentVariable(named = "PROCESSOR_IDENTIFIER", matches = ".*Intel64 Family 6.*")
+    void onIntel64() {
+        System.out.println("Run this on Intel6 Family 6 only.");
+    }
+
+    @Test
+    @EnabledIfEnvironmentVariable(named = "NUMBER_OF_PROCESSORS", matches = "8")
+    void onProcessor8() {
+        System.out.println("Run this if it has 8 processors.");
+    }
+
+    @Test
+    @DisabledIfEnvironmentVariable(named = "CURRENT_ENV", matches = ".*development.*")
+    void notOnDeveloperPC() {
+        System.out.println("Do not run this if env variables 'CURRENT_ENV' matches .*development.* ");
+    }
+
+    @Test
+    void printEnvironmentProperties() {
+        Map<String, String> env = System.getenv();
+        env.forEach((k, v) -> System.out.println(k + ":" + v));
+    }
+
 
 }

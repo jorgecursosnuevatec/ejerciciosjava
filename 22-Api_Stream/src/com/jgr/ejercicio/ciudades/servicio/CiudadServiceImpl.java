@@ -14,7 +14,7 @@ import com.jgr.ejercicio.ciudades.modelo.Ciudad;
 public class CiudadServiceImpl implements ICiudadService{
 
 
-	/** The lista com.jgr.ejercicio.ciudades.ciudades. */
+	/** The lista ciudades. */
 	private List<Ciudad> listaCiudades;
 
 	/**
@@ -46,10 +46,10 @@ public class CiudadServiceImpl implements ICiudadService{
 	}
 	
 	/**
-	 * Alta com.jgr.ejercicio.ciudades.ciudades.
+	 * Alta ciudades.
 	 *
-	 * @param ciudadesNuevas the com.jgr.ejercicio.ciudades.ciudades nuevas
-	 * @return lista com.jgr.ejercicio.ciudades.ciudades
+	 * @param ciudadesNuevas the ciudades nuevas
+	 * @return lista ciudades
 	 */
 	public List<Ciudad> altaCiudades(List<Ciudad> ciudadesNuevas) {
 		
@@ -62,7 +62,7 @@ public class CiudadServiceImpl implements ICiudadService{
 
 
 	/**
-	 * Num com.jgr.ejercicio.ciudades.ciudades pais.
+	 * Num ciudades pais.
 	 *
 	 * @param pais the pais
 	 * @return the int
@@ -103,7 +103,8 @@ public class CiudadServiceImpl implements ICiudadService{
 	public Optional<Ciudad> buscaCiudadPorNombreYPais(String nomCiudad, String nomPais) {
 
 		return listaCiudades.stream()
-				.filter(c->c.getNombreCiudad().equalsIgnoreCase(nomCiudad)&&c.getPaisCiudad().equalsIgnoreCase(nomPais))
+				.filter(c->c.getNombreCiudad().equalsIgnoreCase(nomCiudad)
+						&&c.getPaisCiudad().equalsIgnoreCase(nomPais))
 				.findFirst()
 				;
 	}
@@ -157,7 +158,7 @@ public class CiudadServiceImpl implements ICiudadService{
 
 
 	/**
-	 * Lista com.jgr.ejercicio.ciudades.ciudades.
+	 * Lista ciudades.
 	 *
 	 * @return the list
 	 */

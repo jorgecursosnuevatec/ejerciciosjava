@@ -21,25 +21,25 @@ public interface ICiudadService {
  * @param ciudad the ciudad
  * @return the optional
  */
-//1->añadir ciudad,no se permiten com.jgr.ejercicio.ciudades.ciudades repetidas (clave ciudad+pais)
+//1->añadir ciudad,no se permiten ciudades repetidas (clave ciudad+pais)
 	public Optional<Ciudad> altaCiudad(Ciudad ciudad);
 	
 /**
- * Alta com.jgr.ejercicio.ciudades.ciudades.
+ * Alta ciudades.
  *
- * @param com.jgr.ejercicio.ciudades.ciudades the com.jgr.ejercicio.ciudades.ciudades
+ * @param ciudades the ciudades
  * @return the list
  */
-//2->añadir com.jgr.ejercicio.ciudades.ciudades,no se permiten com.jgr.ejercicio.ciudades.ciudades repetidas (clave ciudad+pais)
+//2->añadir ciudades,no se permiten ciudades repetidas (clave ciudad+pais)
 	public List<Ciudad> altaCiudades(List<Ciudad> ciudades);
 
 /**
- * Num com.jgr.ejercicio.ciudades.ciudades pais.
+ * Num ciudades pais.
  *
  * @param pais the pais
  * @return the long
  */
-//2->numero com.jgr.ejercicio.ciudades.ciudades en un pais	
+//2->numero ciudades en un pais	
 	public long numCiudadesPorPais(String pais);
 	
 	
@@ -81,10 +81,10 @@ public Optional<Ciudad> buscaCiudadMasFria();
 public Optional<Ciudad> buscaCiudadPorFiltro(Predicate<Ciudad> condicion);
 
 /**
- * Lista de todas las com.jgr.ejercicio.ciudades.ciudades
- * @return lista com.jgr.ejercicio.ciudades.ciudades
+ * Lista de todas las ciudades
+ * @return lista ciudades
  */
-//lista de com.jgr.ejercicio.ciudades.ciudades 
+//lista de ciudades 
 public List<Ciudad> listaCiudades();
 
 
