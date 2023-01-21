@@ -2,6 +2,7 @@ package com.jgr.ejercicio.ciudades.servicio;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.OptionalDouble;
 import java.util.function.Predicate;
 
 import com.jgr.ejercicio.ciudades.modelo.Ciudad;
@@ -9,6 +10,7 @@ import com.jgr.ejercicio.ciudades.modelo.Ciudad;
 
 
 
+// TODO: Auto-generated Javadoc
 /**
  * The Interface ICiudadService.
  */
@@ -81,13 +83,39 @@ public Optional<Ciudad> buscaCiudadMasFria();
 public Optional<Ciudad> buscaCiudadPorFiltro(Predicate<Ciudad> condicion);
 
 /**
- * Lista de todas las ciudades
+ * Lista de todas las ciudades.
+ *
  * @return lista ciudades
  */
 //lista de ciudades 
 public List<Ciudad> listaCiudades();
 
+/**
+ * Obtiene total paises.
+ *
+ * @return the long
+ */
+//devuelve el total de paises registrados
+public long obtieneTotalPaises();
+
+/**
+ * Borra ciudad por nombre.
+ *
+ * @param nombre the nombre
+ */
+//borra ciudad
+public void borraCiudadPorNombre(String nombre);
 
 
-	
+
+/**
+ * Temperatura media pais.
+ *
+ * @param nombrePais the nombre pais
+ * @return the long
+ */
+
+//temperatura media de las ciudades de un pais
+public OptionalDouble temperaturaMediaPais(String nombrePais);
+
 }

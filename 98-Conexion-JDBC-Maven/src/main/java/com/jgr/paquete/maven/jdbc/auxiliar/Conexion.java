@@ -1,4 +1,4 @@
-package com.jgr.paquete.maven.jdbc.auxiliar;
+package main.java.com.jgr.paquete.maven.jdbc.auxiliar;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

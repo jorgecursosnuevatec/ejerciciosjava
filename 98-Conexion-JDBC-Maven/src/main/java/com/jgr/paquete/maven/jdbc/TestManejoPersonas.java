@@ -1,9 +1,11 @@
-package com.jgr.paquete.maven.jdbc;
+package main.java.com.jgr.paquete.maven.jdbc;
 
 import java.util.List;
 
-import com.jgr.paquete.maven.jdbc.modelo.Persona;
-import com.jgr.paquete.maven.jdbc.repositorio.PersonaDAO;
+import main.java.com.jgr.paquete.maven.jdbc.modelo.Persona;
+import main.java.com.jgr.paquete.maven.jdbc.repositorio.PersonaDAO;
+
+
 
 public class TestManejoPersonas {
 

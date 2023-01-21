@@ -1,4 +1,4 @@
-package com.jgr.paquete.maven.jdbc.modelo;
+package main.java.com.jgr.paquete.maven.jdbc.modelo;
 
 
 

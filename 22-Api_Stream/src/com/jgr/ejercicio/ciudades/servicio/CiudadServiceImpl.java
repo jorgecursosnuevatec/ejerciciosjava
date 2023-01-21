@@ -3,11 +3,13 @@ package com.jgr.ejercicio.ciudades.servicio;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.OptionalDouble;
 import java.util.function.Predicate;
 
 import com.jgr.ejercicio.ciudades.modelo.Ciudad;
 
 
+// TODO: Auto-generated Javadoc
 /**
  * The Class CiudadServiceImpl.
  */
@@ -163,5 +165,51 @@ public class CiudadServiceImpl implements ICiudadService{
 		
 		return this.listaCiudades;
 	}
+
+
+	/**
+	 * Obtiene total paises.
+	 *
+	 * @return the long
+	 */
+	@Override
+	public long obtieneTotalPaises() {
+		
+		return listaCiudades
+				.stream()
+				.map(c->c.getPaisCiudad())
+				.distinct()
+				.count()
+				;
+	}
+
+
+	/**
+	 * Borra ciudad por nombre.
+	 *
+	 * @param nombre the nombre
+	 */
+	@Override
+	public void borraCiudadPorNombre(String nombre) {		
+		this.listaCiudades.removeIf(c->c.getNombreCiudad().equalsIgnoreCase(nombre));
+	}
+
+
+	/**
+	 * Temperatura media pais.
+	 *
+	 * @param nombrePais the nombre pais
+	 * @return the OptionalDouble
+	 */
+	@Override
+	public OptionalDouble temperaturaMediaPais(String nombrePais) {
+		
+		return listaCiudades.stream()
+				.filter(c->c.getPaisCiudad().equalsIgnoreCase(nombrePais))
+				.mapToDouble(c->c.getTemperaturaMedia())
+				.average()
+				;
+	}
+	
 
 }

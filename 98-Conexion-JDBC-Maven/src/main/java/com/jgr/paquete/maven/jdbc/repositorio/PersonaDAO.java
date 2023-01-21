@@ -1,15 +1,17 @@
-package com.jgr.paquete.maven.jdbc.repositorio;
+package main.java.com.jgr.paquete.maven.jdbc.repositorio;
+import static main.java.com.jgr.paquete.maven.jdbc.auxiliar.Conexion.*;
+import main.java.com.jgr.paquete.maven.jdbc.auxiliar.Conexion;
+
+import main.java.com.jgr.paquete.maven.jdbc.auxiliar.Conexion;
 
 
-
-import static com.jgr.paquete.maven.jdbc.auxiliar.Conexion.*;
 import java.sql.*;
 import java.util.*;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import com.jgr.paquete.maven.jdbc.auxiliar.Conexion;
-import com.jgr.paquete.maven.jdbc.modelo.Persona;
+import main.java.com.jgr.paquete.maven.jdbc.modelo.Persona;
+
 
 public class PersonaDAO {
 
@@ -19,7 +21,8 @@ public class PersonaDAO {
     private static final String SQL_DELETE = "DELETE FROM persona WHERE id_persona = ?";
     
     public List<Persona> seleccionar() {
-        Connection conn = null;
+    	Connection conn = null;
+    	//Conexion conn;
         PreparedStatement stmt = null;
         ResultSet rs = null;
         Persona persona = null;

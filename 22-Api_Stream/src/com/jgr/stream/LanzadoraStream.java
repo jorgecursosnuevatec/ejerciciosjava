@@ -1,10 +1,12 @@
 package com.jgr.stream;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 import com.jgr.stream.modelo.GeneraDatos;
 
@@ -39,7 +41,7 @@ public class LanzadoraStream {
 		
 		//Muestra los elementos
 		listaString
-				.com.jgr.stream()
+				.stream()
 				.forEachOrdered(n->System.out.println(n));
 		
 		//sin duplicados
@@ -124,8 +126,8 @@ public class LanzadoraStream {
 
 		
 		//estadisticas 
-		Stream<Integer> com.jgr.stream = listaInteger.stream();
-		IntStream inStr = com.jgr.stream.mapToInt(a->a);
+		Stream<Integer> stream = listaInteger.stream();
+		IntStream inStr = stream.mapToInt(a->a);
 		IntSummaryStatistics stats = inStr.summaryStatistics();
 		
 		System.out.println("max: " + stats.getMax());
@@ -203,7 +205,7 @@ public class LanzadoraStream {
 //				.sorted((a,b)->Double.compare(b, a))
 				.collect(Collectors.toList()));
 
-		*/
+		
 		
 		//OBTENCION DE EXTREMOS
 		
@@ -222,7 +224,91 @@ public class LanzadoraStream {
 
 		
 		
+		// prueba map listaString
+		//productos no repetidos con mas de 6 caracteres		
+		List<String> nombres=List.of("leche","atún","vino","patatas","leche","agua","vino","lechuga");
 		
+		System.out.println("Con filter->" +
+		nombres.stream()
+		.distinct()
+		.filter(c->c.length()>6)
+		.count());
+		
+		System.out.println("Con map->" +
+		nombres.stream().
+		distinct().
+		mapToInt(c->c.length()).
+		filter(c->c>6).
+		count()
+		);
+		
+				
+		//usando mapToInt,
+		//suma del total de caracteres de todas las cadenas no repetidas
+		
+		List<String> nombres=List.of("leche","atún","vino","patatas","leche","agua","vino","lechuga");
+		
+		System.out.println("Total de caracteres de las cadenas no repetidas->" +
+		nombres.stream()
+		.distinct()
+		.mapToInt(c->c.length())
+		.sum()
+				);
+				
+		
+		System.out.println("\nMedia de caracteres de las cadenas no repetidas->" +
+				nombres.stream()
+		.distinct()
+		.mapToInt(c->c.length())
+		.average()
+		.orElse(0.0)
+				);
+		
+		System.out.println("\nCadena con menos caracteres de las no repetidas->" +
+				nombres.stream()
+		.distinct()
+		.mapToInt(c->c.length())
+		.min()
+		.orElse(0)		
+				);
+		
+		System.out.println("\nCadena con mas caracteres de las no repetidas->" +
+				nombres.stream()
+		.distinct()
+		.mapToInt(c->c.length())
+		.max()
+		.orElse(0)		
+				);
+		
+		
+		
+		
+		//flat map hace un stream de de los streams que deberia estar compuesto
+		List<List<String>> datos = Arrays.asList(
+				Arrays.asList("leche","atún","vino","patatas","leche","agua","vino","lechuga"),
+				Arrays.asList("leche","atún","vino","patatas","leche","agua","vino","lechuga"));
+		
+		System.out.println("\nAplano una lista de listas->" +
+		datos.stream()
+//		.peek(n->System.out.println("antes de convertir"+n))
+		.flatMap(a -> a.stream())
+		.collect(Collectors.toList()));
+			*/
+		//dadas las notas de un centro de formación, donde cada array
+				//contiene las notas de un aula, calcular la media global
+				List<double[]> notas=List.of(new double[]{3.5,7,8.9},
+						new double[]{2.4,5,1,9,6.7},
+						new double[]{5.6,3.2,8,10},
+						new double[]{9.1,4});
+
+				
+				System.out.println("\nNota media de la clase->" +				
+				notas.stream() //Stream<double[]>
+				.flatMapToDouble(a->Arrays.stream(a)) //Stream<Double>
+				.average().orElse(0.0))
+				; 
+				
+						
 	}
 
 }
