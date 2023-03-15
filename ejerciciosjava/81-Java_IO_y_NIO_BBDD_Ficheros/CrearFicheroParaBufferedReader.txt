@@ -1,0 +1,1 @@
+escrito en el FicheroParaBufferedReader
